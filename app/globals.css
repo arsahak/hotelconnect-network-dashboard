@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* HotelConnect brand — the same palette as the public website:
+   brass as the primary colour, warm ink for text, cream and sand surfaces. */
+
+:root {
+  --background: #fbf8f3;
+  --foreground: #1b1611;
+  /* This app has no dark theme — every component hardcodes light colors
+     (bg-white, text-gray-900, etc). Without this, some browsers/OSes still
+     auto-darken native form controls under a dark system preference, which
+     can make typed input text invisible (near-white on a hardcoded white
+     field). */
+  color-scheme: light;
+}
+
+@theme {
+  /* Brand palette (matches website/app/globals.css). */
+  --color-ink-950: #1b1611;
+  --color-ink-900: #241e18;
+  --color-ink-800: #30291f;
+  --color-ink-700: #4a4036;
+  --color-ink-500: #6f665b;
+  --color-ink-300: #b2a99d;
+  --color-ink-100: #ece6dd;
+
+  --color-cream: #fbf8f3;
+  --color-sand: #f4eee5;
+  --color-line: #e7dfd2;
+
+  --color-brass-700: #6f5122;
+  --color-brass-600: #8a6830;
+  --color-brass-500: #9f7b3b;
+  --color-brass-400: #c4a067;
+  --color-brass-100: #f3eadb;
+
+  --color-moss-600: #3f6b4f;
+  --color-moss-100: #e2ece4;
+  --color-ember-600: #a4473a;
+  --color-ember-100: #f6e4e0;
+
+  /* The dashboard was built with Tailwind's grey scale. Warming it to the
+     brand's ink tones keeps every existing screen on-brand without
+     rewriting each class. */
+  --color-gray-50: #faf7f2;
+  --color-gray-100: #f3eee6;
+  --color-gray-200: #e7dfd2;
+  --color-gray-300: #d3c9ba;
+  --color-gray-400: #9d9385;
+  --color-gray-500: #6f665b;
+  --color-gray-600: #5a5148;
+  --color-gray-700: #4a4036;
+  --color-gray-800: #30291f;
+  --color-gray-900: #241e18;
+  --color-gray-950: #1b1611;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-gilda), ui-serif, Georgia, serif;
+
+  /* Primary = brass. */
+  --color-primary: #9f7b3b;
+  --color-primary-dark: #6f5122;
+  --color-secondary: #c4a067;
+  --color-black: #1b1611;
+  --color-white: #ffffff;
+
+  /* shadcn/ui semantic tokens consumed by components/shared/ui/*.
+     Tailwind v4 only generates a utility if its --color-* token exists, so
+     these must stay defined. */
+  --color-primary-foreground: var(--color-white);
+  --color-secondary-foreground: var(--color-black);
+  --color-destructive: #a4473a;
+  --color-destructive-foreground: var(--color-white);
+  --color-accent: var(--color-secondary);
+  --color-accent-foreground: var(--color-black);
+  --color-muted: #f4eee5;
+  --color-muted-foreground: #6f665b;
+  --color-card: var(--color-white);
+  --color-card-foreground: var(--color-black);
+  --color-input: #e7dfd2;
+  --color-border: #e7dfd2;
+  --color-ring: var(--color-primary);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Gilda Display has no bold weight, so a thin stroke makes headings heavier
+   (same trick as the website). */
+.heading-strong {
+  -webkit-text-stroke: 0.4px currentColor;
+}
+
+/* The rich-text editor's one-row toolbar scrolls sideways when its tools
+   don't fit. Its scrollbar is a thin, pale line rather than the browser's
+   full-size one. */
+.tox .tox-toolbar--scrolling::-webkit-scrollbar {
+  height: 2px;
+}
+.tox .tox-toolbar--scrolling::-webkit-scrollbar-track {
+  background: transparent;
+  margin-inline: clamp(24px, 20vw, 400px);
+}
+.tox .tox-toolbar--scrolling::-webkit-scrollbar-thumb {
+  background: #d3c9ba;
+  border-radius: 9999px;
+}
+.tox .tox-toolbar--scrolling::-webkit-scrollbar-thumb:hover {
+  background: #9d9385;
+}
+@supports not selector(::-webkit-scrollbar) {
+  .tox .tox-toolbar--scrolling {
+    scrollbar-width: thin;
+    scrollbar-color: #d3c9ba transparent;
+  }
+}
+
+/* The editor's font dropdown — the one menu with a search box — is kept
+   short: about seven fonts at a time, the rest a scroll or a search away. */
+.tox .tox-menu:has(.tox-menu__searcher) {
+  max-height: 280px !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* The dark sidebar's menu: a slim scrollbar that stays visible — black
+   track (the sidebar colour) with a brass thumb. */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: var(--color-ink-950);
+  /* A shorter track, so the thumb looks short too (its height follows the track). */
+  margin-block: clamp(16px, 18vh, 200px);
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-brass-500);
+  border-radius: 9999px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #c9a86a;
+}
+/* Firefox has no ::-webkit-scrollbar; Chrome would ignore the rules above if these were set. */
+@supports not selector(::-webkit-scrollbar) {
+  .sidebar-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-brass-500) var(--color-ink-950);
+  }
+}

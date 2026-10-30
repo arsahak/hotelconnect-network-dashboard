@@ -1,0 +1,1881 @@
+{
+  "Common": {
+    "tryAgain": "Opnieuw proberen",
+    "refresh": "Vernieuwen",
+    "cancel": "Annuleren",
+    "saving": "Opslaan…",
+    "saveChanges": "Wijzigingen opslaan",
+    "show": "Tonen",
+    "hide": "Verbergen",
+    "error": "Er is iets misgegaan. Probeer het opnieuw.",
+    "allRegions": "Alle regio's",
+    "allStatuses": "Alle statussen",
+    "allCategories": "Alle categorieën",
+    "allHotels": "Alle hotels",
+    "active": "Actief",
+    "inactive": "Inactief",
+    "status": "Status",
+    "added": "Toegevoegd",
+    "actions": "Acties",
+    "noResults": "Niets gevonden voor deze zoekopdracht of filters.",
+    "view": "Bekijken",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "choose": "Kies…",
+    "clear": "Wissen",
+    "photoNotSaved": "Opgeslagen, maar de foto is niet geüpload:",
+    "confirmRemovePhoto": "Deze foto verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "photoRemoved": "Foto verwijderd",
+    "viewOnWebsite": "Bekijk op website",
+    "yes": "Ja",
+    "no": "Nee"
+  },
+  "Language": {
+    "label": "Taal"
+  },
+  "Roles": {
+    "superadmin": "Superbeheerder",
+    "admin": "Beheerder",
+    "hotel_manager": "Hotelmanager",
+    "hotel_staff": "Hotelpersoneel",
+    "supplier": "Leverancier"
+  },
+  "Nav": {
+    "home": "Startpagina HotelConnect-dashboard",
+    "collapse": "Menu inklappen",
+    "expand": "Menu uitklappen",
+    "sections": {
+      "administration": "Beheer",
+      "account": "Account",
+      "network": "Netwerk",
+      "website": "Website",
+      "compliance": "Compliance Radar",
+      "hotel": "Hotel",
+      "purchasing": "Inkoop",
+      "company": "Je bedrijf",
+      "billing": "Facturen & reclame"
+    },
+    "items": {
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "Uw startpagina en snelkoppelingen"
+      },
+      "team": {
+        "title": "Team",
+        "description": "De beheerders van HotelConnect"
+      },
+      "teamAll": {
+        "title": "Alle leden",
+        "description": "Bekijk iedereen in het HotelConnect-team"
+      },
+      "teamAdd": {
+        "title": "Lid toevoegen",
+        "description": "Geef een nieuwe beheerder toegang tot het dashboard"
+      },
+      "profile": {
+        "title": "Mijn profiel",
+        "description": "Uw account in één oogopslag"
+      },
+      "settings": {
+        "title": "Instellingen",
+        "description": "Uw gegevens, foto, wachtwoord en taal"
+      },
+      "hotels": {
+        "title": "Hotels",
+        "description": "Aangesloten hotels en hun profiel in de hotelgids"
+      },
+      "hotelsAll": {
+        "title": "Alle hotels",
+        "description": "Elk aangesloten hotel"
+      },
+      "hotelsAdd": {
+        "title": "Hotel toevoegen",
+        "description": "Voeg een hotel toe en geef het een lidnummer"
+      },
+      "suppliers": {
+        "title": "Leveranciers",
+        "description": "Leveranciers en hun profiel in de directory"
+      },
+      "suppliersAll": {
+        "title": "Alle leveranciers",
+        "description": "Elke leverancier in het netwerk"
+      },
+      "suppliersAdd": {
+        "title": "Leverancier toevoegen",
+        "description": "Voeg een leverancier toe en geef het een lidnummer"
+      },
+      "jobs": {
+        "title": "Vacatures",
+        "description": "Vacatures van aangesloten hotels op de website"
+      },
+      "jobsAll": {
+        "title": "Alle vacatures",
+        "description": "Wachtende, gepubliceerde en gesloten vacatures"
+      },
+      "jobsAdd": {
+        "title": "Vacature toevoegen",
+        "description": "Plaats een vacature voor een hotel"
+      },
+      "vouchers": {
+        "title": "Vouchers",
+        "description": "Corporate vouchers van aangesloten hotels"
+      },
+      "vouchersAll": {
+        "title": "Alle vouchers",
+        "description": "Elke corporate voucher"
+      },
+      "vouchersAdd": {
+        "title": "Voucher toevoegen",
+        "description": "Voeg een aanbieding van een hotel toe"
+      },
+      "stories": {
+        "title": "Verhalen",
+        "description": "Artikelen, interviews en columns"
+      },
+      "storiesAll": {
+        "title": "Alle verhalen",
+        "description": "Concepten en gepubliceerde verhalen"
+      },
+      "storiesAdd": {
+        "title": "Verhaal schrijven",
+        "description": "Schrijf een nieuw artikel of interview"
+      },
+      "contracts": {
+        "title": "Contracten",
+        "description": "Contractregister met einddata en kosten"
+      },
+      "contractsAll": {
+        "title": "Alle contracten",
+        "description": "Elk contract van uw hotel"
+      },
+      "contractsAdd": {
+        "title": "Contract toevoegen",
+        "description": "Voeg een contract toe aan het register"
+      },
+      "permits": {
+        "title": "Vergunningen",
+        "description": "Vergunningen en certificaten met verloopdata"
+      },
+      "permitsAll": {
+        "title": "Alle vergunningen",
+        "description": "Elke vergunning en elk certificaat"
+      },
+      "permitsAdd": {
+        "title": "Vergunning toevoegen",
+        "description": "Voeg een vergunning of certificaat toe"
+      },
+      "faults": {
+        "title": "Storingslijst",
+        "description": "Wie u belt bij een storing"
+      },
+      "faultsAll": {
+        "title": "Storingslijst",
+        "description": "Alle partijen die u belt bij storingen"
+      },
+      "faultsAdd": {
+        "title": "Contact toevoegen",
+        "description": "Voeg een partij toe aan de storingslijst"
+      },
+      "myHotel": {
+        "title": "Mijn hotel",
+        "description": "Bedrijfsgegevens, hotelgids, e-mail en personeelslogin"
+      },
+      "links": {
+        "title": "Handige links",
+        "description": "Alle portalen waar je inlogt, op één plek"
+      },
+      "linksAll": {
+        "title": "Alle links",
+        "description": "Je portalen per categorie"
+      },
+      "linksAdd": {
+        "title": "Link toevoegen",
+        "description": "Een portaal toevoegen"
+      },
+      "kennisbank": {
+        "title": "Kennisbank",
+        "description": "Wet- en regelgeving met links naar de officiële bronnen"
+      },
+      "tenders": {
+        "title": "Tenders",
+        "description": "Vraag leveranciers om een offerte en vergelijk"
+      },
+      "tendersAll": {
+        "title": "Alle tenders",
+        "description": "Je tenders en hun offertes"
+      },
+      "tendersAdd": {
+        "title": "Nieuwe tender",
+        "description": "Vraag tot 3 leveranciers om een offerte"
+      },
+      "supplierTenders": {
+        "title": "Aanvragen",
+        "description": "Tenders en aanvragen van hotels, en je offertes"
+      },
+      "supplierProfile": {
+        "title": "Mijn bedrijf",
+        "description": "Profiel, categorieën, regio's en contactgegevens"
+      },
+      "notifications": {
+        "title": "Meldingen",
+        "description": "Je meldingen: tenders, herinneringen, sollicitaties"
+      },
+      "hotelJobs": {
+        "title": "Vacatures",
+        "description": "Plaats je vacatures op de openbare vacaturepagina"
+      },
+      "hotelJobsAll": {
+        "title": "Je vacatures",
+        "description": "Status en sollicitaties"
+      },
+      "hotelJobsAdd": {
+        "title": "Nieuwe vacature",
+        "description": "Een vacature plaatsen"
+      },
+      "hotelVouchers": {
+        "title": "Vouchers",
+        "description": "Zakelijke deals voor leveranciers"
+      },
+      "hotelVouchersAll": {
+        "title": "Je vouchers",
+        "description": "Je corporate vouchers"
+      },
+      "hotelVouchersAdd": {
+        "title": "Nieuwe voucher",
+        "description": "Een corporate voucher toevoegen"
+      },
+      "collectivePurchasing": {
+        "title": "Collectieve inkoop",
+        "description": "Samen met andere hotels energie en meer inkopen"
+      },
+      "adminPurchasing": {
+        "title": "Collectieve inkoop",
+        "description": "Acties, deelnemers en jaarafrekeningen"
+      },
+      "adminPurchasingAll": {
+        "title": "Alle acties",
+        "description": "Collectieve inkoopacties"
+      },
+      "adminPurchasingAdd": {
+        "title": "Nieuwe actie",
+        "description": "Een collectieve inkoop starten"
+      },
+      "registrations": {
+        "title": "Aanmeldingen",
+        "description": "Nieuwe hotels en leveranciers goedkeuren; testfase aan/uit"
+      },
+      "hotelInvoices": {
+        "title": "Facturen",
+        "description": "Lidmaatschap en facturen"
+      },
+      "supplierInvoices": {
+        "title": "Facturen",
+        "description": "Lidmaatschap, commissie en facturen"
+      },
+      "hotelAdvertising": {
+        "title": "Reclame",
+        "description": "Een gesponsorde plek op de homepage"
+      },
+      "supplierAdvertising": {
+        "title": "Reclame",
+        "description": "Een gesponsorde plek op de homepage"
+      },
+      "adminInvoices": {
+        "title": "Facturen",
+        "description": "Alle facturen, betalingen verwerken"
+      },
+      "adminAdvertising": {
+        "title": "Reclame",
+        "description": "Gesponsorde plekken en wachtlijst"
+      }
+    },
+    "organisation": "Uw hotel"
+  },
+  "Topbar": {
+    "searchPlaceholder": "Zoeken in dashboard…",
+    "quickAccess": "Snel naar",
+    "results": "{count, plural, one {# resultaat} other {# resultaten}}",
+    "noPages": "Geen pagina's gevonden",
+    "noPagesHint": "Probeer een ander woord.",
+    "navigate": "Navigeren",
+    "open": "Openen",
+    "close": "Sluiten",
+    "userMenu": "Accountmenu",
+    "user": "Gebruiker",
+    "profile": "Mijn profiel",
+    "settings": "Instellingen",
+    "signOut": "Uitloggen"
+  },
+  "Notifications": {
+    "title": "Meldingen",
+    "description": "Alles wat er voor jou gebeurde op HotelConnect. Klik op een melding om hem te openen.",
+    "markAllRead": "Alles als gelezen markeren",
+    "all": "Alles",
+    "unreadOnly": "Ongelezen ({count})",
+    "empty": "Nog geen meldingen.",
+    "noUnread": "Je hebt alles gelezen.",
+    "new": "Nieuw",
+    "unread": "{count, plural, =0 {Geen ongelezen meldingen} one {# ongelezen melding} other {# ongelezen meldingen}}",
+    "types": {
+      "compliance": "Compliance",
+      "tender": "Tender",
+      "vacancy": "Sollicitatie",
+      "fault": "Storing",
+      "system": "Systeem",
+      "advertising": "Reclame"
+    },
+    "push": {
+      "title": "Pushmeldingen op dit apparaat",
+      "enable": "Aanzetten",
+      "disable": "Uitzetten",
+      "enabled": "Pushmeldingen staan aan op dit apparaat",
+      "disabled": "Pushmeldingen staan uit op dit apparaat",
+      "state": {
+        "unsupported": "Deze browser ondersteunt geen pushmeldingen.",
+        "ios-install": "Op iPhone: tik op Deel → \"Zet op beginscherm\", open HotelConnect daarvandaan en zet push aan (iOS 16.4 of nieuwer).",
+        "denied": "Meldingen zijn geblokkeerd voor deze site. Sta ze toe in je browserinstellingen.",
+        "off": "Krijg een melding op deze telefoon of computer bij nieuwe tenders, deadlines en storingen.",
+        "on": "Aan. Je krijgt hier een melding bij nieuwe meldingen.",
+        "server-off": "Pushmeldingen zijn nog niet ingesteld op de server."
+      }
+    }
+  },
+  "Signin": {
+    "title": "Log in op uw dashboard",
+    "subtitle": "Voor hotels, leveranciers en het HotelConnect-team.",
+    "email": "E-mail",
+    "emailPlaceholder": "naam@hotel.nl",
+    "password": "Wachtwoord",
+    "showPassword": "Wachtwoord tonen",
+    "hidePassword": "Wachtwoord verbergen",
+    "submit": "Inloggen",
+    "submitting": "Bezig met inloggen…",
+    "success": "Ingelogd. U wordt doorgestuurd…",
+    "help": "Nog geen account? HotelConnect is in de testfase — binnenkort opent de aanmelding.",
+    "errors": {
+      "required": "Vul uw e-mailadres en wachtwoord in.",
+      "invalid": "E-mailadres of wachtwoord is onjuist.",
+      "inactive": "Uw account is uitgeschakeld. Neem contact op met HotelConnect.",
+      "unknown": "Er is iets misgegaan. Probeer het opnieuw.",
+      "invalidCode": "Deze code klopt niet of is verlopen."
+    },
+    "twoFactor": {
+      "title": "Kijk in je e-mail",
+      "sent": "We stuurden een inlogcode van 6 cijfers naar {email}. Die is 10 minuten geldig.",
+      "code": "Inlogcode",
+      "submit": "Bevestigen",
+      "back": "Terug naar inloggen"
+    }
+  },
+  "Dashboard": {
+    "welcome": "Welkom terug, {name}",
+    "quickLinks": "Snelkoppelingen",
+    "intro": {
+      "superadmin": "Beheer hier hotels, leveranciers en het HotelConnect-platform.",
+      "admin": "Beheer hier hotels, leveranciers en het HotelConnect-platform.",
+      "hotel_manager": "Alles voor uw hotel op één plek: compliance, tenders, vacatures en meer.",
+      "hotel_staff": "Vind snel het juiste contact bij een storing.",
+      "supplier": "Bekijk nieuwe tenders en aanvragen van hotels in uw categorie en regio."
+    },
+    "vouchers": {
+      "title": "Corporate vouchers",
+      "description": "Boek aanbiedingen van aangesloten hotels op de website. Je wordt daar automatisch ingelogd."
+    }
+  },
+  "Profile": {
+    "title": "Mijn profiel",
+    "description": "Uw account in één oogopslag.",
+    "editSettings": "Instellingen wijzigen",
+    "loadError": "Uw profiel kon niet worden geladen.",
+    "accountDetails": "Accountgegevens",
+    "refresh": "Vernieuwen",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "role": "Rol",
+    "memberSince": "Lid sinds",
+    "lastUpdated": "Laatst bijgewerkt",
+    "session": "Sessie",
+    "sessionText": "Log uit van uw account op dit apparaat.",
+    "signOut": "Uitloggen",
+    "signingOut": "Bezig met uitloggen…"
+  },
+  "Settings": {
+    "title": "Instellingen",
+    "description": "Wijzig uw gegevens, foto, wachtwoord en taal.",
+    "loadError": "Uw account kon niet worden geladen.",
+    "changePhoto": "Foto wijzigen",
+    "photoUpdated": "Foto bijgewerkt",
+    "photoError": "Uw foto kon niet worden bijgewerkt",
+    "accountDetails": "Uw gegevens",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "save": "Wijzigingen opslaan",
+    "saving": "Opslaan…",
+    "saved": "Uw gegevens zijn opgeslagen",
+    "saveError": "Uw gegevens konden niet worden opgeslagen",
+    "changePassword": "Wachtwoord wijzigen",
+    "currentPassword": "Huidig wachtwoord",
+    "newPassword": "Nieuw wachtwoord",
+    "confirmPassword": "Bevestig nieuw wachtwoord",
+    "passwordHint": "Gebruik minimaal 8 tekens.",
+    "showPasswords": "Wachtwoorden tonen",
+    "hidePasswords": "Wachtwoorden verbergen",
+    "updatePassword": "Wachtwoord bijwerken",
+    "updating": "Bijwerken…",
+    "passwordChanged": "Wachtwoord gewijzigd",
+    "passwordMismatch": "De nieuwe wachtwoorden komen niet overeen",
+    "passwordError": "Uw wachtwoord kon niet worden gewijzigd",
+    "language": "Taal van het dashboard",
+    "languageText": "Kies Engels of Nederlands. Uw keuze wordt op dit apparaat bewaard."
+  },
+  "Team": {
+    "title": "Team",
+    "description": "De mensen achter HotelConnect.",
+    "add": "Lid toevoegen",
+    "searchPlaceholder": "Zoek op naam, e-mail of telefoon…",
+    "loadError": "Het team kon niet worden geladen.",
+    "empty": "Nog geen teamleden.",
+    "noResults": "Geen teamleden gevonden voor uw zoekopdracht.",
+    "you": "U",
+    "active": "Actief",
+    "inactive": "Inactief",
+    "view": "Bekijken",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "confirmDelete": "{name} uit het team verwijderen? Deze persoon kan dan niet meer inloggen.",
+    "deleted": "{name} is uit het team verwijderd",
+    "deleteError": "Dit teamlid kon niet worden verwijderd",
+    "created": "{name} is aan het team toegevoegd",
+    "updated": "{name} is bijgewerkt",
+    "saveError": "Dit teamlid kon niet worden opgeslagen",
+    "notFound": "Teamlid niet gevonden",
+    "addTitle": "Teamlid toevoegen",
+    "addDescription": "Geef een nieuwe beheerder toegang tot het HotelConnect-dashboard.",
+    "editTitle": "Teamlid bewerken",
+    "backToTeam": "Terug naar team",
+    "backToMember": "Terug naar teamlid",
+    "memberSince": "Lid sinds",
+    "lastUpdated": "Laatst bijgewerkt",
+    "passwordHint": "Minimaal 8 tekens. Deel het veilig met het nieuwe teamlid; het kan worden gewijzigd onder Instellingen.",
+    "isActiveHelp": "Uitschakelen blokkeert het inloggen zonder het account te verwijderen.",
+    "columns": {
+      "member": "Teamlid",
+      "role": "Rol",
+      "status": "Status",
+      "added": "Toegevoegd",
+      "actions": "Acties"
+    },
+    "sections": {
+      "details": "Gegevens",
+      "access": "Toegang"
+    },
+    "fields": {
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "role": "Rol",
+      "password": "Tijdelijk wachtwoord",
+      "isActive": "Account actief"
+    },
+    "roleHelp": {
+      "admin": "Beheert hotels, leveranciers en content. Kan het team bekijken.",
+      "superadmin": "Alles wat een beheerder kan, plus teamleden toevoegen en verwijderen."
+    }
+  },
+  "Pagination": {
+    "label": "Paginering",
+    "showing": "<strong>{from}–{to}</strong> van <strong>{total}</strong>",
+    "rowsPerPage": "Rijen per pagina",
+    "back": "Vorige",
+    "next": "Volgende"
+  },
+  "ImageField": {
+    "choose": "Foto kiezen",
+    "replace": "Foto vervangen",
+    "remove": "Foto verwijderen",
+    "undo": "Keuze ongedaan maken",
+    "new": "Nieuw",
+    "hint": "JPEG, PNG, WEBP of GIF, max. 5 MB. Wordt samen met het formulier opgeslagen.",
+    "wrongType": "Kies een JPEG-, PNG-, WEBP- of GIF-afbeelding.",
+    "tooLarge": "Deze foto is groter dan 5 MB."
+  },
+  "Options": {
+    "regions": {
+      "North Holland": "Noord-Holland",
+      "South Holland": "Zuid-Holland",
+      "Utrecht": "Utrecht",
+      "North Brabant": "Noord-Brabant",
+      "Gelderland": "Gelderland",
+      "Limburg": "Limburg",
+      "Overijssel": "Overijssel",
+      "Friesland": "Friesland",
+      "Groningen": "Groningen",
+      "Drenthe": "Drenthe",
+      "Flevoland": "Flevoland",
+      "Zeeland": "Zeeland",
+      "All of the Netherlands": "Heel Nederland"
+    },
+    "vacancyCategories": {
+      "Kitchen": "Keuken",
+      "Front Office": "Front office",
+      "Housekeeping": "Housekeeping",
+      "F&B Service": "Bediening (F&B)",
+      "Technical": "Technische dienst",
+      "Management": "Management",
+      "Other": "Overig"
+    },
+    "employmentTypes": {
+      "Full-time": "Fulltime",
+      "Part-time": "Parttime",
+      "On call": "Oproepbasis",
+      "Internship": "Stage",
+      "Seasonal": "Seizoenswerk"
+    },
+    "voucherCategories": {
+      "Meeting": "Vergaderen",
+      "Stay": "Overnachten",
+      "Dining": "Dineren",
+      "Gift": "Cadeau"
+    },
+    "articleKinds": {
+      "Article": "Artikel",
+      "Interview": "Interview",
+      "Column": "Column"
+    },
+    "supplierCategories": {
+      "Linen & textiles": "Linnen & textiel",
+      "Laundry": "Wasserij",
+      "Cleaning": "Schoonmaak",
+      "Technical maintenance": "Technisch onderhoud",
+      "Fire safety": "Brandveiligheid",
+      "Energy": "Energie",
+      "F&B": "F&B",
+      "Wholesale": "Groothandel",
+      "Furniture & interior": "Meubilair & interieur",
+      "Amenities": "Amenities",
+      "IT & software": "IT & software",
+      "Security": "Beveiliging",
+      "Staffing": "Personeel",
+      "Other": "Overig"
+    },
+    "faultTypes": {
+      "Electricity": "Elektra",
+      "Heating & cooling": "Verwarming & koeling",
+      "Water & plumbing": "Water & sanitair",
+      "Lift": "Lift",
+      "Fire alarm": "Brandmeldinstallatie",
+      "Internet & phone": "Internet & telefonie",
+      "Locks & key cards": "Sloten & keycards",
+      "Kitchen equipment": "Keukenapparatuur",
+      "Laundry": "Wasserij",
+      "Pool": "Zwembad",
+      "Building": "Gebouw",
+      "Other": "Overig"
+    },
+    "portalCategories": {
+      "KVK": "KVK",
+      "Municipality": "Gemeente",
+      "Energy supplier": "Energieleverancier",
+      "Water supplier": "Waterleverancier",
+      "Waste collector": "Afvalverwerker",
+      "Internet provider": "Internetprovider",
+      "Accounting software": "Boekhoudsoftware",
+      "Banking": "Bankieren",
+      "Tax authority": "Belastingdienst",
+      "Omgevingsloket": "Omgevingsloket",
+      "Pension fund": "Pensioenfonds",
+      "Occupational health service": "Arbodienst",
+      "Insurance": "Verzekeringen",
+      "Software": "Software",
+      "Other": "Overig"
+    },
+    "tenderTypes": {
+      "Tender": "Tender",
+      "Maintenance contract": "Onderhoudscontract",
+      "Product request": "Productaanvraag"
+    }
+  },
+  "Hotels": {
+    "title": "Hotels",
+    "description": "Aangesloten hotels en hoe ze in de hotelgids staan.",
+    "add": "Hotel toevoegen",
+    "back": "Terug naar hotels",
+    "searchPlaceholder": "Zoek op naam, plaats, nummer of e-mail…",
+    "empty": "Nog geen hotels. Voeg het eerste toe.",
+    "notFound": "Hotel niet gevonden",
+    "addTitle": "Hotel toevoegen",
+    "addDescription": "Het hotel krijgt automatisch het volgende lidnummer (H0001, H0002, …).",
+    "editTitle": "Hotel bewerken",
+    "created": "{name} is toegevoegd als {number}",
+    "updated": "{name} is opgeslagen",
+    "deleted": "{name} is verwijderd",
+    "confirmDelete": "{name} verwijderen? De vacatures en vouchers worden ook verwijderd. Dit kan niet ongedaan worden gemaakt.",
+    "confirmDeleteWithItems": "{name} verwijderen? Dit verwijdert ook {jobs, plural, one {# vacature} other {# vacatures}} en {vouchers, plural, one {# voucher} other {# vouchers}}. Dit kan niet ongedaan worden gemaakt.",
+    "jobsCount": "{count, plural, =0 {Geen vacatures} one {# vacature} other {# vacatures}}",
+    "vouchersCount": "{count, plural, =0 {Geen vouchers} one {# voucher} other {# vouchers}}",
+    "columns": {
+      "hotel": "Hotel",
+      "location": "Locatie"
+    },
+    "sections": {
+      "details": "Profiel in de hotelgids",
+      "photo": "Foto",
+      "emails": "E-mailadressen",
+      "visibility": "Zichtbaarheid",
+      "content": "Op de website"
+    },
+    "fields": {
+      "name": "Hotelnaam",
+      "city": "Plaats",
+      "region": "Regio",
+      "address": "Adres",
+      "description": "Korte beschrijving",
+      "bookingUrl": "Boekingspagina",
+      "offer": "Huidige actie",
+      "featured": "Uitgelicht op de homepage",
+      "isActive": "Actief lid"
+    },
+    "emails": {
+      "general": "Algemeen",
+      "invoices": "Facturen",
+      "vacancies": "Sollicitaties",
+      "faults": "Storingen (TD)",
+      "alerts": "Systeemalerts"
+    },
+    "hints": {
+      "description": "{count} / 1000 tekens. Staat op de hotelkaart.",
+      "bookingUrl": "De eigen boekingspagina van het hotel; \"Boek nu\" gaat hierheen.",
+      "offer": "Optioneel, bv. \"15% korting midweek\". Staat op de kaart.",
+      "emails": "Elk type e-mail gaat naar een eigen adres. Leeg = het algemene adres.",
+      "emailFallback": "Gebruikt het algemene adres",
+      "isActive": "Uit: het hotel en zijn vacatures en vouchers verdwijnen van de website.",
+      "featured": "Staat in blok 3 van de homepage (het mooist met een foto)."
+    }
+  },
+  "Suppliers": {
+    "title": "Leveranciers",
+    "description": "Leveranciers in het netwerk en hun profiel in de directory.",
+    "add": "Leverancier toevoegen",
+    "back": "Terug naar leveranciers",
+    "searchPlaceholder": "Zoek op naam, nummer of contact…",
+    "empty": "Nog geen leveranciers. Voeg de eerste toe.",
+    "notFound": "Leverancier niet gevonden",
+    "addTitle": "Leverancier toevoegen",
+    "addDescription": "De leverancier krijgt automatisch het volgende lidnummer (L001, L002, …).",
+    "editTitle": "Leverancier bewerken",
+    "created": "{name} is toegevoegd als {number}",
+    "updated": "{name} is opgeslagen",
+    "deleted": "{name} is verwijderd",
+    "confirmDelete": "{name} verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "columns": {
+      "supplier": "Leverancier",
+      "contact": "Contact"
+    },
+    "sections": {
+      "profile": "Profiel in de directory",
+      "pictures": "Logo en foto",
+      "contact": "Contactgegevens",
+      "visibility": "Zichtbaarheid"
+    },
+    "fields": {
+      "name": "Bedrijfsnaam",
+      "website": "Website",
+      "tagline": "Omschrijving in één zin",
+      "description": "Omschrijving",
+      "categories": "Categorieën",
+      "regions": "Regio's",
+      "logo": "Logo",
+      "image": "Grote foto",
+      "person": "Contactpersoon",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "isActive": "Actief lid",
+      "featured": "Slideshow homepage",
+      "showInPurchasing": "Inkooppagina",
+      "rating": "Beoordeling door hotels",
+      "plan": "Abonnement"
+    },
+    "hints": {
+      "tagline": "Eén zin voor de slideshow op de homepage en de kaart in de directory.",
+      "words": "{count} / {max} woorden",
+      "contact": "Alleen voor leden en het HotelConnect-team — nooit op de openbare website.",
+      "isActive": "Uit: de leverancier verdwijnt van de website.",
+      "featured": "Een van de leveranciers in blok 1 van de homepage.",
+      "showInPurchasing": "Staat als partnerblok op de pagina Inkoop & webshops.",
+      "plan": "Betalen van het abonnement komt met Moneybird."
+    },
+    "ratingValue": "★ {average} / 5 ({count, plural, one {# beoordeling} other {# beoordelingen}})",
+    "noRating": "Nog geen beoordelingen",
+    "plans": {
+      "contract": "Onderhoudscontract (€49/maand of €539/jaar)",
+      "commission": "Zonder contract (alleen commissie)"
+    }
+  },
+  "Jobs": {
+    "title": "Vacatures",
+    "description": "Vacatures van aangesloten hotels. Gepubliceerde vacatures staan op de website.",
+    "add": "Vacature toevoegen",
+    "back": "Terug naar vacatures",
+    "searchPlaceholder": "Zoek op titel of plaats…",
+    "empty": "Nog geen vacatures.",
+    "notFound": "Vacature niet gevonden",
+    "addTitle": "Vacature toevoegen",
+    "addDescription": "Plaats en regio komen van het hotel.",
+    "editTitle": "Vacature bewerken",
+    "created": "\"{title}\" is toegevoegd",
+    "updated": "\"{title}\" is opgeslagen",
+    "deleted": "\"{title}\" is verwijderd",
+    "confirmDelete": "\"{title}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "columns": {
+      "job": "Vacature",
+      "published": "Gepubliceerd"
+    },
+    "sections": {
+      "job": "De vacature",
+      "apply": "Zo solliciteren mensen",
+      "status": "Status"
+    },
+    "fields": {
+      "hotel": "Hotel",
+      "title": "Functietitel",
+      "category": "Categorie",
+      "employmentType": "Type",
+      "description": "Omschrijving",
+      "urgent": "Urgent",
+      "applyEmail": "E-mail voor sollicitaties",
+      "applyWhatsapp": "WhatsApp-nummer",
+      "location": "Locatie"
+    },
+    "statuses": {
+      "pending": "Wacht op goedkeuring",
+      "published": "Gepubliceerd",
+      "closed": "Gesloten"
+    },
+    "statusHelp": {
+      "pending": "Nog niet op de website.",
+      "published": "Zichtbaar op de vacaturepagina van de website.",
+      "closed": "Van de website gehaald; blijft hier bewaard."
+    },
+    "statusChanged": {
+      "published": "De vacature staat nu op de website",
+      "closed": "De vacature is gesloten",
+      "pending": "De vacature wacht op goedkeuring"
+    },
+    "actions": {
+      "publish": "Publiceren op website",
+      "close": "Vacature sluiten"
+    },
+    "hints": {
+      "location": "Staat in {city}.",
+      "urgent": "Urgente vacatures komen eerst, ook op de homepage.",
+      "applyEmail": "Leeg = {email}. Cv's van het websiteformulier gaan hier ook heen.",
+      "applyEmailNoHotel": "Leeg = het sollicitatie-adres van het hotel.",
+      "applyWhatsapp": "Cijfers met landcode, zonder +. Leeg = geen WhatsApp-knop.",
+      "cv": "Cv's die via de website worden gestuurd, gaan per e-mail naar het hotel en worden nooit opgeslagen."
+    }
+  },
+  "Vouchers": {
+    "title": "Vouchers",
+    "description": "Corporate vouchers: aanbiedingen van aangesloten hotels voor leveranciers.",
+    "add": "Voucher toevoegen",
+    "back": "Terug naar vouchers",
+    "searchPlaceholder": "Zoek op titel…",
+    "empty": "Nog geen vouchers.",
+    "notFound": "Voucher niet gevonden",
+    "addTitle": "Voucher toevoegen",
+    "addDescription": "De regio komt van het hotel.",
+    "editTitle": "Voucher bewerken",
+    "created": "\"{title}\" is toegevoegd",
+    "updated": "\"{title}\" is opgeslagen",
+    "deleted": "\"{title}\" is verwijderd",
+    "confirmDelete": "\"{title}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "promotedUntil": "In slideshow tot {date}",
+    "notPromoted": "Niet gepromoot",
+    "columns": {
+      "voucher": "Voucher"
+    },
+    "sections": {
+      "deal": "De aanbieding",
+      "photo": "Foto",
+      "visibility": "Zichtbaarheid",
+      "details": "Gegevens"
+    },
+    "fields": {
+      "hotel": "Hotel",
+      "title": "Titel",
+      "category": "Categorie",
+      "discountPercent": "Korting",
+      "teaser": "Teaser",
+      "description": "Omschrijving",
+      "bookingUrl": "Boekingslink",
+      "isActive": "Actief",
+      "promotedUntil": "Gepromoot tot",
+      "region": "Regio"
+    },
+    "hints": {
+      "discount": "Verplicht: een heel percentage.",
+      "teaser": "Eén korte regel voor de openbare slideshow.",
+      "description": "Te zien voor leveranciers die de vouchers ontgrendelen.",
+      "bookingUrl": "Alleen voor leveranciers met een geldig lidnummer.",
+      "isActive": "Uit: de voucher verdwijnt van de website.",
+      "promotedUntil": "Betaalde promotie: als eerste in de slideshow tot deze datum."
+    }
+  },
+  "Stories": {
+    "title": "Verhalen",
+    "description": "Artikelen, interviews en columns voor de website.",
+    "add": "Verhaal schrijven",
+    "save": "Verhaal opslaan",
+    "back": "Terug naar verhalen",
+    "searchPlaceholder": "Zoek op titel…",
+    "empty": "Nog geen verhalen.",
+    "notFound": "Verhaal niet gevonden",
+    "allKinds": "Alle soorten",
+    "preview": "Voorbeeld van het verhaal",
+    "addTitle": "Verhaal schrijven",
+    "addDescription": "Sla eerst op als concept en publiceer als het klaar is.",
+    "editTitle": "Verhaal bewerken",
+    "created": "\"{title}\" is opgeslagen",
+    "updated": "\"{title}\" is opgeslagen",
+    "deleted": "\"{title}\" is verwijderd",
+    "confirmDelete": "\"{title}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "minutes": "{count} min lezen",
+    "columns": {
+      "story": "Verhaal"
+    },
+    "sections": {
+      "publish": "Publiceren",
+      "cover": "Omslagfoto"
+    },
+    "fields": {
+      "title": "Titel",
+      "excerpt": "Intro",
+      "body": "Tekst",
+      "kind": "Soort",
+      "publishedAt": "Publicatiedatum"
+    },
+    "statuses": {
+      "draft": "Concept",
+      "published": "Gepubliceerd"
+    },
+    "statusHelp": {
+      "draft": "Alleen hier zichtbaar.",
+      "published": "Vanaf de publicatiedatum zichtbaar op de website."
+    },
+    "statusChanged": {
+      "published": "Het verhaal is gepubliceerd",
+      "draft": "Het verhaal is weer een concept"
+    },
+    "actions": {
+      "publish": "Publiceren",
+      "unpublish": "Terug naar concept"
+    },
+    "hints": {
+      "excerpt": "{count} / 300 tekens. Staat op de verhaalkaart en onder de titel.",
+      "body": "Scripts en onveilige links worden bij het opslaan verwijderd. De leestijd wordt voor u berekend.",
+      "publishedAt": "Leeg = vandaag bij publiceren. Een datum in de toekomst plant het verhaal in."
+    }
+  },
+  "Dates": {
+    "inDays": "{days, plural, one {over # dag} other {over # dagen}}",
+    "expiredAgo": "{days, plural, one {# dag geleden verlopen} other {# dagen geleden verlopen}}",
+    "today": "vandaag"
+  },
+  "Compliance": {
+    "title": "Aanbevolen voor uw hotel",
+    "description": "Op basis van uw type hotel. Klik om toe te voegen.",
+    "permits": {
+      "operatingPermit": "Exploitatievergunning",
+      "fireSafetyNotice": "Gebruiksmelding brandveilig gebruik",
+      "fireExtinguishers": "Brandblussers – jaarlijkse controle",
+      "fireAlarm": "Brandmeldinstallatie – periodieke controle",
+      "emergencyResponse": "BHV-certificaten",
+      "electricalInspection": "NEN 3140-keuring elektrische installaties",
+      "riskAssessment": "RI&E (risico-inventarisatie en -evaluatie)",
+      "tourismTax": "Registratie toeristenbelasting",
+      "liquorLicence": "Drank- en horecavergunning (Alcoholwet)",
+      "terracePermit": "Terrasvergunning",
+      "nvwaRegistration": "NVWA-registratie",
+      "haccp": "HACCP / hygiënecode",
+      "liftInspection": "Liftkeuring",
+      "poolHygiene": "Zwemwaterkwaliteit en hygiëne",
+      "legionella": "Legionella-risicoanalyse en beheersplan",
+      "parkingVentilation": "Parkeergarage: ventilatie en CO-detectie"
+    }
+  },
+  "Calendar": {
+    "title": "Jaarkalender",
+    "nothing": "Niets te doen",
+    "kinds": {
+      "contract_end": "Contract loopt af",
+      "notice_deadline": "Laatste dag opzeggen",
+      "permit_expiry": "Vergunning verloopt"
+    },
+    "remindersTitle": "Aandacht nodig",
+    "remindersHint": "Verlopen, of binnen {days} dagen. U krijgt dit ook per e-mail.",
+    "allClear": "Niets binnen de komende 30 dagen.",
+    "passed": "{days, plural, one {# dag geleden} other {# dagen geleden}}",
+    "inDays": "{days, plural, one {over # dag} other {over # dagen}}",
+    "today": "vandaag",
+    "stats": {
+      "contracts": "Contracten",
+      "costPerYear": "Contractkosten per jaar",
+      "permits": "Vergunningen & certificaten",
+      "faultContacts": "Contacten storingslijst"
+    }
+  },
+  "Contracts": {
+    "title": "Contractregister",
+    "description": "Elk contract met einddatum, opzegtermijn en kosten.",
+    "explanation": "Vul in wat u wilt bijhouden. Als u alleen herinneringen wilt ontvangen, vul dan de einddatum en de opzegtermijn in. Als u het register ook wilt gebruiken voor uw jaarlijkse budgettering, vul dan ook de kosten per jaar en de grootboekrekening in. Alle velden zijn optioneel.",
+    "add": "Contract toevoegen",
+    "back": "Terug naar contracten",
+    "searchPlaceholder": "Zoek op contract, bedrijf of grootboekrekening…",
+    "empty": "Nog geen contracten. Voeg uw eerste toe.",
+    "notFound": "Contract niet gevonden",
+    "addTitle": "Contract toevoegen",
+    "editTitle": "Contract bewerken",
+    "created": "Het contract is toegevoegd",
+    "updated": "Het contract is opgeslagen",
+    "deleted": "Het contract is verwijderd",
+    "confirmDelete": "\"{name}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "autoRenewShort": "verlengt",
+    "noEndDate": "Geen einddatum",
+    "noNoticePeriod": "Vul de opzegtermijn in",
+    "totals": {
+      "count": "Contracten",
+      "costPerYear": "Totale kosten per jaar",
+      "withCost": "{count} van {total} contracten hebben kosten"
+    },
+    "columns": {
+      "contract": "Contract",
+      "cancelBy": "Opzeggen vóór"
+    },
+    "sections": {
+      "contract": "Contract",
+      "budget": "Budget",
+      "links": "Links en opmerkingen",
+      "reminders": "Herinneringen"
+    },
+    "fields": {
+      "contractFor": "Contract voor",
+      "company": "Bedrijf",
+      "startDate": "Startdatum",
+      "endDate": "Einddatum",
+      "duration": "Contractsduur",
+      "autoRenew": "Stilzwijgende verlenging",
+      "noticePeriod": "Opzegtermijn",
+      "noticeUnit": "Eenheid",
+      "paymentTerm": "Betalingstermijn",
+      "costPerYear": "Kosten per jaar",
+      "ledgerAccount": "Grootboekrekening",
+      "contractLink": "Link naar contract",
+      "portalLink": "Portaallink",
+      "notes": "Opmerkingen"
+    },
+    "placeholders": {
+      "contractFor": "bv. Energie, linnen, liftonderhoud",
+      "duration": "bv. 3 jaar",
+      "paymentTerm": "bv. maandelijks"
+    },
+    "units": {
+      "days": "dagen",
+      "weeks": "weken",
+      "months": "maanden"
+    },
+    "hints": {
+      "endDate": "U krijgt 30 dagen van tevoren een herinnering.",
+      "noticePeriod": "Bij stilzwijgende verlenging krijgt u ook een herinnering vóór de laatste dag om op te zeggen.",
+      "autoRenew": "Het contract loopt door, tenzij u op tijd opzegt.",
+      "contractLink": "Google Drive, Dropbox, …",
+      "portalLink": "De online portal van de leverancier.",
+      "reminders": "Herinneringen gaan 30 dagen vóór de einddatum en, bij stilzwijgende verlenging, vóór de laatste dag om op te zeggen."
+    }
+  },
+  "Permits": {
+    "title": "Vergunningen & certificaten",
+    "description": "Elke vergunning en elk certificaat met de verloopdatum.",
+    "explanation": "Vul in wat u wilt bijhouden. Als u alleen herinneringen wilt ontvangen, vul dan de verloopdatum in. Als u het overzicht compleet wilt maken, vul dan ook de instantie en de link naar het document in. Alle velden behalve het type zijn optioneel.",
+    "add": "Vergunning toevoegen",
+    "back": "Terug naar vergunningen",
+    "searchPlaceholder": "Zoek op type of instantie…",
+    "empty": "Nog geen vergunningen of certificaten.",
+    "notFound": "Vergunning niet gevonden",
+    "addTitle": "Vergunning of certificaat toevoegen",
+    "editTitle": "Vergunning bewerken",
+    "created": "De vergunning is toegevoegd",
+    "updated": "De vergunning is opgeslagen",
+    "deleted": "De vergunning is verwijderd",
+    "confirmDelete": "\"{name}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "openDocument": "Openen",
+    "noExpiry": "Geen verloopdatum",
+    "fields": {
+      "type": "Type vergunning / certificaat",
+      "authority": "Instantie",
+      "issueDate": "Afgiftedatum",
+      "expiryDate": "Verloopdatum",
+      "documentLink": "Link naar document",
+      "notes": "Opmerkingen"
+    },
+    "placeholders": {
+      "type": "bv. Drank- en horecavergunning",
+      "authority": "bv. Gemeente Amsterdam"
+    },
+    "hints": {
+      "expiryDate": "U krijgt 30 dagen van tevoren een herinnering.",
+      "documentLink": "Google Drive, Dropbox, …",
+      "reminders": "Er gaat 30 dagen vóór de verloopdatum een herinnering uit."
+    }
+  },
+  "PortalLinks": {
+    "title": "Handige links & portalen",
+    "description": "Alle online portalen waar je inlogt, op één plek. Alleen jij (de hotelmanager) ziet deze.",
+    "add": "Link toevoegen",
+    "back": "Terug naar links",
+    "searchPlaceholder": "Zoek op naam, gebruikersnaam of notitie…",
+    "empty": "Nog geen links. Voeg de portalen toe die je gebruikt, zoals KVK, je gemeente of je bank.",
+    "notFound": "Link niet gevonden",
+    "addTitle": "Link toevoegen",
+    "editTitle": "Link bewerken",
+    "created": "De link is toegevoegd",
+    "updated": "De link is opgeslagen",
+    "deleted": "De link is verwijderd",
+    "confirmDelete": "\"{name}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "open": "Openen",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd",
+    "noPasswords": "Bewaar hier nooit wachtwoorden. Gebruik daarvoor een wachtwoordmanager; deze lijst onthoudt alleen waar je inlogt en met welke gebruikersnaam.",
+    "fields": {
+      "category": "Categorie",
+      "customCategory": "Naam van de categorie",
+      "name": "Naam",
+      "url": "Link",
+      "username": "Gebruikersnaam",
+      "notes": "Opmerkingen"
+    },
+    "placeholders": {
+      "customCategory": "bijv. Channel manager",
+      "name": "bijv. Gemeente Amsterdam"
+    },
+    "hints": {
+      "username": "Optioneel. Geen wachtwoord."
+    }
+  },
+  "Faults": {
+    "title": "Storingslijst",
+    "description": "Alle partijen die u belt bij een storing. Tik op een nummer om te bellen.",
+    "descriptionStaff": "Wie u belt bij een storing. Tik op een nummer om te bellen.",
+    "add": "Contact toevoegen",
+    "back": "Terug naar storingslijst",
+    "searchPlaceholder": "Zoek op naam of type storing…",
+    "empty": "Nog geen contacten. Voeg de partijen toe die u belt bij storingen.",
+    "emptyStaff": "Uw manager heeft nog geen contacten toegevoegd.",
+    "notFound": "Contact niet gevonden",
+    "addTitle": "Contact toevoegen",
+    "addDescription": "Een partij die het hotel belt bij een storing.",
+    "editTitle": "Contact bewerken",
+    "created": "{name} is toegevoegd",
+    "updated": "{name} is opgeslagen",
+    "deleted": "Het contact is verwijderd",
+    "confirmDelete": "{name} van de storingslijst verwijderen?",
+    "edit": "Bewerken",
+    "delete": "Verwijderen",
+    "emailButton": "E-mail",
+    "websiteButton": "Website",
+    "reportButton": "Storing per e-mail melden",
+    "fields": {
+      "name": "Naam van de partij",
+      "faultType": "Type storing",
+      "phone": "Telefoonnummer",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail",
+      "website": "Website of serviceformulier",
+      "notes": "Notitie"
+    },
+    "hints": {
+      "whatsapp": "Optioneel. Cijfers met landcode, bv. 31612345678.",
+      "email": "Optioneel. Nodig om storingen per e-mail te melden.",
+      "notes": "bv. contractnummer of openingstijden."
+    },
+    "report": {
+      "title": "Storing melden bij {name}",
+      "explanation": "We mailen {email} met de gegevens van uw hotel. Zij nemen direct contact met u op.",
+      "location": "Waar in het hotel",
+      "locationPlaceholder": "bv. kamer 12, lift A",
+      "description": "Wat is er aan de hand",
+      "urgent": "Urgent",
+      "urgentHint": "Wordt als urgent gemarkeerd in de onderwerpregel.",
+      "privacy": "HotelConnect slaat de melding niet op en volgt hem niet op.",
+      "send": "Melding versturen",
+      "sent": "De storing is gemeld bij {name}"
+    }
+  },
+  "Kennisbank": {
+    "title": "Kennisbank wet- en regelgeving",
+    "description": "Regels voor hotels per onderwerp, elk met een link naar de officiële bron.",
+    "intro": "Op deze pagina vindt u de regelgeving per onderwerp, met een directe link naar de officiële bron. Zo kunt u zelf de laatste update van de wetgeving controleren.",
+    "search": "Zoek in de kennisbank",
+    "searchPlaceholder": "Zoek, bijv. HACCP, BHV, toeristenbelasting…",
+    "all": "Alles",
+    "topics": "{count, plural, one {# onderwerp} other {# onderwerpen}}",
+    "empty": "Niets gevonden. Probeer een ander woord.",
+    "opensNewTab": "(opent de officiële bron in een nieuw tabblad)",
+    "disclaimer": "Dit overzicht helpt u de juiste regels te vinden; het is geen juridisch advies. Controleer altijd de officiële bron voor de actuele regels."
+  },
+  "Tenders": {
+    "title": "Tenders",
+    "description": "Vraag leveranciers om een offerte, vergelijk de offertes en kies de beste.",
+    "add": "Nieuwe tender",
+    "send": "Tender versturen",
+    "back": "Terug naar tenders",
+    "searchPlaceholder": "Zoek op titel of omschrijving…",
+    "empty": "Nog geen tenders. Verstuur je eerste en ontvang tot drie offertes.",
+    "notFound": "Tender niet gevonden",
+    "addTitle": "Nieuwe tender",
+    "editTitle": "Tender bewerken",
+    "explanation": "Je tender gaat naar maximaal drie geverifieerde leveranciers met dezelfde categorie en regio. Zij krijgen een e-mail en sturen hun offerte via hun eigen dashboard; hier vergelijk je de offertes.",
+    "editExplanation": "De tender is al verstuurd, dus type, categorie en regio kunnen niet meer veranderen. Leveranciers zien je wijzigingen meteen.",
+    "closedCannotEdit": "Deze tender is gesloten en kan niet meer worden gewijzigd.",
+    "sent": "{count, plural, one {Tender verstuurd naar # leverancier} other {Tender verstuurd naar # leveranciers}}",
+    "sentNoSupplier": "Tender opgeslagen, maar er is nog geen passende leverancier. HotelConnect gaat er een zoeken.",
+    "updated": "De tender is opgeslagen",
+    "cancel": "Tender annuleren",
+    "confirmCancel": "Deze tender annuleren? Leveranciers kunnen dan geen offerte meer sturen.",
+    "cancelled": "De tender is geannuleerd",
+    "confirmAward": "{name} als winnaar kiezen? De andere leveranciers horen dat ze niet gekozen zijn.",
+    "awarded": "{name} is gekozen",
+    "quotes": "Offertes",
+    "quotesOf": "{offers} van {invited}",
+    "invited": "Uitgenodigde leveranciers",
+    "quoteIn": "Offerte binnen",
+    "waiting": "Wacht",
+    "noSuppliers": "Er is nog geen passende leverancier gevonden voor deze categorie en regio.",
+    "compare": "Offertes vergelijken",
+    "noQuotes": "Nog geen offertes. Je krijgt een e-mail zodra er een binnenkomt.",
+    "supplier": "Leverancier",
+    "price": "Prijs",
+    "deliveryTime": "Levertijd",
+    "notes": "Opmerkingen",
+    "file": "Offerte",
+    "open": "Openen",
+    "lowest": "Laagste",
+    "winner": "Winnaar",
+    "chooseWinner": "Kiezen",
+    "status": {
+      "open": "Open",
+      "awarded": "Winnaar gekozen",
+      "cancelled": "Geannuleerd"
+    },
+    "offerStatus": {
+      "submitted": "Verstuurd",
+      "won": "Gewonnen",
+      "lost": "Niet gekozen"
+    },
+    "fields": {
+      "type": "Type",
+      "title": "Titel",
+      "category": "Categorie",
+      "region": "Regio",
+      "description": "Wat heb je nodig?",
+      "deadline": "Deadline",
+      "budget": "Budget"
+    },
+    "placeholders": {
+      "title": "bijv. Nieuwe ketel voor de spa",
+      "description": "Beschrijf wat je nodig hebt: aantallen, maten, wensen, wanneer het klaar moet zijn…"
+    },
+    "hints": {
+      "category": "Alleen leveranciers in deze categorie worden uitgenodigd.",
+      "deadline": "Leveranciers kunnen tot het einde van deze dag een offerte sturen.",
+      "budget": "Optioneel. Leveranciers zien het."
+    },
+    "review": {
+      "title": "Beoordeel {name}",
+      "intro": "Hoe ging de opdracht? Je antwoorden zetten goede leveranciers hoger in de ranking. Alleen HotelConnect ziet ze.",
+      "rating": "Totaalcijfer",
+      "communication": "Communicatie",
+      "onTime": "Op tijd klaar?",
+      "wouldHireAgain": "Zou je ze opnieuw inhuren?",
+      "comments": "Opmerkingen",
+      "save": "Beoordeling opslaan",
+      "saved": "Bedankt! Je beoordeling is opgeslagen."
+    }
+  },
+  "HotelJobs": {
+    "title": "Vacatures",
+    "description": "Je vacatures op de openbare vacaturepagina van HotelConnect. HotelConnect controleert elke nieuwe vacature voordat die live gaat.",
+    "add": "Nieuwe vacature",
+    "back": "Terug naar vacatures",
+    "empty": "Nog geen vacatures. Plaats je eerste vacature.",
+    "notFound": "Vacature niet gevonden",
+    "addTitle": "Nieuwe vacature",
+    "addDescription": "HotelConnect controleert de vacature en publiceert hem, meestal binnen een werkdag.",
+    "editTitle": "Vacature bewerken",
+    "submit": "Ter goedkeuring versturen",
+    "created": "Je vacature is verstuurd; HotelConnect publiceert hem binnenkort",
+    "updated": "De vacature is opgeslagen",
+    "deleted": "De vacature is verwijderd",
+    "confirmDelete": "\"{title}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "close": "Vacature sluiten",
+    "reopen": "Heropenen",
+    "confirmClose": "Deze vacature sluiten? Hij verdwijnt van de website.",
+    "closed": "De vacature is gesloten",
+    "reopened": "De vacature is heropend; HotelConnect controleert hem opnieuw",
+    "applying": "Hoe mensen solliciteren",
+    "lastApplication": "Laatste sollicitatie op {date}.",
+    "noApplications": "Nog geen sollicitaties via het formulier op de website.",
+    "applicationsHint": "Geteld worden sollicitaties met het cv-formulier op de website. Ze gaan naar {email}; HotelConnect slaat ze nooit op. Sollicitaties via WhatsApp en e-mail komen direct bij jou en worden niet geteld.",
+    "columns": {
+      "job": "Vacature",
+      "applications": "Sollicitaties"
+    },
+    "status": {
+      "pending": "Wacht op goedkeuring",
+      "published": "Live",
+      "closed": "Gesloten"
+    },
+    "statusHint": {
+      "pending": "HotelConnect controleert de vacature voordat die op de website verschijnt.",
+      "published": "De vacature staat op de openbare vacaturepagina.",
+      "closed": "De vacature wordt niet getoond op de website."
+    },
+    "style": {
+      "title": "Stijl",
+      "traditional": "Traditioneel",
+      "traditionalHint": "Tekst en een sollicitatieformulier.",
+      "visual": "Visueel",
+      "visualHint": "Eerst een foto of video, solliciteren via WhatsApp."
+    },
+    "fields": {
+      "photo": "Foto",
+      "video": "Video (YouTube of Vimeo)"
+    },
+    "placeholders": {
+      "title": "bijv. Chef de partie",
+      "description": "Wat houdt de baan in, wat bied je, wie zoek je?"
+    },
+    "hints": {
+      "video": "Optioneel. Een link naar een YouTube- of Vimeo-video.",
+      "applyEmail": "Leeg = je sollicitatie-adres uit Mijn hotel."
+    }
+  },
+  "HotelVouchers": {
+    "title": "Vouchers",
+    "description": "Zakelijke deals voor leveranciers in het netwerk: vergaderen, overnachten, dineren en cadeaus. Je voucher staat meteen op de website.",
+    "add": "Nieuwe voucher",
+    "back": "Terug naar vouchers",
+    "empty": "Nog geen vouchers. Voeg een deal toe voor leveranciers.",
+    "notFound": "Voucher niet gevonden",
+    "addTitle": "Nieuwe voucher",
+    "addDescription": "Je voucher verschijnt meteen op de openbare voucherpagina.",
+    "editTitle": "Voucher bewerken",
+    "publish": "Voucher publiceren",
+    "created": "Je voucher staat live",
+    "updated": "De voucher is opgeslagen",
+    "deleted": "De voucher is verwijderd",
+    "confirmDelete": "\"{title}\" verwijderen? Dit kan niet ongedaan worden gemaakt.",
+    "live": "Live",
+    "photo": "Foto",
+    "columns": {
+      "voucher": "Voucher",
+      "discount": "Korting"
+    },
+    "placeholders": {
+      "title": "bijv. Vergaderzaal met lunch"
+    },
+    "hints": {
+      "bookingUrl": "Je eigen boekingspagina. Alleen ingelogde leveranciers krijgen deze link."
+    },
+    "promote": {
+      "title": "Promoot deze voucher",
+      "text": "Zet je voucher bovenaan in de slideshow op de leverancierspagina, voor een maand of een kwartaal.",
+      "cta": "Promoten en betalen",
+      "extend": "Promotie verlengen",
+      "until": "Gepromoot tot {date}",
+      "hint": "start zodra er betaald is",
+      "inactive": "Zet de voucher eerst aan; alleen live vouchers kun je promoten."
+    }
+  },
+  "Purchasing": {
+    "title": "Collectieve inkoop",
+    "subtitle": "Samen met andere hotels inkopen voor betere deals.",
+    "introTitle": "Samen inkopen. Samen sterker.",
+    "intro": "Op deze pagina doen we samen inkoop. Voorlopig alleen energie, maar er komt straks veel meer bij: keycards, brandstof, en nog veel meer. Hoe meer hotels meedoen, hoe sterker onze onderhandelingspositie. En hoe beter de deals voor jou.",
+    "empty": "Nog geen collectieve inkoop. Je krijgt een melding zodra er een start.",
+    "participants": "Deelnemers",
+    "of": "van {target}",
+    "deadline": "Deadline",
+    "expectedSavings": "Verwacht voordeel",
+    "join": "Meld je aan",
+    "joinTitle": "Aanmelden voor {title}",
+    "joined": "Je doet mee! We houden je op de hoogte.",
+    "withdraw": "Afmelden",
+    "confirmWithdraw": "Afmelden voor deze collectieve inkoop? Je jaarafrekening wordt verwijderd.",
+    "withdrawn": "Je bent afgemeld",
+    "youTakePart": "Je doet mee · {supplier}, contract loopt af op {date}",
+    "privacy": "Alleen HotelConnect ziet je jaarafrekening. Die wordt alleen voor deze actie gedeeld met de energieleverancier en na afronding verwijderd.",
+    "hint": {
+      "open": "Meld je aan vóór de deadline.",
+      "negotiating": "Er doen genoeg hotels mee; HotelConnect onderhandelt nu.",
+      "completed": "Deze collectieve inkoop is afgerond."
+    },
+    "status": {
+      "open": "Open",
+      "negotiating": "In onderhandeling",
+      "completed": "Afgerond"
+    },
+    "fields": {
+      "currentSupplier": "Huidige leverancier",
+      "contractEndDate": "Contractvervaldatum",
+      "annualUsage": "Jaarverbruik",
+      "invoice": "Laatste jaarafrekening (PDF)"
+    },
+    "placeholders": {
+      "currentSupplier": "bijv. Vattenfall",
+      "annualUsage": "bijv. 120.000 kWh, 30.000 m³ gas"
+    },
+    "hints": {
+      "annualUsage": "Optioneel.",
+      "invoice": "PDF, max. 10 MB."
+    }
+  },
+  "AdminPurchasing": {
+    "title": "Collectieve inkoop",
+    "description": "Collectieve inkoopacties. Bij het doelaantal hotels gaat de status vanzelf naar \"In onderhandeling\".",
+    "add": "Nieuwe actie",
+    "back": "Terug naar acties",
+    "empty": "Nog geen acties.",
+    "notFound": "Actie niet gevonden",
+    "addTitle": "Nieuwe collectieve inkoop",
+    "editTitle": "Actie bewerken",
+    "created": "De actie is aangemaakt",
+    "updated": "De actie is opgeslagen",
+    "deleted": "De actie is verwijderd",
+    "confirmDelete": "\"{title}\" verwijderen met alle deelnemers en jaarafrekeningen? Dit kan niet ongedaan worden gemaakt.",
+    "participants": "Deelnemers",
+    "hotel": "Hotel",
+    "noParticipants": "Nog geen hotels.",
+    "downloadZip": "Alle jaarafrekeningen ({count}) als ZIP downloaden",
+    "privacyTitle": "Jaarafrekeningen (AVG)",
+    "filesKept": "Jaarafrekeningen worden bewaard tot 90 dagen na afronding van de actie.",
+    "filesDeleteOn": "De jaarafrekeningen worden automatisch verwijderd op {date}.",
+    "filesDeleted": "De jaarafrekeningen zijn verwijderd op {date}.",
+    "fields": {
+      "title": "Titel",
+      "category": "Categorie",
+      "status": "Status",
+      "deadline": "Deadline",
+      "targetParticipants": "Benodigde hotels",
+      "expectedSavings": "Verwacht voordeel",
+      "description": "Omschrijving"
+    },
+    "placeholders": {
+      "expectedSavings": "bijv. 10–15% op je energierekening"
+    },
+    "hints": {
+      "status": "\"Afgerond\" start de 90 dagen tot het verwijderen van de jaarafrekeningen; de hotels krijgen een melding.",
+      "target": "Bij dit aantal gaat de status naar \"In onderhandeling\"."
+    }
+  },
+  "Registrations": {
+    "title": "Aanmeldingen",
+    "description": "Nieuwe hotels en leveranciers die zich op de website aanmeldden. Goedkeuren maakt het lid aan met een lidnummer en een login.",
+    "all": "Alles",
+    "empty": "Geen aanmeldingen hier.",
+    "notFound": "Aanmelding niet gevonden",
+    "back": "Terug naar aanmeldingen",
+    "company": "Bedrijf",
+    "type": "Soort",
+    "contact": "Contact",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "address": "Adres",
+    "plan": "Abonnement",
+    "website": "Website",
+    "categories": "Categorieën",
+    "regions": "Regio's",
+    "approve": "Goedkeuren",
+    "reject": "Afwijzen",
+    "confirmApprove": "{name} goedkeuren? Het lid en de login worden aangemaakt en ze krijgen een e-mail.",
+    "approved": "Goedgekeurd — lidnummer {number}",
+    "rejectTitle": "Aanmelding afwijzen",
+    "reasonLabel": "Reden (optioneel, wordt gemaild naar de aanvrager)",
+    "rejected": "De aanmelding is afgewezen",
+    "openMember": "Open het lid",
+    "types": {
+      "hotel": "Hotel",
+      "supplier": "Leverancier"
+    },
+    "plans": {
+      "contract": "Onderhoudscontract (€49/maand of €539/jaar)",
+      "commission": "Zonder contract (alleen commissie)"
+    },
+    "status": {
+      "pending": "Wacht",
+      "approved": "Goedgekeurd",
+      "rejected": "Afgewezen"
+    },
+    "statusHint": {
+      "pending": "Controleer het KVK-nummer en de gegevens, keur dan goed of wijs af.",
+      "approved": "Het lid en de login zijn aangemaakt; de aanvrager kreeg een e-mail.",
+      "rejected": "De aanvrager kreeg een e-mail."
+    },
+    "testPhase": {
+      "label": "Testfase (aanmelden gesloten)",
+      "on": "Aan: de website toont de wachtlijst en niemand kan zich aanmelden.",
+      "off": "Uit: hotels en leveranciers kunnen zich aanmelden op de website. De website volgt binnen een paar minuten.",
+      "confirmOpen": "Aanmelden openzetten? Iedereen kan zich dan aanmelden op de website (je keurt nog steeds elke aanmelding goed).",
+      "opened": "Aanmelden staat open",
+      "closed": "Testfase aan: aanmelden is gesloten"
+    }
+  },
+  "SupplierTenders": {
+    "title": "Aanvragen",
+    "description": "Tenders, onderhoudscontracten en productaanvragen van hotels in je categorie en regio.",
+    "back": "Terug naar aanvragen",
+    "empty": "Nog geen aanvragen. Je krijgt een e-mail zodra een hotel je uitnodigt.",
+    "notFound": "Aanvraag niet gevonden",
+    "sendQuote": "Offerte versturen",
+    "changeQuote": "Offerte wijzigen",
+    "quoteSent": "Je offerte is naar het hotel gestuurd",
+    "quoteUpdated": "Je offerte is gewijzigd",
+    "yourQuote": "Je offerte",
+    "fields": {
+      "title": "Aanvraag",
+      "hotel": "Hotel",
+      "category": "Categorie",
+      "region": "Regio",
+      "deadline": "Deadline",
+      "status": "Status",
+      "budget": "Budget",
+      "price": "Prijs (excl. btw)",
+      "deliveryTime": "Levertijd",
+      "notes": "Opmerkingen",
+      "file": "Offerte (PDF of foto)"
+    },
+    "placeholders": {
+      "deliveryTime": "bijv. 2 weken"
+    },
+    "hints": {
+      "deliveryTime": "Wanneer kun je leveren of starten?",
+      "file": "Optioneel. PDF, JPEG, PNG of WEBP, max. 10 MB. Een nieuw bestand vervangt het oude."
+    },
+    "status": {
+      "open": "Open",
+      "submitted": "Offerte verstuurd",
+      "won": "Gewonnen",
+      "lost": "Niet gekozen",
+      "expired": "Deadline verstreken",
+      "cancelled": "Geannuleerd"
+    },
+    "statusHint": {
+      "open": "Stuur je offerte vóór het einde van de deadlinedag.",
+      "submitted": "Je kunt je offerte wijzigen tot het einde van de deadlinedag.",
+      "won": "Het hotel heeft je offerte gekozen en neemt contact met je op.",
+      "lost": "Het hotel heeft een andere offerte gekozen.",
+      "expired": "De deadline is verstreken zonder offerte van jou.",
+      "cancelled": "Het hotel heeft deze aanvraag geannuleerd."
+    }
+  },
+  "SupplierHome": {
+    "welcome": "Welkom terug, {name}",
+    "intro": "Nieuwe aanvragen van hotels in je categorie en regio, en hoe het met je offertes staat.",
+    "stats": {
+      "toQuote": "Wacht op je offerte",
+      "running": "Offertes verstuurd",
+      "won": "Gewonnen"
+    },
+    "newRequests": "Nieuwe aanvragen",
+    "all": "Alle aanvragen",
+    "noNewRequests": "Op dit moment geen nieuwe aanvragen. Je krijgt een e-mail zodra een hotel je uitnodigt.",
+    "runningQuotes": "Je offertes",
+    "noQuotes": "Je hebt nog geen offertes verstuurd.",
+    "profile": {
+      "title": "Mijn bedrijf",
+      "description": "Houd je categorieën, regio's en contactgegevens actueel, zodat de juiste aanvragen bij je komen."
+    },
+    "vouchers": {
+      "title": "Corporate vouchers",
+      "description": "Boek aanbiedingen van aangesloten hotels op de website. Je wordt daar automatisch ingelogd."
+    },
+    "checklist": {
+      "title": "Maak je profiel compleet",
+      "intro": "Hotels zien je profiel in de directory en bij het vergelijken van offertes. Een compleet profiel levert meer werk op.",
+      "cta": "Profiel aanvullen",
+      "progress": "{done} van {total} klaar",
+      "steps": {
+        "logo": "Upload je logo",
+        "tagline": "Schrijf een omschrijving in één zin",
+        "description": "Beschrijf je bedrijf (minstens 20 woorden)",
+        "work": "Kies je categorieën en regio's",
+        "website": "Voeg je website toe",
+        "emails": "Voeg een e-mailadres voor facturen of meldingen toe"
+      }
+    }
+  },
+  "SupplierProfile": {
+    "title": "Mijn bedrijf",
+    "description": "Je profiel in het netwerk",
+    "viewPublic": "Bekijk op website",
+    "nameHint": "Je bedrijfsnaam en lidnummer worden beheerd door HotelConnect. Neem contact op om ze te wijzigen.",
+    "saved": "Je profiel is opgeslagen",
+    "addCertificate": "Certificaat toevoegen",
+    "sections": {
+      "company": "Bedrijf",
+      "work": "Wat je doet en waar",
+      "contact": "Contact en e-mail",
+      "certificates": "Certificaten"
+    },
+    "fields": {
+      "logo": "Logo",
+      "tagline": "Omschrijving in één zin",
+      "description": "Omschrijving",
+      "website": "Website",
+      "categories": "Categorieën",
+      "regions": "Regio's",
+      "person": "Contactpersoon",
+      "phone": "Telefoon",
+      "generalEmail": "Algemeen e-mailadres",
+      "invoicesEmail": "E-mailadres voor facturen",
+      "notificationsEmail": "E-mailadres voor meldingen",
+      "certificateName": "Certificaat",
+      "certificateUrl": "Link"
+    },
+    "placeholders": {
+      "certificateName": "bijv. ISO 9001, VCA"
+    },
+    "hints": {
+      "tagline": "Getoond in de slideshow op de homepage.",
+      "words": "{count} van {max} woorden",
+      "work": "Je krijgt alleen aanvragen voor deze categorieën en regio's. Je profiel in de openbare directory toont ze ook.",
+      "contact": "Hotels zien deze niet op de website; ze zijn voor HotelConnect en voor hotels waarmee je werkt.",
+      "fallback": "Leeg = het algemene e-mailadres.",
+      "notifications": "Nieuwe aanvragen en uitslagen komen hier. Leeg = het algemene e-mailadres.",
+      "certificates": "Alleen links (bijv. naar een certificaat op je website of in een register); geen uploads."
+    }
+  },
+  "MyHotel": {
+    "title": "Mijn hotel",
+    "saved": "Opgeslagen",
+    "company": {
+      "title": "Bedrijfsgegevens",
+      "description": "Zoals ingeschreven bij de KVK.",
+      "name": "Hotelnaam",
+      "kvk": "KVK-nummer",
+      "kvkHint": "8 cijfers.",
+      "address": "Adres",
+      "city": "Plaats",
+      "region": "Regio",
+      "contactPerson": "Contactpersoon",
+      "phone": "Telefoon",
+      "generalEmail": "Algemeen e-mailadres",
+      "generalEmailHint": "Verplicht, bv. info@hotel.nl. Alle e-mail gaat hierheen, tenzij u die elders laat binnenkomen."
+    },
+    "facilities": {
+      "title": "Type hotel",
+      "description": "Dit bepaalt welke regels voor uw hotel gelden (uw compliance-profiel).",
+      "rooms": "Aantal kamers",
+      "restaurant": "Restaurant",
+      "restaurantHint": "Eten en drinken voor gasten of passanten.",
+      "lift": "Lift",
+      "liftHint": "Een personen- of goederenlift.",
+      "pool": "Zwembad",
+      "poolHint": "Binnen- of buitenbad, spa of hottub.",
+      "parking": "Parkeergarage",
+      "parkingHint": "Een overdekte of ondergrondse parkeergarage.",
+      "profileTitle": "Uw compliance-profiel",
+      "profileHint": "Vergunningen en certificaten die hotels zoals het uwe meestal nodig hebben:"
+    },
+    "guide": {
+      "title": "Profiel in de hotelgids",
+      "description": "Zo staat uw hotel in de openbare hotelgids. Wijzigingen verschijnen direct.",
+      "text": "Korte beschrijving",
+      "textHint": "{count} / 1000 tekens.",
+      "bookingUrl": "Uw boekingspagina",
+      "bookingUrlHint": "\"Boek nu\" in de hotelgids gaat hierheen.",
+      "offer": "Huidige actie",
+      "offerHint": "Optioneel, bv. \"15% korting midweek\"."
+    },
+    "emails": {
+      "title": "E-mailadressen en routering",
+      "description": "Kies waar elk type e-mail heen gaat, en welke u wilt ontvangen.",
+      "receive": "Ontvangen",
+      "fallback": "Leeg = {email}",
+      "types": {
+        "general": "Algemeen",
+        "invoices": "Facturen",
+        "vacancies": "Sollicitaties",
+        "faults": "Storingen",
+        "alerts": "Systeemalerts"
+      },
+      "hints": {
+        "general": "Verplicht. Het standaardadres.",
+        "invoices": "Facturen voor het lidmaatschap.",
+        "vacancies": "Sollicitaties en cv's.",
+        "faults": "Meestal de technische dienst (TD).",
+        "alerts": "bv. herinneringen en abonnementsmeldingen."
+      }
+    },
+    "staff": {
+      "title": "Personeelslogin",
+      "description": "Eén gedeelde login voor uw personeel. Zij zien alleen de storingslijst en kunnen niets aanpassen.",
+      "email": "E-mail voor de personeelslogin",
+      "emailHint": "Het personeel logt in met dit adres.",
+      "password": "Wachtwoord",
+      "passwordHint": "Minimaal 8 tekens. Deel het met uw personeel.",
+      "newPassword": "Nieuw wachtwoord",
+      "newPasswordHint": "Leeg laten om het huidige wachtwoord te houden.",
+      "create": "Personeelslogin aanmaken",
+      "save": "Personeelslogin opslaan",
+      "saved": "De personeelslogin is opgeslagen",
+      "delete": "Verwijderen",
+      "deleted": "De personeelslogin is verwijderd",
+      "confirmDelete": "De personeelslogin verwijderen? Het personeel kan dan niet meer inloggen."
+    },
+    "channels": {
+      "title": "Meldingen: e-mail of dashboard",
+      "description": "Kies per soort melding waar die je bereikt. Leveranciers krijgen altijd beide.",
+      "saved": "Je keuzes zijn opgeslagen",
+      "options": {
+        "both": "E-mail + dashboard",
+        "dashboard": "Alleen dashboard",
+        "email": "Alleen e-mail"
+      },
+      "types": {
+        "compliance": "Compliance-herinneringen",
+        "tender": "Tenders en offertes",
+        "vacancy": "Sollicitaties",
+        "fault": "Storingen",
+        "system": "Systeemalerts",
+        "advertising": "Reclame"
+      },
+      "hints": {
+        "compliance": "Contracten en vergunningen die binnen 30 dagen aflopen.",
+        "tender": "Nieuwe offertes op je tenders.",
+        "vacancy": "Sollicitaties komen altijd ook per e-mail, omdat cv's nooit worden opgeslagen.",
+        "fault": "Storingen die je bij een leverancier meldde.",
+        "system": "Berichten van HotelConnect over je account.",
+        "advertising": "Wanneer je advertentie live gaat of afloopt."
+      },
+      "push": "Push"
+    }
+  },
+  "Onboarding": {
+    "eyebrow": "Welkom · {number}",
+    "title": "We richten {name} in",
+    "intro": "Acht korte stappen. Uw voortgang wordt bewaard, dus u kunt stoppen en later verdergaan. Stap 3 tot en met 5 kunnen ook later.",
+    "back": "Terug",
+    "continue": "Verder",
+    "skip": "Later doen",
+    "saveContinue": "Opslaan en verder",
+    "remove": "Verwijderen",
+    "confirm": "Bevestigen en naar mijn dashboard",
+    "done": "Welkom bij HotelConnect!",
+    "until": "tot {date}",
+    "steps": {
+      "registers": "Registers",
+      "company": {
+        "short": "Bedrijf",
+        "title": "Bedrijfsgegevens"
+      },
+      "facilities": {
+        "short": "Type hotel",
+        "title": "Type hotel"
+      },
+      "contracts": {
+        "short": "Contracten",
+        "title": "Contractregister",
+        "empty": "Nog geen contracten toegevoegd."
+      },
+      "permits": {
+        "short": "Vergunningen",
+        "title": "Vergunningen en certificaten",
+        "empty": "Nog geen vergunningen toegevoegd."
+      },
+      "faults": {
+        "short": "Storingslijst",
+        "title": "Storingslijst",
+        "empty": "Nog geen contacten toegevoegd."
+      },
+      "guide": {
+        "short": "Hotelgids",
+        "title": "Profiel in de hotelgids"
+      },
+      "emails": {
+        "short": "E-mail",
+        "title": "E-mailadressen en routering"
+      },
+      "confirm": {
+        "short": "Bevestigen",
+        "title": "Controleren en bevestigen",
+        "description": "Een overzicht van alles wat u heeft ingevuld. U kunt alles later wijzigen onder Mijn hotel.",
+        "noFacilities": "Geen restaurant, lift, zwembad of parkeergarage",
+        "contracts": "{count, plural, =0 {Geen contracten} one {# contract} other {# contracten}}",
+        "permits": "{count, plural, =0 {Geen vergunningen} one {# vergunning} other {# vergunningen}}",
+        "faults": "{count, plural, =0 {Geen contacten op de storingslijst} one {# contact op de storingslijst} other {# contacten op de storingslijst}}"
+      }
+    }
+  },
+  "HotelLogins": {
+    "title": "Logins",
+    "add": "Manager toevoegen",
+    "addTitle": "Login hotelmanager",
+    "empty": "Nog geen logins.",
+    "hint": "De hotelmanager logt in, doorloopt de onboarding en maakt de personeelslogin aan.",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mail",
+    "password": "Tijdelijk wachtwoord",
+    "passwordHint": "Minimaal 8 tekens. Deel het veilig; het kan worden gewijzigd onder Instellingen.",
+    "created": "Login aangemaakt voor {email}",
+    "deleted": "Login verwijderd",
+    "delete": "Verwijderen",
+    "confirmDelete": "De login {email} verwijderen?"
+  },
+  "SupplierLogins": {
+    "title": "Logins",
+    "add": "Login toevoegen",
+    "addTitle": "Login leverancier",
+    "empty": "Nog geen logins.",
+    "hint": "Met deze login logt de leverancier in op het dashboard en kan hij corporate vouchers boeken op de website.",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "E-mail",
+    "password": "Tijdelijk wachtwoord",
+    "passwordHint": "Minimaal 8 tekens. Deel het veilig; het kan worden gewijzigd onder Instellingen.",
+    "created": "Login aangemaakt voor {email}",
+    "deleted": "Login verwijderd",
+    "delete": "Verwijderen",
+    "confirmDelete": "De login {email} verwijderen?"
+  },
+  "Billing": {
+    "title": "Facturen",
+    "subtitle": "Je lidmaatschap, prijzen en facturen.",
+    "membership": "Lidmaatschap",
+    "prices": "Prijzen",
+    "plan": {
+      "hotel": "Hotellidmaatschap",
+      "supplier-contract": "Onderhoudscontract"
+    },
+    "interval": {
+      "month": "Maandelijks",
+      "year": "Jaarlijks"
+    },
+    "subStatus": {
+      "active": "Actief",
+      "cancelled": "Gestopt"
+    },
+    "status": {
+      "open": "Open",
+      "paid": "Betaald",
+      "cancelled": "Geannuleerd",
+      "overdue": "Te laat"
+    },
+    "kind": {
+      "membership": "Lidmaatschap",
+      "commission": "Commissie",
+      "advertising": "Gesponsorde plek",
+      "promotion": "Voucherpromotie"
+    },
+    "adStatus": {
+      "pending_payment": "Wacht op betaling",
+      "queued": "Wacht op zijn beurt",
+      "live": "Live",
+      "ended": "Afgelopen",
+      "cancelled": "Geannuleerd"
+    },
+    "currentPeriod": "Huidige periode: {start} – {end}",
+    "endsOn": "Gestopt — eindigt op {date}",
+    "pricePerYear": "{price} per jaar, excl. btw",
+    "pricePerMonth": "{price} per maand, excl. btw",
+    "perYear": "{price} / jaar",
+    "perMonth": "{price} / maand",
+    "perQuarter": "{price} / kwartaal",
+    "payEvery": "Betalen",
+    "intervalHint": "Een wijziging geldt vanaf je volgende periode.",
+    "intervalSaved": "Opgeslagen — dit geldt vanaf je volgende periode.",
+    "noMembershipHotel": "Je lidmaatschap start zodra HotelConnect je hotel goedkeurt. Tijdens de testfase zijn de eerste hotels gratis.",
+    "noMembershipContract": "Je lidmaatschap voor het onderhoudscontract is nog niet gestart. HotelConnect zet het voor je aan.",
+    "commissionOnly": "Je hebt geen vast lidmaatschap: je betaalt {percent}% commissie op elke opdracht die je via een aanvraag wint.",
+    "commission": "Commissie per gewonnen opdracht",
+    "sponsoredSpot": "Gesponsorde plek op de homepage",
+    "voucherPromotion": "Voucherpromotie",
+    "exclVat": "Alle prijzen excl. {rate}% btw.",
+    "payByTransfer": "Online betalen staat nog niet aan: betaal per overboeking onder vermelding van het factuurnummer. HotelConnect zet de factuur op betaald.",
+    "thanks": "Dank je! We hebben de betaling voor {number} ontvangen; het kan een minuutje duren voordat je het hier ziet.",
+    "invoice": "Factuur",
+    "member": "Lid",
+    "description": "Omschrijving",
+    "dueDate": "Vervalt",
+    "total": "Totaal",
+    "paidOn": "Betaald {date}",
+    "inclVat": "incl. {vat} btw",
+    "payNow": "Nu betalen",
+    "viewInvoice": "Factuur bekijken",
+    "noInvoices": "Nog geen facturen.",
+    "markPaid": "Op betaald zetten",
+    "markedPaid": "Op betaald gezet.",
+    "cancelled": "Factuur geannuleerd.",
+    "confirmPaid": "Factuur {number} op betaald zetten? Als het een advertentie of promotie betaalt, start die nu.",
+    "confirmCancel": "Factuur {number} annuleren?",
+    "adminTitle": "Facturen",
+    "adminSubtitle": "Alle facturen: lidmaatschappen, commissie, advertenties en voucherpromoties.",
+    "invoiceCount": "{count, plural, one {# factuur} other {# facturen}}",
+    "filterStatus": "Filter op status",
+    "filterKind": "Filter op soort",
+    "allStatuses": "Alle statussen",
+    "allKinds": "Alle soorten",
+    "adsTitle": "Reclame",
+    "adsSubtitle": "Een gesponsorde plek op de homepage van de website, voor een maand of een kwartaal.",
+    "spots": "Plekken",
+    "block": {
+      "suppliers": "Leveranciersblok",
+      "jobs": "Vacatureblok",
+      "hotels": "Hotelblok"
+    },
+    "blockHint": {
+      "suppliers": "Je bedrijf bovenaan bij “Leveranciers in de spotlight”.",
+      "jobs": "Een van je gepubliceerde vacatures bovenaan bij “Urgente vacatures”.",
+      "hotels": "Je hotel bovenaan bij “Uitgelichte hotels”."
+    },
+    "position": "Positie {n}",
+    "free": "Nu vrij",
+    "takenUntil": "Bezet tot {date}",
+    "waiting": "{count, plural, one {# boeking wacht} other {# boekingen wachten}}",
+    "book": "Boeken",
+    "period": "Periode",
+    "adPeriod": {
+      "month": "1 maand",
+      "quarter": "1 kwartaal"
+    },
+    "job": "Vacature",
+    "chooseJob": "Kies een gepubliceerde vacature",
+    "noPublishedJobs": "Je hebt nog geen gepubliceerde vacatures.",
+    "startsOn": "Start op zijn vroegst op {date} (na betaling).",
+    "toPay": "Te betalen:",
+    "plusVat": "plus btw",
+    "bookAndPay": "Boeken en betalen",
+    "bookHint": "Na betaling gaat je plek live; is hij bezet, dan start hij zodra de huidige afloopt. Je krijgt een melding bij de start en het einde.",
+    "bookedInvoice": "Geboekt. Factuur {number} staat klaar bij Facturen; hij start zodra er betaald is.",
+    "myBookings": "Mijn boekingen",
+    "spot": "Plek",
+    "dates": "Data",
+    "noBookings": "Nog geen boekingen.",
+    "confirmCancelBooking": "Deze boeking annuleren? De factuur wordt ook geannuleerd.",
+    "bookingCancelled": "Boeking geannuleerd.",
+    "adminAdsTitle": "Reclame",
+    "adminAdsSubtitle": "Gesponsorde plekken op de homepage: wie live staat en wie wacht.",
+    "noMembershipAdmin": "Nog geen betaald lidmaatschap (gratis testfase, of handmatig aangemaakt).",
+    "commissionMember": "Betaalt commissie per gewonnen opdracht (geen onderhoudscontract).",
+    "startMembership": "Betaald lidmaatschap starten",
+    "confirmStart": "Het betaalde lidmaatschap starten? De eerste factuur gaat meteen de deur uit.",
+    "started": "Lidmaatschap gestart.",
+    "stopMembership": "Niet meer verlengen",
+    "confirmStop": "Dit lidmaatschap stoppen? Het eindigt aan het einde van de betaalde periode.",
+    "stopped": "Lidmaatschap gestopt.",
+    "allInvoices": "Alle facturen"
+  }
+}

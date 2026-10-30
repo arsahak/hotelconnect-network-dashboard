@@ -1,0 +1,44 @@
+"use client";
+
+import { createMyVoucherAction, uploadMyVoucherImageAction, type MyVoucherInput } from "@/app/actions/myVoucher";
+import { PageHeader } from "@/components/shared/PageHeader";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toast } from "react-hot-toast";
+import HotelVoucherForm from "./HotelVoucherForm";
+
+/** "New voucher" — /hotel/vouchers/add. Public straight away. */
+const HotelVoucherAdd = () => {
+  const t = useTranslations("HotelVouchers");
+  const tc = useTranslations("Common");
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (data: MyVoucherInput, image: File | null) => {
+    setSubmitting(true);
+    const res = await createMyVoucherAction(data);
+    if (!res.ok || !res.data) {
+      toast.error(res.error || tc("error"));
+      setSubmitting(false);
+      return;
+    }
+    if (image) {
+      const form = new FormData();
+      form.set("image", image);
+      const up = await uploadMyVoucherImageAction(res.data._id, form);
+      if (!up.ok) toast.error(up.error || tc("photoNotSaved"));
+    }
+    toast.success(t("created"));
+    router.push(`/hotel/vouchers/${res.data._id}`);
+  };
+
+  return (
+    <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
+      <PageHeader title={t("addTitle")} description={t("addDescription")} back={{ href: "/hotel/vouchers", label: t("back") }} />
+      <HotelVoucherForm submitting={submitting} submitLabel={t("publish")} cancelHref="/hotel/vouchers" onSubmit={handleSubmit} />
+    </div>
+  );
+};
+
+export default HotelVoucherAdd;

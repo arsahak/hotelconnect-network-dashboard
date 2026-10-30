@@ -1,0 +1,1881 @@
+{
+  "Common": {
+    "tryAgain": "Try again",
+    "refresh": "Refresh",
+    "cancel": "Cancel",
+    "saving": "Saving…",
+    "saveChanges": "Save changes",
+    "show": "Show",
+    "hide": "Hide",
+    "error": "Something went wrong. Please try again.",
+    "allRegions": "All regions",
+    "allStatuses": "All statuses",
+    "allCategories": "All categories",
+    "allHotels": "All hotels",
+    "active": "Active",
+    "inactive": "Inactive",
+    "status": "Status",
+    "added": "Added",
+    "actions": "Actions",
+    "noResults": "Nothing matches your search or filters.",
+    "view": "View",
+    "edit": "Edit",
+    "delete": "Delete",
+    "choose": "Choose…",
+    "clear": "Clear",
+    "photoNotSaved": "Saved, but the photo was not uploaded:",
+    "confirmRemovePhoto": "Remove this photo? This cannot be undone.",
+    "photoRemoved": "Photo removed",
+    "viewOnWebsite": "View on website",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "Language": {
+    "label": "Language"
+  },
+  "Roles": {
+    "superadmin": "Super admin",
+    "admin": "Admin",
+    "hotel_manager": "Hotel manager",
+    "hotel_staff": "Hotel staff",
+    "supplier": "Supplier"
+  },
+  "Nav": {
+    "home": "HotelConnect dashboard home",
+    "collapse": "Collapse menu",
+    "expand": "Expand menu",
+    "sections": {
+      "administration": "Administration",
+      "account": "Account",
+      "network": "Network",
+      "website": "Website",
+      "compliance": "Compliance Radar",
+      "hotel": "Hotel",
+      "purchasing": "Purchasing",
+      "company": "Your company",
+      "billing": "Billing & ads"
+    },
+    "items": {
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "Your start page and quick links"
+      },
+      "team": {
+        "title": "Team",
+        "description": "The admins who run HotelConnect"
+      },
+      "teamAll": {
+        "title": "All members",
+        "description": "See everyone in the HotelConnect team"
+      },
+      "teamAdd": {
+        "title": "Add member",
+        "description": "Give a new admin access to the dashboard"
+      },
+      "profile": {
+        "title": "My profile",
+        "description": "Your account at a glance"
+      },
+      "settings": {
+        "title": "Settings",
+        "description": "Your details, photo, password and language"
+      },
+      "hotels": {
+        "title": "Hotels",
+        "description": "Member hotels and their hotel-guide profile"
+      },
+      "hotelsAll": {
+        "title": "All hotels",
+        "description": "Every member hotel"
+      },
+      "hotelsAdd": {
+        "title": "Add hotel",
+        "description": "Add a hotel and give it a member number"
+      },
+      "suppliers": {
+        "title": "Suppliers",
+        "description": "Suppliers and their directory profile"
+      },
+      "suppliersAll": {
+        "title": "All suppliers",
+        "description": "Every supplier in the network"
+      },
+      "suppliersAdd": {
+        "title": "Add supplier",
+        "description": "Add a supplier and give it a member number"
+      },
+      "jobs": {
+        "title": "Jobs",
+        "description": "Jobs at member hotels on the website"
+      },
+      "jobsAll": {
+        "title": "All jobs",
+        "description": "Pending, published and closed jobs"
+      },
+      "jobsAdd": {
+        "title": "Add job",
+        "description": "Post a job for a member hotel"
+      },
+      "vouchers": {
+        "title": "Vouchers",
+        "description": "Corporate vouchers from member hotels"
+      },
+      "vouchersAll": {
+        "title": "All vouchers",
+        "description": "Every corporate voucher"
+      },
+      "vouchersAdd": {
+        "title": "Add voucher",
+        "description": "Add a deal from a member hotel"
+      },
+      "stories": {
+        "title": "Stories",
+        "description": "Articles, interviews and columns"
+      },
+      "storiesAll": {
+        "title": "All stories",
+        "description": "Drafts and published stories"
+      },
+      "storiesAdd": {
+        "title": "Write story",
+        "description": "Write a new article or interview"
+      },
+      "contracts": {
+        "title": "Contracts",
+        "description": "Contract register with end dates and costs"
+      },
+      "contractsAll": {
+        "title": "All contracts",
+        "description": "Every contract of your hotel"
+      },
+      "contractsAdd": {
+        "title": "Add contract",
+        "description": "Add a contract to the register"
+      },
+      "permits": {
+        "title": "Permits",
+        "description": "Permits and certificates with expiry dates"
+      },
+      "permitsAll": {
+        "title": "All permits",
+        "description": "Every permit and certificate"
+      },
+      "permitsAdd": {
+        "title": "Add permit",
+        "description": "Add a permit or certificate"
+      },
+      "faults": {
+        "title": "Storingslijst",
+        "description": "Who to call when something breaks"
+      },
+      "faultsAll": {
+        "title": "Storingslijst",
+        "description": "Every party you call for faults"
+      },
+      "faultsAdd": {
+        "title": "Add contact",
+        "description": "Add a party to the storingslijst"
+      },
+      "myHotel": {
+        "title": "My hotel",
+        "description": "Company details, hotel guide, emails and staff login"
+      },
+      "links": {
+        "title": "Useful links",
+        "description": "Every portal you sign in to, in one place"
+      },
+      "linksAll": {
+        "title": "All links",
+        "description": "Your portals by category"
+      },
+      "linksAdd": {
+        "title": "Add link",
+        "description": "Add a portal"
+      },
+      "kennisbank": {
+        "title": "Knowledge base",
+        "description": "Laws and rules with links to the official sources"
+      },
+      "tenders": {
+        "title": "Tenders",
+        "description": "Ask suppliers for quotes and compare them"
+      },
+      "tendersAll": {
+        "title": "All tenders",
+        "description": "Your tenders and their quotes"
+      },
+      "tendersAdd": {
+        "title": "New tender",
+        "description": "Ask up to 3 suppliers for a quote"
+      },
+      "supplierTenders": {
+        "title": "Requests",
+        "description": "Tenders and requests from hotels, and your quotes"
+      },
+      "supplierProfile": {
+        "title": "My company",
+        "description": "Profile, categories, regions and contact details"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "Your meldingen: tenders, reminders, applications"
+      },
+      "hotelJobs": {
+        "title": "Jobs",
+        "description": "Post your vacancies on the public jobs page"
+      },
+      "hotelJobsAll": {
+        "title": "Your jobs",
+        "description": "Status and applications"
+      },
+      "hotelJobsAdd": {
+        "title": "New job",
+        "description": "Post a vacancy"
+      },
+      "hotelVouchers": {
+        "title": "Vouchers",
+        "description": "Corporate deals for suppliers"
+      },
+      "hotelVouchersAll": {
+        "title": "Your vouchers",
+        "description": "Your corporate vouchers"
+      },
+      "hotelVouchersAdd": {
+        "title": "New voucher",
+        "description": "Add a corporate voucher"
+      },
+      "collectivePurchasing": {
+        "title": "Collective purchasing",
+        "description": "Buy energy and more together with other hotels"
+      },
+      "adminPurchasing": {
+        "title": "Collective purchasing",
+        "description": "Actions, participants and invoices"
+      },
+      "adminPurchasingAll": {
+        "title": "All actions",
+        "description": "Collective purchasing actions"
+      },
+      "adminPurchasingAdd": {
+        "title": "New action",
+        "description": "Start a collective purchase"
+      },
+      "registrations": {
+        "title": "Registrations",
+        "description": "Approve new hotels and suppliers; test phase on/off"
+      },
+      "hotelInvoices": {
+        "title": "Invoices",
+        "description": "Membership and invoices"
+      },
+      "supplierInvoices": {
+        "title": "Invoices",
+        "description": "Membership, commission and invoices"
+      },
+      "hotelAdvertising": {
+        "title": "Advertising",
+        "description": "A sponsored spot on the homepage"
+      },
+      "supplierAdvertising": {
+        "title": "Advertising",
+        "description": "A sponsored spot on the homepage"
+      },
+      "adminInvoices": {
+        "title": "Invoices",
+        "description": "Every invoice, mark payments"
+      },
+      "adminAdvertising": {
+        "title": "Advertising",
+        "description": "Sponsored spots and waiting list"
+      }
+    },
+    "organisation": "Your hotel"
+  },
+  "Topbar": {
+    "searchPlaceholder": "Search dashboard…",
+    "quickAccess": "Quick access",
+    "results": "{count, plural, one {# result} other {# results}}",
+    "noPages": "No pages found",
+    "noPagesHint": "Try another word.",
+    "navigate": "Navigate",
+    "open": "Open",
+    "close": "Close",
+    "userMenu": "Account menu",
+    "user": "User",
+    "profile": "My profile",
+    "settings": "Settings",
+    "signOut": "Sign out"
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "description": "Everything that happened for you on HotelConnect. Click a notification to open it.",
+    "markAllRead": "Mark all as read",
+    "all": "All",
+    "unreadOnly": "Unread ({count})",
+    "empty": "No notifications yet.",
+    "noUnread": "You have read everything.",
+    "new": "New",
+    "unread": "{count, plural, =0 {No unread notifications} one {# unread notification} other {# unread notifications}}",
+    "types": {
+      "compliance": "Compliance",
+      "tender": "Tender",
+      "vacancy": "Job application",
+      "fault": "Fault",
+      "system": "System",
+      "advertising": "Advertising"
+    },
+    "push": {
+      "title": "Push notifications on this device",
+      "enable": "Turn on",
+      "disable": "Turn off",
+      "enabled": "Push notifications are on for this device",
+      "disabled": "Push notifications are off for this device",
+      "state": {
+        "unsupported": "This browser does not support push notifications.",
+        "ios-install": "On iPhone: tap Share → \"Add to Home Screen\", open HotelConnect from there and turn on push (iOS 16.4 or later).",
+        "denied": "Notifications are blocked for this site. Allow them in your browser settings.",
+        "off": "Get a notification on this phone or computer for new tenders, deadlines and repairs.",
+        "on": "On. You get a notification here for new meldingen.",
+        "server-off": "Push notifications are not set up on the server yet."
+      }
+    }
+  },
+  "Signin": {
+    "title": "Sign in to your dashboard",
+    "subtitle": "For hotels, suppliers and the HotelConnect team.",
+    "email": "Email",
+    "emailPlaceholder": "name@hotel.nl",
+    "password": "Password",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "submit": "Sign in",
+    "submitting": "Signing in…",
+    "success": "Signed in. Redirecting…",
+    "help": "No account yet? HotelConnect is in its test phase — sign-ups open soon.",
+    "errors": {
+      "required": "Enter your email and password.",
+      "invalid": "Incorrect email or password.",
+      "inactive": "Your account is switched off. Please contact HotelConnect.",
+      "unknown": "Something went wrong. Please try again.",
+      "invalidCode": "This code is not correct or has expired."
+    },
+    "twoFactor": {
+      "title": "Check your email",
+      "sent": "We sent a 6-digit sign-in code to {email}. It is valid for 10 minutes.",
+      "code": "Sign-in code",
+      "submit": "Confirm",
+      "back": "Back to sign in"
+    }
+  },
+  "Dashboard": {
+    "welcome": "Welcome back, {name}",
+    "quickLinks": "Quick links",
+    "intro": {
+      "superadmin": "Manage hotels, suppliers and the HotelConnect platform from here.",
+      "admin": "Manage hotels, suppliers and the HotelConnect platform from here.",
+      "hotel_manager": "Everything for your hotel in one place: compliance, tenders, jobs and more.",
+      "hotel_staff": "Find the right contact quickly when something breaks.",
+      "supplier": "See new tenders and requests from hotels in your category and region."
+    },
+    "vouchers": {
+      "title": "Corporate vouchers",
+      "description": "Book deals from member hotels on the website. You are signed in there automatically."
+    }
+  },
+  "Profile": {
+    "title": "My profile",
+    "description": "Your account at a glance.",
+    "editSettings": "Edit settings",
+    "loadError": "Could not load your profile.",
+    "accountDetails": "Account details",
+    "refresh": "Refresh",
+    "email": "Email",
+    "phone": "Phone",
+    "role": "Role",
+    "memberSince": "Member since",
+    "lastUpdated": "Last updated",
+    "session": "Session",
+    "sessionText": "Sign out of your account on this device.",
+    "signOut": "Sign out",
+    "signingOut": "Signing out…"
+  },
+  "Settings": {
+    "title": "Settings",
+    "description": "Change your details, photo, password and language.",
+    "loadError": "Could not load your account.",
+    "changePhoto": "Change photo",
+    "photoUpdated": "Photo updated",
+    "photoError": "Could not update your photo",
+    "accountDetails": "Your details",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "phone": "Phone",
+    "save": "Save changes",
+    "saving": "Saving…",
+    "saved": "Your details are saved",
+    "saveError": "Could not save your details",
+    "changePassword": "Change password",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "passwordHint": "Use at least 8 characters.",
+    "showPasswords": "Show passwords",
+    "hidePasswords": "Hide passwords",
+    "updatePassword": "Update password",
+    "updating": "Updating…",
+    "passwordChanged": "Password changed",
+    "passwordMismatch": "The new passwords don't match",
+    "passwordError": "Could not change your password",
+    "language": "Dashboard language",
+    "languageText": "Choose English or Dutch. Your choice is saved on this device."
+  },
+  "Team": {
+    "title": "Team",
+    "description": "The people who run HotelConnect.",
+    "add": "Add member",
+    "searchPlaceholder": "Search by name, email or phone…",
+    "loadError": "Could not load the team.",
+    "empty": "No team members yet.",
+    "noResults": "No team members match your search.",
+    "you": "You",
+    "active": "Active",
+    "inactive": "Inactive",
+    "view": "View",
+    "edit": "Edit",
+    "delete": "Remove",
+    "confirmDelete": "Remove {name} from the team? They can no longer sign in.",
+    "deleted": "{name} was removed from the team",
+    "deleteError": "Could not remove this team member",
+    "created": "{name} was added to the team",
+    "updated": "{name} was updated",
+    "saveError": "Could not save this team member",
+    "notFound": "Team member not found",
+    "addTitle": "Add a team member",
+    "addDescription": "Give a new admin access to the HotelConnect dashboard.",
+    "editTitle": "Edit team member",
+    "backToTeam": "Back to team",
+    "backToMember": "Back to member",
+    "memberSince": "Member since",
+    "lastUpdated": "Last updated",
+    "passwordHint": "At least 8 characters. Share it with the new member in a safe way; they can change it under Settings.",
+    "isActiveHelp": "Switch off to block sign-in without removing the account.",
+    "columns": {
+      "member": "Member",
+      "role": "Role",
+      "status": "Status",
+      "added": "Added",
+      "actions": "Actions"
+    },
+    "sections": {
+      "details": "Details",
+      "access": "Access"
+    },
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "role": "Role",
+      "password": "Temporary password",
+      "isActive": "Account active"
+    },
+    "roleHelp": {
+      "admin": "Manages hotels, suppliers and content. Can see the team.",
+      "superadmin": "Everything an admin can do, plus adding and removing team members."
+    }
+  },
+  "Pagination": {
+    "label": "Pagination",
+    "showing": "Showing <strong>{from}–{to}</strong> of <strong>{total}</strong>",
+    "rowsPerPage": "Rows per page",
+    "back": "Back",
+    "next": "Next"
+  },
+  "ImageField": {
+    "choose": "Choose photo",
+    "replace": "Replace photo",
+    "remove": "Remove photo",
+    "undo": "Undo choice",
+    "new": "New",
+    "hint": "JPEG, PNG, WEBP or GIF, max. 5 MB. Saved together with the form.",
+    "wrongType": "Please choose a JPEG, PNG, WEBP or GIF image.",
+    "tooLarge": "This photo is larger than 5 MB."
+  },
+  "Options": {
+    "regions": {
+      "North Holland": "North Holland",
+      "South Holland": "South Holland",
+      "Utrecht": "Utrecht",
+      "North Brabant": "North Brabant",
+      "Gelderland": "Gelderland",
+      "Limburg": "Limburg",
+      "Overijssel": "Overijssel",
+      "Friesland": "Friesland",
+      "Groningen": "Groningen",
+      "Drenthe": "Drenthe",
+      "Flevoland": "Flevoland",
+      "Zeeland": "Zeeland",
+      "All of the Netherlands": "All of the Netherlands"
+    },
+    "vacancyCategories": {
+      "Kitchen": "Kitchen",
+      "Front Office": "Front Office",
+      "Housekeeping": "Housekeeping",
+      "F&B Service": "F&B Service",
+      "Technical": "Technical",
+      "Management": "Management",
+      "Other": "Other"
+    },
+    "employmentTypes": {
+      "Full-time": "Full-time",
+      "Part-time": "Part-time",
+      "On call": "On call",
+      "Internship": "Internship",
+      "Seasonal": "Seasonal"
+    },
+    "voucherCategories": {
+      "Meeting": "Meeting",
+      "Stay": "Stay",
+      "Dining": "Dining",
+      "Gift": "Gift"
+    },
+    "articleKinds": {
+      "Article": "Article",
+      "Interview": "Interview",
+      "Column": "Column"
+    },
+    "supplierCategories": {
+      "Linen & textiles": "Linen & textiles",
+      "Laundry": "Laundry",
+      "Cleaning": "Cleaning",
+      "Technical maintenance": "Technical maintenance",
+      "Fire safety": "Fire safety",
+      "Energy": "Energy",
+      "F&B": "F&B",
+      "Wholesale": "Wholesale",
+      "Furniture & interior": "Furniture & interior",
+      "Amenities": "Amenities",
+      "IT & software": "IT & software",
+      "Security": "Security",
+      "Staffing": "Staffing",
+      "Other": "Other"
+    },
+    "faultTypes": {
+      "Electricity": "Electricity",
+      "Heating & cooling": "Heating & cooling",
+      "Water & plumbing": "Water & plumbing",
+      "Lift": "Lift",
+      "Fire alarm": "Fire alarm",
+      "Internet & phone": "Internet & phone",
+      "Locks & key cards": "Locks & key cards",
+      "Kitchen equipment": "Kitchen equipment",
+      "Laundry": "Laundry",
+      "Pool": "Pool",
+      "Building": "Building",
+      "Other": "Other"
+    },
+    "portalCategories": {
+      "KVK": "KVK",
+      "Municipality": "Municipality",
+      "Energy supplier": "Energy supplier",
+      "Water supplier": "Water supplier",
+      "Waste collector": "Waste collector",
+      "Internet provider": "Internet provider",
+      "Accounting software": "Accounting software",
+      "Banking": "Banking",
+      "Tax authority": "Tax authority",
+      "Omgevingsloket": "Omgevingsloket",
+      "Pension fund": "Pension fund",
+      "Occupational health service": "Occupational health service",
+      "Insurance": "Insurance",
+      "Software": "Software",
+      "Other": "Other"
+    },
+    "tenderTypes": {
+      "Tender": "Tender",
+      "Maintenance contract": "Maintenance contract",
+      "Product request": "Product request"
+    }
+  },
+  "Hotels": {
+    "title": "Hotels",
+    "description": "Member hotels and how they appear in the hotel guide.",
+    "add": "Add hotel",
+    "back": "Back to hotels",
+    "searchPlaceholder": "Search by name, city, number or email…",
+    "empty": "No hotels yet. Add the first one.",
+    "notFound": "Hotel not found",
+    "addTitle": "Add a hotel",
+    "addDescription": "The hotel gets the next member number (H0001, H0002, …) automatically.",
+    "editTitle": "Edit hotel",
+    "created": "{name} was added as {number}",
+    "updated": "{name} was saved",
+    "deleted": "{name} was deleted",
+    "confirmDelete": "Delete {name}? Its jobs and vouchers are deleted too. This cannot be undone.",
+    "confirmDeleteWithItems": "Delete {name}? This also deletes {jobs, plural, one {# job} other {# jobs}} and {vouchers, plural, one {# voucher} other {# vouchers}}. This cannot be undone.",
+    "jobsCount": "{count, plural, =0 {No jobs} one {# job} other {# jobs}}",
+    "vouchersCount": "{count, plural, =0 {No vouchers} one {# voucher} other {# vouchers}}",
+    "columns": {
+      "hotel": "Hotel",
+      "location": "Location"
+    },
+    "sections": {
+      "details": "Hotel guide profile",
+      "photo": "Photo",
+      "emails": "Email addresses",
+      "visibility": "Visibility",
+      "content": "On the website"
+    },
+    "fields": {
+      "name": "Hotel name",
+      "city": "City",
+      "region": "Region",
+      "address": "Address",
+      "description": "Short description",
+      "bookingUrl": "Booking page",
+      "offer": "Current offer",
+      "featured": "Featured on the homepage",
+      "isActive": "Active member"
+    },
+    "emails": {
+      "general": "General",
+      "invoices": "Invoices",
+      "vacancies": "Job applications",
+      "faults": "Faults (technical)",
+      "alerts": "System alerts"
+    },
+    "hints": {
+      "description": "{count} / 1000 characters. Shown on the hotel card.",
+      "bookingUrl": "The hotel's own booking page; \"Book now\" goes here.",
+      "offer": "Optional, e.g. \"15% off midweek\". Shown on the card.",
+      "emails": "Each type of email goes to its own address. Empty = the general address.",
+      "emailFallback": "Uses the general address",
+      "isActive": "Off: the hotel and its jobs and vouchers disappear from the website.",
+      "featured": "Shown in homepage block 3 (best with a photo)."
+    }
+  },
+  "Suppliers": {
+    "title": "Suppliers",
+    "description": "Suppliers in the network and their directory profile.",
+    "add": "Add supplier",
+    "back": "Back to suppliers",
+    "searchPlaceholder": "Search by name, number or contact…",
+    "empty": "No suppliers yet. Add the first one.",
+    "notFound": "Supplier not found",
+    "addTitle": "Add a supplier",
+    "addDescription": "The supplier gets the next member number (L001, L002, …) automatically.",
+    "editTitle": "Edit supplier",
+    "created": "{name} was added as {number}",
+    "updated": "{name} was saved",
+    "deleted": "{name} was deleted",
+    "confirmDelete": "Delete {name}? This cannot be undone.",
+    "columns": {
+      "supplier": "Supplier",
+      "contact": "Contact"
+    },
+    "sections": {
+      "profile": "Directory profile",
+      "pictures": "Logo and photo",
+      "contact": "Contact details",
+      "visibility": "Visibility"
+    },
+    "fields": {
+      "name": "Company name",
+      "website": "Website",
+      "tagline": "One-line description",
+      "description": "Description",
+      "categories": "Categories",
+      "regions": "Regions",
+      "logo": "Logo",
+      "image": "Large photo",
+      "person": "Contact person",
+      "email": "Email",
+      "phone": "Phone",
+      "isActive": "Active member",
+      "featured": "Homepage slideshow",
+      "showInPurchasing": "Purchasing page",
+      "rating": "Rating from hotels",
+      "plan": "Plan"
+    },
+    "hints": {
+      "tagline": "One sentence for the homepage slideshow and the directory card.",
+      "words": "{count} / {max} words",
+      "contact": "Only for members and the HotelConnect team — never shown on the public website.",
+      "isActive": "Off: the supplier disappears from the website.",
+      "featured": "One of the suppliers in homepage block 1.",
+      "showInPurchasing": "Shown as a partner block on the Purchasing page.",
+      "plan": "Paying the plan comes with Moneybird."
+    },
+    "ratingValue": "★ {average} / 5 ({count, plural, one {# review} other {# reviews}})",
+    "noRating": "No reviews yet",
+    "plans": {
+      "contract": "Maintenance contract (€49/month or €539/year)",
+      "commission": "No contract (commission only)"
+    }
+  },
+  "Jobs": {
+    "title": "Jobs",
+    "description": "Jobs at member hotels. Published jobs appear on the website.",
+    "add": "Add job",
+    "back": "Back to jobs",
+    "searchPlaceholder": "Search by title or city…",
+    "empty": "No jobs yet.",
+    "notFound": "Job not found",
+    "addTitle": "Add a job",
+    "addDescription": "City and region are taken from the hotel.",
+    "editTitle": "Edit job",
+    "created": "\"{title}\" was added",
+    "updated": "\"{title}\" was saved",
+    "deleted": "\"{title}\" was deleted",
+    "confirmDelete": "Delete \"{title}\"? This cannot be undone.",
+    "columns": {
+      "job": "Job",
+      "published": "Published"
+    },
+    "sections": {
+      "job": "The job",
+      "apply": "How people apply",
+      "status": "Status"
+    },
+    "fields": {
+      "hotel": "Hotel",
+      "title": "Job title",
+      "category": "Category",
+      "employmentType": "Type",
+      "description": "Description",
+      "urgent": "Urgent",
+      "applyEmail": "Applications email",
+      "applyWhatsapp": "WhatsApp number",
+      "location": "Location"
+    },
+    "statuses": {
+      "pending": "Waiting for approval",
+      "published": "Published",
+      "closed": "Closed"
+    },
+    "statusHelp": {
+      "pending": "Not on the website yet.",
+      "published": "Visible on the website's jobs page.",
+      "closed": "Taken off the website; kept here."
+    },
+    "statusChanged": {
+      "published": "The job is now on the website",
+      "closed": "The job was closed",
+      "pending": "The job is waiting for approval"
+    },
+    "actions": {
+      "publish": "Publish on website",
+      "close": "Close job"
+    },
+    "hints": {
+      "location": "Shown in {city}.",
+      "urgent": "Urgent jobs come first, also on the homepage.",
+      "applyEmail": "Empty = {email}. CVs from the website form go here too.",
+      "applyEmailNoHotel": "Empty = the hotel's applications address.",
+      "applyWhatsapp": "Digits with country code, no +. Empty = no WhatsApp button.",
+      "cv": "CVs sent through the website are emailed to the hotel and never stored."
+    }
+  },
+  "Vouchers": {
+    "title": "Vouchers",
+    "description": "Corporate vouchers: deals from member hotels for suppliers.",
+    "add": "Add voucher",
+    "back": "Back to vouchers",
+    "searchPlaceholder": "Search by title…",
+    "empty": "No vouchers yet.",
+    "notFound": "Voucher not found",
+    "addTitle": "Add a voucher",
+    "addDescription": "The region is taken from the hotel.",
+    "editTitle": "Edit voucher",
+    "created": "\"{title}\" was added",
+    "updated": "\"{title}\" was saved",
+    "deleted": "\"{title}\" was deleted",
+    "confirmDelete": "Delete \"{title}\"? This cannot be undone.",
+    "promotedUntil": "In slideshow until {date}",
+    "notPromoted": "Not promoted",
+    "columns": {
+      "voucher": "Voucher"
+    },
+    "sections": {
+      "deal": "The deal",
+      "photo": "Photo",
+      "visibility": "Visibility",
+      "details": "Details"
+    },
+    "fields": {
+      "hotel": "Hotel",
+      "title": "Title",
+      "category": "Category",
+      "discountPercent": "Discount",
+      "teaser": "Teaser",
+      "description": "Description",
+      "bookingUrl": "Booking link",
+      "isActive": "Active",
+      "promotedUntil": "Promoted until",
+      "region": "Region"
+    },
+    "hints": {
+      "discount": "Required: a whole percentage.",
+      "teaser": "One short line for the public slideshow.",
+      "description": "Shown to suppliers who unlock the vouchers.",
+      "bookingUrl": "Only given to suppliers with a valid member number.",
+      "isActive": "Off: the voucher disappears from the website.",
+      "promotedUntil": "Paid promotion: shown first in the slideshow until this date."
+    }
+  },
+  "Stories": {
+    "title": "Stories",
+    "description": "Articles, interviews and columns for the website.",
+    "add": "Write story",
+    "save": "Save story",
+    "back": "Back to stories",
+    "searchPlaceholder": "Search by title…",
+    "empty": "No stories yet.",
+    "notFound": "Story not found",
+    "allKinds": "All kinds",
+    "preview": "Story preview",
+    "addTitle": "Write a story",
+    "addDescription": "Save as draft first, publish when it's ready.",
+    "editTitle": "Edit story",
+    "created": "\"{title}\" was saved",
+    "updated": "\"{title}\" was saved",
+    "deleted": "\"{title}\" was deleted",
+    "confirmDelete": "Delete \"{title}\"? This cannot be undone.",
+    "minutes": "{count} min read",
+    "columns": {
+      "story": "Story"
+    },
+    "sections": {
+      "publish": "Publish",
+      "cover": "Cover photo"
+    },
+    "fields": {
+      "title": "Title",
+      "excerpt": "Intro",
+      "body": "Text",
+      "kind": "Kind",
+      "publishedAt": "Publish date"
+    },
+    "statuses": {
+      "draft": "Draft",
+      "published": "Published"
+    },
+    "statusHelp": {
+      "draft": "Only visible here.",
+      "published": "Visible on the website from the publish date."
+    },
+    "statusChanged": {
+      "published": "The story is published",
+      "draft": "The story is back to draft"
+    },
+    "actions": {
+      "publish": "Publish",
+      "unpublish": "Back to draft"
+    },
+    "hints": {
+      "excerpt": "{count} / 300 characters. Shown on the story card and under the title.",
+      "body": "Scripts and unsafe links are removed when you save. Reading time is worked out for you.",
+      "publishedAt": "Empty = today when published. A future date schedules the story."
+    }
+  },
+  "Dates": {
+    "inDays": "{days, plural, one {in # day} other {in # days}}",
+    "expiredAgo": "{days, plural, one {expired # day ago} other {expired # days ago}}",
+    "today": "today"
+  },
+  "Compliance": {
+    "title": "Suggested for your hotel",
+    "description": "Based on your hotel type. Click one to add it.",
+    "permits": {
+      "operatingPermit": "Operating permit",
+      "fireSafetyNotice": "Notice of fire-safe use",
+      "fireExtinguishers": "Fire extinguishers – yearly check",
+      "fireAlarm": "Fire alarm system – periodic inspection",
+      "emergencyResponse": "BHV certificates (emergency response)",
+      "electricalInspection": "NEN 3140 electrical inspection",
+      "riskAssessment": "RI&E (risk inventory and evaluation)",
+      "tourismTax": "Tourist tax registration",
+      "liquorLicence": "Liquor licence (Alcoholwet)",
+      "terracePermit": "Terrace permit",
+      "nvwaRegistration": "NVWA registration",
+      "haccp": "HACCP / hygiene code",
+      "liftInspection": "Lift inspection",
+      "poolHygiene": "Pool water quality and hygiene",
+      "legionella": "Legionella risk analysis and management plan",
+      "parkingVentilation": "Car park ventilation and CO detection"
+    }
+  },
+  "Calendar": {
+    "title": "Year calendar",
+    "nothing": "Nothing due",
+    "kinds": {
+      "contract_end": "Contract ends",
+      "notice_deadline": "Last day to cancel",
+      "permit_expiry": "Permit expires"
+    },
+    "remindersTitle": "Needs attention",
+    "remindersHint": "Passed, or due within {days} days. You also get these by email.",
+    "allClear": "Nothing due in the next 30 days.",
+    "passed": "{days, plural, one {# day ago} other {# days ago}}",
+    "inDays": "{days, plural, one {in # day} other {in # days}}",
+    "today": "today",
+    "stats": {
+      "contracts": "Contracts",
+      "costPerYear": "Contract costs per year",
+      "permits": "Permits & certificates",
+      "faultContacts": "Storingslijst contacts"
+    }
+  },
+  "Contracts": {
+    "title": "Contract register",
+    "description": "Every contract with its end date, notice period and costs.",
+    "explanation": "Fill in what you want to keep track of. If you only want reminders, fill in the end date and the notice period. If you also want to use the register for your yearly budget, fill in the cost per year and the ledger account too. All fields are optional.",
+    "add": "Add contract",
+    "back": "Back to contracts",
+    "searchPlaceholder": "Search by contract, company or ledger account…",
+    "empty": "No contracts yet. Add your first one.",
+    "notFound": "Contract not found",
+    "addTitle": "Add a contract",
+    "editTitle": "Edit contract",
+    "created": "The contract was added",
+    "updated": "The contract was saved",
+    "deleted": "The contract was deleted",
+    "confirmDelete": "Delete \"{name}\"? This cannot be undone.",
+    "autoRenewShort": "renews",
+    "noEndDate": "No end date",
+    "noNoticePeriod": "Fill in the notice period",
+    "totals": {
+      "count": "Contracts",
+      "costPerYear": "Total cost per year",
+      "withCost": "{count} of {total} contracts have a cost"
+    },
+    "columns": {
+      "contract": "Contract",
+      "cancelBy": "Cancel before"
+    },
+    "sections": {
+      "contract": "Contract",
+      "budget": "Budget",
+      "links": "Links and notes",
+      "reminders": "Reminders"
+    },
+    "fields": {
+      "contractFor": "Contract for",
+      "company": "Company",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "duration": "Duration",
+      "autoRenew": "Renews automatically",
+      "noticePeriod": "Notice period",
+      "noticeUnit": "Unit",
+      "paymentTerm": "Payment term",
+      "costPerYear": "Cost per year",
+      "ledgerAccount": "Ledger account",
+      "contractLink": "Link to contract",
+      "portalLink": "Supplier portal",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "contractFor": "e.g. Energy, linen, lift maintenance",
+      "duration": "e.g. 3 years",
+      "paymentTerm": "e.g. monthly"
+    },
+    "units": {
+      "days": "days",
+      "weeks": "weeks",
+      "months": "months"
+    },
+    "hints": {
+      "endDate": "You get a reminder 30 days before.",
+      "noticePeriod": "With automatic renewal you also get a reminder before the last day to cancel.",
+      "autoRenew": "Tacit renewal: the contract continues unless you cancel in time.",
+      "contractLink": "Google Drive, Dropbox, …",
+      "portalLink": "The supplier's online portal.",
+      "reminders": "Reminders go out 30 days before the end date and, with automatic renewal, before the last day to cancel."
+    }
+  },
+  "Permits": {
+    "title": "Permits & certificates",
+    "description": "Every permit and certificate with its expiry date.",
+    "explanation": "Fill in what you want to keep track of. If you only want reminders, fill in the expiry date. To make the overview complete, also fill in the authority and the link to the document. All fields except the type are optional.",
+    "add": "Add permit",
+    "back": "Back to permits",
+    "searchPlaceholder": "Search by type or authority…",
+    "empty": "No permits or certificates yet.",
+    "notFound": "Permit not found",
+    "addTitle": "Add a permit or certificate",
+    "editTitle": "Edit permit",
+    "created": "The permit was added",
+    "updated": "The permit was saved",
+    "deleted": "The permit was deleted",
+    "confirmDelete": "Delete \"{name}\"? This cannot be undone.",
+    "openDocument": "Open",
+    "noExpiry": "No expiry date",
+    "fields": {
+      "type": "Type of permit / certificate",
+      "authority": "Authority",
+      "issueDate": "Issue date",
+      "expiryDate": "Expiry date",
+      "documentLink": "Link to document",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "type": "e.g. Liquor licence",
+      "authority": "e.g. Gemeente Amsterdam"
+    },
+    "hints": {
+      "expiryDate": "You get a reminder 30 days before.",
+      "documentLink": "Google Drive, Dropbox, …",
+      "reminders": "A reminder goes out 30 days before the expiry date."
+    }
+  },
+  "PortalLinks": {
+    "title": "Useful links & portals",
+    "description": "Every online portal you sign in to, in one place. Only you (the hotel manager) can see these.",
+    "add": "Add link",
+    "back": "Back to links",
+    "searchPlaceholder": "Search by name, username or note…",
+    "empty": "No links yet. Add the portals you use, such as KVK, your municipality or your bank.",
+    "notFound": "Link not found",
+    "addTitle": "Add a link",
+    "editTitle": "Edit link",
+    "created": "The link was added",
+    "updated": "The link was saved",
+    "deleted": "The link was deleted",
+    "confirmDelete": "Delete \"{name}\"? This cannot be undone.",
+    "open": "Open",
+    "copy": "Copy",
+    "copied": "Copied",
+    "noPasswords": "Never store passwords here. Keep them in a password manager; this list only remembers where to sign in and with which username.",
+    "fields": {
+      "category": "Category",
+      "customCategory": "Category name",
+      "name": "Name",
+      "url": "Link",
+      "username": "Username",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "customCategory": "e.g. Channel manager",
+      "name": "e.g. Gemeente Amsterdam"
+    },
+    "hints": {
+      "username": "Optional. No password."
+    }
+  },
+  "Faults": {
+    "title": "Storingslijst",
+    "description": "Every party you call when something breaks. Tap a number to call.",
+    "descriptionStaff": "Who to call when something breaks. Tap a number to call.",
+    "add": "Add contact",
+    "back": "Back to storingslijst",
+    "searchPlaceholder": "Search by name or type of fault…",
+    "empty": "No contacts yet. Add the parties you call for faults.",
+    "emptyStaff": "Your manager hasn't added any contacts yet.",
+    "notFound": "Contact not found",
+    "addTitle": "Add a contact",
+    "addDescription": "A party the hotel calls when something breaks.",
+    "editTitle": "Edit contact",
+    "created": "{name} was added",
+    "updated": "{name} was saved",
+    "deleted": "The contact was deleted",
+    "confirmDelete": "Delete {name} from the storingslijst?",
+    "edit": "Edit",
+    "delete": "Delete",
+    "emailButton": "Email",
+    "websiteButton": "Website",
+    "reportButton": "Report a fault by email",
+    "fields": {
+      "name": "Name of the party",
+      "faultType": "Type of fault",
+      "phone": "Phone number",
+      "whatsapp": "WhatsApp",
+      "email": "Email",
+      "website": "Website or service form",
+      "notes": "Note"
+    },
+    "hints": {
+      "whatsapp": "Optional. Digits with country code, e.g. 31612345678.",
+      "email": "Optional. Needed to report faults by email.",
+      "notes": "e.g. contract number or opening hours."
+    },
+    "report": {
+      "title": "Report a fault to {name}",
+      "explanation": "We email {email} with your hotel's details. They contact you directly.",
+      "location": "Where in the hotel",
+      "locationPlaceholder": "e.g. room 12, lift A",
+      "description": "What is wrong",
+      "urgent": "Urgent",
+      "urgentHint": "Marked as urgent in the subject line.",
+      "privacy": "HotelConnect does not store or follow up the report.",
+      "send": "Send report",
+      "sent": "The fault was reported to {name}"
+    }
+  },
+  "Kennisbank": {
+    "title": "Knowledge base: laws & regulations",
+    "description": "Dutch rules for hotels by topic, each with a link to the official source.",
+    "intro": "On this page you find the regulations per topic, with a direct link to the official source. That way you can check the latest version of the law yourself. The topics are in Dutch, like the law itself.",
+    "search": "Search the knowledge base",
+    "searchPlaceholder": "Search, e.g. HACCP, BHV, toeristenbelasting…",
+    "all": "All",
+    "topics": "{count, plural, one {# topic} other {# topics}}",
+    "empty": "Nothing found. Try another word.",
+    "opensNewTab": "(opens the official source in a new tab)",
+    "disclaimer": "This overview helps you find the right rules; it is not legal advice. Always check the official source for the current rules."
+  },
+  "Tenders": {
+    "title": "Tenders",
+    "description": "Ask suppliers for a quote, compare the quotes and choose the best one.",
+    "add": "New tender",
+    "send": "Send tender",
+    "back": "Back to tenders",
+    "searchPlaceholder": "Search by title or description…",
+    "empty": "No tenders yet. Send your first one to get up to three quotes.",
+    "notFound": "Tender not found",
+    "addTitle": "New tender",
+    "editTitle": "Edit tender",
+    "explanation": "Your tender goes to at most three verified suppliers with the same category and region. They get an email and send their quote in their own dashboard; you compare the quotes here.",
+    "editExplanation": "The tender was already sent, so the type, category and region can no longer change. Suppliers see your changes straight away.",
+    "closedCannotEdit": "This tender is closed and can no longer be changed.",
+    "sent": "{count, plural, one {Tender sent to # supplier} other {Tender sent to # suppliers}}",
+    "sentNoSupplier": "Tender saved, but there is no matching supplier yet. HotelConnect will look for one.",
+    "updated": "The tender was saved",
+    "cancel": "Cancel tender",
+    "confirmCancel": "Cancel this tender? Suppliers can no longer send a quote.",
+    "cancelled": "The tender was cancelled",
+    "confirmAward": "Choose {name} as the winner? The other suppliers hear they were not chosen.",
+    "awarded": "{name} was chosen",
+    "quotes": "Quotes",
+    "quotesOf": "{offers} of {invited}",
+    "invited": "Invited suppliers",
+    "quoteIn": "Quote in",
+    "waiting": "Waiting",
+    "noSuppliers": "No matching supplier was found for this category and region yet.",
+    "compare": "Compare quotes",
+    "noQuotes": "No quotes yet. You get an email when one comes in.",
+    "supplier": "Supplier",
+    "price": "Price",
+    "deliveryTime": "Delivery time",
+    "notes": "Notes",
+    "file": "Quote",
+    "open": "Open",
+    "lowest": "Lowest",
+    "winner": "Winner",
+    "chooseWinner": "Choose",
+    "status": {
+      "open": "Open",
+      "awarded": "Winner chosen",
+      "cancelled": "Cancelled"
+    },
+    "offerStatus": {
+      "submitted": "Sent",
+      "won": "Won",
+      "lost": "Not chosen"
+    },
+    "fields": {
+      "type": "Type",
+      "title": "Title",
+      "category": "Category",
+      "region": "Region",
+      "description": "What do you need?",
+      "deadline": "Deadline",
+      "budget": "Budget"
+    },
+    "placeholders": {
+      "title": "e.g. New boiler for the spa",
+      "description": "Describe what you need: quantities, sizes, wishes, when it should be ready…"
+    },
+    "hints": {
+      "category": "Only suppliers in this category are invited.",
+      "deadline": "Suppliers can send a quote until the end of this day.",
+      "budget": "Optional. Suppliers see it."
+    },
+    "review": {
+      "title": "Rate {name}",
+      "intro": "How did the job go? Your answers move good suppliers up the ranking. Only HotelConnect sees them.",
+      "rating": "Overall rating",
+      "communication": "Communication",
+      "onTime": "Done on time?",
+      "wouldHireAgain": "Would you hire them again?",
+      "comments": "Comments",
+      "save": "Save rating",
+      "saved": "Thank you! Your rating was saved."
+    }
+  },
+  "HotelJobs": {
+    "title": "Jobs",
+    "description": "Your vacancies on the public HotelConnect jobs page. HotelConnect checks every new job before it goes live.",
+    "add": "New job",
+    "back": "Back to jobs",
+    "empty": "No jobs yet. Post your first vacancy.",
+    "notFound": "Job not found",
+    "addTitle": "New job",
+    "addDescription": "HotelConnect checks the job and publishes it, usually within a working day.",
+    "editTitle": "Edit job",
+    "submit": "Send for approval",
+    "created": "Your job was sent; HotelConnect will publish it soon",
+    "updated": "The job was saved",
+    "deleted": "The job was deleted",
+    "confirmDelete": "Delete \"{title}\"? This cannot be undone.",
+    "close": "Close job",
+    "reopen": "Reopen",
+    "confirmClose": "Close this job? It disappears from the website.",
+    "closed": "The job was closed",
+    "reopened": "The job was reopened; HotelConnect checks it again",
+    "applying": "How people apply",
+    "lastApplication": "Last application on {date}.",
+    "noApplications": "No applications through the website form yet.",
+    "applicationsHint": "Counted are applications sent with the CV form on the website. They go to {email}; HotelConnect never stores them. WhatsApp and email applications go to you directly and are not counted.",
+    "columns": {
+      "job": "Job",
+      "applications": "Applications"
+    },
+    "status": {
+      "pending": "Waiting for approval",
+      "published": "Live",
+      "closed": "Closed"
+    },
+    "statusHint": {
+      "pending": "HotelConnect checks the job before it appears on the website.",
+      "published": "The job is on the public jobs page.",
+      "closed": "The job is not shown on the website."
+    },
+    "style": {
+      "title": "Style",
+      "traditional": "Traditional",
+      "traditionalHint": "Text and an application form.",
+      "visual": "Visual",
+      "visualHint": "A photo or video first, applying by WhatsApp."
+    },
+    "fields": {
+      "photo": "Photo",
+      "video": "Video (YouTube or Vimeo)"
+    },
+    "placeholders": {
+      "title": "e.g. Chef de partie",
+      "description": "What does the job involve, what do you offer, who are you looking for?"
+    },
+    "hints": {
+      "video": "Optional. A link to a YouTube or Vimeo video.",
+      "applyEmail": "Empty = your applications address from My hotel."
+    }
+  },
+  "HotelVouchers": {
+    "title": "Vouchers",
+    "description": "Corporate deals for suppliers in the network: meetings, stays, dinners and gifts. Your voucher is on the website straight away.",
+    "add": "New voucher",
+    "back": "Back to vouchers",
+    "empty": "No vouchers yet. Add a deal for suppliers.",
+    "notFound": "Voucher not found",
+    "addTitle": "New voucher",
+    "addDescription": "Your voucher appears on the public voucher page straight away.",
+    "editTitle": "Edit voucher",
+    "publish": "Publish voucher",
+    "created": "Your voucher is live",
+    "updated": "The voucher was saved",
+    "deleted": "The voucher was deleted",
+    "confirmDelete": "Delete \"{title}\"? This cannot be undone.",
+    "live": "Live",
+    "photo": "Photo",
+    "columns": {
+      "voucher": "Voucher",
+      "discount": "Discount"
+    },
+    "placeholders": {
+      "title": "e.g. Meeting room with lunch"
+    },
+    "hints": {
+      "bookingUrl": "Your own booking page. Only signed-in suppliers get this link."
+    },
+    "promote": {
+      "title": "Promote this voucher",
+      "text": "Put your voucher first in the slideshow on the suppliers page, for a month or a quarter.",
+      "cta": "Promote and pay",
+      "extend": "Extend the promotion",
+      "until": "Promoted until {date}",
+      "hint": "starts as soon as it is paid",
+      "inactive": "Switch the voucher on first; only live vouchers can be promoted."
+    }
+  },
+  "Purchasing": {
+    "title": "Collective purchasing",
+    "subtitle": "Buy together with other hotels and get better deals.",
+    "introTitle": "Buying together. Stronger together.",
+    "intro": "On this page we buy together. For now only energy, but much more is coming soon: key cards, fuel and much more. The more hotels join, the stronger our negotiating position. And the better the deals for you.",
+    "empty": "No collective purchases yet. You get a notification when a new one starts.",
+    "participants": "Participants",
+    "of": "of {target}",
+    "deadline": "Deadline",
+    "expectedSavings": "Expected savings",
+    "join": "Sign up",
+    "joinTitle": "Sign up for {title}",
+    "joined": "You take part! We keep you posted.",
+    "withdraw": "Withdraw",
+    "confirmWithdraw": "Withdraw from this collective purchase? Your invoice is deleted.",
+    "withdrawn": "You withdrew",
+    "youTakePart": "You take part · {supplier}, contract ends {date}",
+    "privacy": "Only HotelConnect sees your invoice. It is shared with the energy supplier only for this action and deleted after the action is completed.",
+    "hint": {
+      "open": "Sign up before the deadline.",
+      "negotiating": "Enough hotels joined; HotelConnect is negotiating.",
+      "completed": "This collective purchase is completed."
+    },
+    "status": {
+      "open": "Open",
+      "negotiating": "In negotiation",
+      "completed": "Completed"
+    },
+    "fields": {
+      "currentSupplier": "Current supplier",
+      "contractEndDate": "Contract end date",
+      "annualUsage": "Annual usage",
+      "invoice": "Latest annual invoice (PDF)"
+    },
+    "placeholders": {
+      "currentSupplier": "e.g. Vattenfall",
+      "annualUsage": "e.g. 120,000 kWh, 30,000 m³ gas"
+    },
+    "hints": {
+      "annualUsage": "Optional.",
+      "invoice": "PDF, max 10 MB."
+    }
+  },
+  "AdminPurchasing": {
+    "title": "Collective purchasing",
+    "description": "Collective purchasing actions. At the target number of hotels the status turns to \"In negotiation\" by itself.",
+    "add": "New action",
+    "back": "Back to actions",
+    "empty": "No actions yet.",
+    "notFound": "Action not found",
+    "addTitle": "New collective purchase",
+    "editTitle": "Edit action",
+    "created": "The action was created",
+    "updated": "The action was saved",
+    "deleted": "The action was deleted",
+    "confirmDelete": "Delete \"{title}\" with all participants and invoices? This cannot be undone.",
+    "participants": "Participants",
+    "hotel": "Hotel",
+    "noParticipants": "No hotels yet.",
+    "downloadZip": "Download all invoices ({count}) as ZIP",
+    "privacyTitle": "Invoices (AVG)",
+    "filesKept": "Invoices are kept until 90 days after the action is completed.",
+    "filesDeleteOn": "The invoices are deleted automatically on {date}.",
+    "filesDeleted": "The invoices were deleted on {date}.",
+    "fields": {
+      "title": "Title",
+      "category": "Category",
+      "status": "Status",
+      "deadline": "Deadline",
+      "targetParticipants": "Hotels needed",
+      "expectedSavings": "Expected savings",
+      "description": "Description"
+    },
+    "placeholders": {
+      "expectedSavings": "e.g. 10–15% on your energy bill"
+    },
+    "hints": {
+      "status": "\"Completed\" starts the 90-day countdown for deleting the invoices; the hotels get a notification.",
+      "target": "At this number the status turns to \"In negotiation\"."
+    }
+  },
+  "Registrations": {
+    "title": "Registrations",
+    "description": "New hotels and suppliers who signed up on the website. Approving creates the member with a member number and its login.",
+    "all": "All",
+    "empty": "No registrations here.",
+    "notFound": "Registration not found",
+    "back": "Back to registrations",
+    "company": "Company",
+    "type": "Type",
+    "contact": "Contact",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "plan": "Plan",
+    "website": "Website",
+    "categories": "Categories",
+    "regions": "Regions",
+    "approve": "Approve",
+    "reject": "Reject",
+    "confirmApprove": "Approve {name}? The member and its login are created and they get an email.",
+    "approved": "Approved — member number {number}",
+    "rejectTitle": "Reject registration",
+    "reasonLabel": "Reason (optional, emailed to the applicant)",
+    "rejected": "The registration was rejected",
+    "openMember": "Open the member",
+    "types": {
+      "hotel": "Hotel",
+      "supplier": "Supplier"
+    },
+    "plans": {
+      "contract": "Maintenance contract (€49/month or €539/year)",
+      "commission": "No contract (commission only)"
+    },
+    "status": {
+      "pending": "Waiting",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "statusHint": {
+      "pending": "Check the KVK number and the details, then approve or reject.",
+      "approved": "The member and its login were created; the applicant got an email.",
+      "rejected": "The applicant got an email."
+    },
+    "testPhase": {
+      "label": "Test phase (registration closed)",
+      "on": "On: the website shows the waitlist and nobody can register.",
+      "off": "Off: hotels and suppliers can register on the website. The website follows within a few minutes.",
+      "confirmOpen": "Open registration? Anyone can then register on the website (you still approve each one).",
+      "opened": "Registration is open",
+      "closed": "Test phase on: registration is closed"
+    }
+  },
+  "SupplierTenders": {
+    "title": "Requests",
+    "description": "Tenders, maintenance contracts and product requests from hotels in your category and region.",
+    "back": "Back to requests",
+    "empty": "No requests yet. You get an email when a hotel invites you.",
+    "notFound": "Request not found",
+    "sendQuote": "Send quote",
+    "changeQuote": "Change quote",
+    "quoteSent": "Your quote was sent to the hotel",
+    "quoteUpdated": "Your quote was changed",
+    "yourQuote": "Your quote",
+    "fields": {
+      "title": "Request",
+      "hotel": "Hotel",
+      "category": "Category",
+      "region": "Region",
+      "deadline": "Deadline",
+      "status": "Status",
+      "budget": "Budget",
+      "price": "Price (excl. VAT)",
+      "deliveryTime": "Delivery time",
+      "notes": "Notes",
+      "file": "Quote (PDF or photo)"
+    },
+    "placeholders": {
+      "deliveryTime": "e.g. 2 weeks"
+    },
+    "hints": {
+      "deliveryTime": "When can you deliver or start?",
+      "file": "Optional. PDF, JPEG, PNG or WEBP, max 10 MB. A new file replaces the old one."
+    },
+    "status": {
+      "open": "Open",
+      "submitted": "Quote sent",
+      "won": "Won",
+      "lost": "Not chosen",
+      "expired": "Deadline passed",
+      "cancelled": "Cancelled"
+    },
+    "statusHint": {
+      "open": "Send your quote before the end of the deadline day.",
+      "submitted": "You can change your quote until the end of the deadline day.",
+      "won": "The hotel chose your quote and will contact you.",
+      "lost": "The hotel chose another quote.",
+      "expired": "The deadline has passed without a quote from you.",
+      "cancelled": "The hotel cancelled this request."
+    }
+  },
+  "SupplierHome": {
+    "welcome": "Welcome back, {name}",
+    "intro": "New requests from hotels in your category and region, and how your quotes are doing.",
+    "stats": {
+      "toQuote": "Waiting for your quote",
+      "running": "Quotes sent",
+      "won": "Won"
+    },
+    "newRequests": "New requests",
+    "all": "All requests",
+    "noNewRequests": "No new requests right now. You get an email when a hotel invites you.",
+    "runningQuotes": "Your quotes",
+    "noQuotes": "You have not sent any quotes yet.",
+    "profile": {
+      "title": "My company",
+      "description": "Keep your categories, regions and contact details up to date, so the right requests reach you."
+    },
+    "vouchers": {
+      "title": "Corporate vouchers",
+      "description": "Book deals from member hotels on the website. You are signed in there automatically."
+    },
+    "checklist": {
+      "title": "Complete your profile",
+      "intro": "Hotels see your profile in the directory and when they compare quotes. A complete profile gets more work.",
+      "cta": "Complete profile",
+      "progress": "{done} of {total} done",
+      "steps": {
+        "logo": "Upload your logo",
+        "tagline": "Write a one-line description",
+        "description": "Describe your company (at least 20 words)",
+        "work": "Choose your categories and regions",
+        "website": "Add your website",
+        "emails": "Add an email for invoices or notifications"
+      }
+    }
+  },
+  "SupplierProfile": {
+    "title": "My company",
+    "description": "Your profile in the network",
+    "viewPublic": "View on website",
+    "nameHint": "Your company name and member number are managed by HotelConnect. Contact us to change them.",
+    "saved": "Your profile was saved",
+    "addCertificate": "Add certificate",
+    "sections": {
+      "company": "Company",
+      "work": "What you do and where",
+      "contact": "Contact and email",
+      "certificates": "Certificates"
+    },
+    "fields": {
+      "logo": "Logo",
+      "tagline": "One-line description",
+      "description": "Description",
+      "website": "Website",
+      "categories": "Categories",
+      "regions": "Regions",
+      "person": "Contact person",
+      "phone": "Phone",
+      "generalEmail": "General email",
+      "invoicesEmail": "Email for invoices",
+      "notificationsEmail": "Email for notifications",
+      "certificateName": "Certificate",
+      "certificateUrl": "Link"
+    },
+    "placeholders": {
+      "certificateName": "e.g. ISO 9001, VCA"
+    },
+    "hints": {
+      "tagline": "Shown in the homepage slideshow.",
+      "words": "{count} of {max} words",
+      "work": "You only get requests for these categories and regions. Your profile in the public directory shows them too.",
+      "contact": "Hotels never see these on the website; they are for HotelConnect and for hotels you work with.",
+      "fallback": "Empty = the general email.",
+      "notifications": "New requests and results go here. Empty = the general email.",
+      "certificates": "Links only (e.g. to a certificate on your website or in a register); no uploads."
+    }
+  },
+  "MyHotel": {
+    "title": "My hotel",
+    "saved": "Saved",
+    "company": {
+      "title": "Company details",
+      "description": "As registered with the Chamber of Commerce.",
+      "name": "Hotel name",
+      "kvk": "KVK number",
+      "kvkHint": "8 digits.",
+      "address": "Address",
+      "city": "City",
+      "region": "Region",
+      "contactPerson": "Contact person",
+      "phone": "Phone",
+      "generalEmail": "General email address",
+      "generalEmailHint": "Required, e.g. info@hotel.nl. Every email goes here unless you route it elsewhere."
+    },
+    "facilities": {
+      "title": "Type of hotel",
+      "description": "This decides which rules apply to your hotel (your compliance profile).",
+      "rooms": "Number of rooms",
+      "restaurant": "Restaurant",
+      "restaurantHint": "Food and drinks for guests or walk-ins.",
+      "lift": "Lift",
+      "liftHint": "A passenger or goods lift.",
+      "pool": "Swimming pool",
+      "poolHint": "Indoor or outdoor pool, spa or hot tub.",
+      "parking": "Car park",
+      "parkingHint": "An indoor or underground car park.",
+      "profileTitle": "Your compliance profile",
+      "profileHint": "Permits and certificates hotels like yours usually need:"
+    },
+    "guide": {
+      "title": "Hotel guide profile",
+      "description": "How your hotel appears in the public hotel guide. Changes show right away.",
+      "text": "Short description",
+      "textHint": "{count} / 1000 characters.",
+      "bookingUrl": "Your booking page",
+      "bookingUrlHint": "\"Book now\" in the hotel guide goes here.",
+      "offer": "Current offer",
+      "offerHint": "Optional, e.g. \"15% off midweek\"."
+    },
+    "emails": {
+      "title": "Email addresses and routing",
+      "description": "Choose where each type of email goes, and which ones you want to receive.",
+      "receive": "Receive",
+      "fallback": "Empty = {email}",
+      "types": {
+        "general": "General",
+        "invoices": "Invoices",
+        "vacancies": "Job applications",
+        "faults": "Faults",
+        "alerts": "System alerts"
+      },
+      "hints": {
+        "general": "Required. The default address.",
+        "invoices": "Membership invoices.",
+        "vacancies": "Applications and CVs.",
+        "faults": "Usually the technical service.",
+        "alerts": "e.g. reminders and subscription alerts."
+      }
+    },
+    "staff": {
+      "title": "Staff login",
+      "description": "One shared login for your staff. They only see the storingslijst and can't change anything.",
+      "email": "Email for the staff login",
+      "emailHint": "Staff sign in with this address.",
+      "password": "Password",
+      "passwordHint": "At least 8 characters. Share it with your staff.",
+      "newPassword": "New password",
+      "newPasswordHint": "Leave empty to keep the current password.",
+      "create": "Create staff login",
+      "save": "Save staff login",
+      "saved": "The staff login was saved",
+      "delete": "Remove",
+      "deleted": "The staff login was removed",
+      "confirmDelete": "Remove the staff login? Staff can no longer sign in."
+    },
+    "channels": {
+      "title": "Notifications: email or dashboard",
+      "description": "Per kind of notification, choose where it reaches you. Suppliers always get both.",
+      "saved": "Your choices were saved",
+      "options": {
+        "both": "Email + dashboard",
+        "dashboard": "Only dashboard",
+        "email": "Only email"
+      },
+      "types": {
+        "compliance": "Compliance reminders",
+        "tender": "Tenders and quotes",
+        "vacancy": "Job applications",
+        "fault": "Faults",
+        "system": "System alerts",
+        "advertising": "Advertising"
+      },
+      "hints": {
+        "compliance": "Contracts and permits that end within 30 days.",
+        "tender": "New quotes for your tenders.",
+        "vacancy": "Applications always come by email too, because CVs are never stored.",
+        "fault": "Faults you reported to a supplier.",
+        "system": "Messages from HotelConnect about your account.",
+        "advertising": "When your ad goes live or ends."
+      },
+      "push": "Push"
+    }
+  },
+  "Onboarding": {
+    "eyebrow": "Welcome · {number}",
+    "title": "Let's set up {name}",
+    "intro": "Eight short steps. Your progress is saved, so you can stop and continue later. Steps 3 to 5 can also be done later.",
+    "back": "Back",
+    "continue": "Continue",
+    "skip": "Skip for now",
+    "saveContinue": "Save and continue",
+    "remove": "Remove",
+    "confirm": "Confirm and open my dashboard",
+    "done": "Welcome to HotelConnect!",
+    "until": "until {date}",
+    "steps": {
+      "registers": "Registers",
+      "company": {
+        "short": "Company",
+        "title": "Company details"
+      },
+      "facilities": {
+        "short": "Hotel type",
+        "title": "Type of hotel"
+      },
+      "contracts": {
+        "short": "Contracts",
+        "title": "Contract register",
+        "empty": "No contracts added yet."
+      },
+      "permits": {
+        "short": "Permits",
+        "title": "Permits and certificates",
+        "empty": "No permits added yet."
+      },
+      "faults": {
+        "short": "Storingslijst",
+        "title": "Storingslijst",
+        "empty": "No contacts added yet."
+      },
+      "guide": {
+        "short": "Hotel guide",
+        "title": "Hotel guide profile"
+      },
+      "emails": {
+        "short": "Emails",
+        "title": "Email addresses and routing"
+      },
+      "confirm": {
+        "short": "Confirm",
+        "title": "Check and confirm",
+        "description": "An overview of everything you filled in. You can change it all later under My hotel.",
+        "noFacilities": "No restaurant, lift, pool or car park",
+        "contracts": "{count, plural, =0 {No contracts} one {# contract} other {# contracts}}",
+        "permits": "{count, plural, =0 {No permits} one {# permit} other {# permits}}",
+        "faults": "{count, plural, =0 {No storingslijst contacts} one {# storingslijst contact} other {# storingslijst contacts}}"
+      }
+    }
+  },
+  "HotelLogins": {
+    "title": "Logins",
+    "add": "Add manager",
+    "addTitle": "Hotel manager login",
+    "empty": "No logins yet.",
+    "hint": "The hotel manager signs in, completes the onboarding and creates the staff login.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "password": "Temporary password",
+    "passwordHint": "At least 8 characters. Share it safely; they can change it under Settings.",
+    "created": "Login created for {email}",
+    "deleted": "Login removed",
+    "delete": "Remove",
+    "confirmDelete": "Remove the login {email}?"
+  },
+  "SupplierLogins": {
+    "title": "Logins",
+    "add": "Add login",
+    "addTitle": "Supplier login",
+    "empty": "No logins yet.",
+    "hint": "With this login the supplier signs in to the dashboard and can book corporate vouchers on the website.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "password": "Temporary password",
+    "passwordHint": "At least 8 characters. Share it safely; they can change it under Settings.",
+    "created": "Login created for {email}",
+    "deleted": "Login removed",
+    "delete": "Remove",
+    "confirmDelete": "Remove the login {email}?"
+  },
+  "Billing": {
+    "title": "Invoices",
+    "subtitle": "Your membership, prices and invoices.",
+    "membership": "Membership",
+    "prices": "Prices",
+    "plan": {
+      "hotel": "Hotel membership",
+      "supplier-contract": "Maintenance contract"
+    },
+    "interval": {
+      "month": "Monthly",
+      "year": "Yearly"
+    },
+    "subStatus": {
+      "active": "Active",
+      "cancelled": "Stopped"
+    },
+    "status": {
+      "open": "Open",
+      "paid": "Paid",
+      "cancelled": "Cancelled",
+      "overdue": "Overdue"
+    },
+    "kind": {
+      "membership": "Membership",
+      "commission": "Commission",
+      "advertising": "Sponsored spot",
+      "promotion": "Voucher promotion"
+    },
+    "adStatus": {
+      "pending_payment": "Awaiting payment",
+      "queued": "Waiting for its turn",
+      "live": "Live",
+      "ended": "Ended",
+      "cancelled": "Cancelled"
+    },
+    "currentPeriod": "Current period: {start} – {end}",
+    "endsOn": "Stopped — ends on {date}",
+    "pricePerYear": "{price} per year, excl. VAT",
+    "pricePerMonth": "{price} per month, excl. VAT",
+    "perYear": "{price} / year",
+    "perMonth": "{price} / month",
+    "perQuarter": "{price} / quarter",
+    "payEvery": "Pay",
+    "intervalHint": "A change applies from your next period.",
+    "intervalSaved": "Saved — this applies from your next period.",
+    "noMembershipHotel": "Your membership starts when HotelConnect approves your hotel. During the test phase the first hotels are free.",
+    "noMembershipContract": "Your maintenance contract membership has not started yet. HotelConnect starts it for you.",
+    "commissionOnly": "You have no fixed membership: you pay {percent}% commission on each job you win through a tender.",
+    "commission": "Commission per won job",
+    "sponsoredSpot": "Sponsored spot on the homepage",
+    "voucherPromotion": "Voucher promotion",
+    "exclVat": "All prices excl. {rate}% VAT.",
+    "payByTransfer": "Online payment is not switched on yet: pay by bank transfer, quoting the invoice number. HotelConnect marks the invoice as paid.",
+    "thanks": "Thank you! We received the payment for {number}; it can take a minute to show here.",
+    "invoice": "Invoice",
+    "member": "Member",
+    "description": "Description",
+    "dueDate": "Due",
+    "total": "Total",
+    "paidOn": "Paid {date}",
+    "inclVat": "incl. {vat} VAT",
+    "payNow": "Pay now",
+    "viewInvoice": "View invoice",
+    "noInvoices": "No invoices yet.",
+    "markPaid": "Mark paid",
+    "markedPaid": "Marked as paid.",
+    "cancelled": "Invoice cancelled.",
+    "confirmPaid": "Mark invoice {number} as paid? If it pays for an ad or a promotion, that starts now.",
+    "confirmCancel": "Cancel invoice {number}?",
+    "adminTitle": "Invoices",
+    "adminSubtitle": "Every invoice: memberships, commission, ads and voucher promotions.",
+    "invoiceCount": "{count, plural, one {# invoice} other {# invoices}}",
+    "filterStatus": "Filter by status",
+    "filterKind": "Filter by type",
+    "allStatuses": "All statuses",
+    "allKinds": "All types",
+    "adsTitle": "Advertising",
+    "adsSubtitle": "A sponsored spot on the homepage of the website, for a month or a quarter.",
+    "spots": "Spots",
+    "block": {
+      "suppliers": "Suppliers block",
+      "jobs": "Jobs block",
+      "hotels": "Hotels block"
+    },
+    "blockHint": {
+      "suppliers": "Your company first in “Suppliers in the spotlight”.",
+      "jobs": "One of your published jobs first in “Urgent vacancies”.",
+      "hotels": "Your hotel first in “Featured hotels”."
+    },
+    "position": "Position {n}",
+    "free": "Free now",
+    "takenUntil": "Taken until {date}",
+    "waiting": "{count, plural, one {# booking waiting} other {# bookings waiting}}",
+    "book": "Book",
+    "period": "Period",
+    "adPeriod": {
+      "month": "1 month",
+      "quarter": "1 quarter"
+    },
+    "job": "Job",
+    "chooseJob": "Choose a published job",
+    "noPublishedJobs": "You have no published jobs yet.",
+    "startsOn": "Starts on {date} at the earliest (after payment).",
+    "toPay": "To pay:",
+    "plusVat": "plus VAT",
+    "bookAndPay": "Book and pay",
+    "bookHint": "After payment your spot goes live; if it is taken, it starts when the current one ends. You get a melding when it starts and ends.",
+    "bookedInvoice": "Booked. Invoice {number} is waiting in Invoices; it starts once paid.",
+    "myBookings": "My bookings",
+    "spot": "Spot",
+    "dates": "Dates",
+    "noBookings": "No bookings yet.",
+    "confirmCancelBooking": "Cancel this booking? The invoice is cancelled too.",
+    "bookingCancelled": "Booking cancelled.",
+    "adminAdsTitle": "Advertising",
+    "adminAdsSubtitle": "Sponsored spots on the homepage: who is live and who is waiting.",
+    "noMembershipAdmin": "No paid membership yet (free test phase, or set up by hand).",
+    "commissionMember": "Pays commission per won job (no maintenance contract).",
+    "startMembership": "Start paid membership",
+    "confirmStart": "Start the paid membership? The first invoice is sent right away.",
+    "started": "Membership started.",
+    "stopMembership": "Stop renewing",
+    "confirmStop": "Stop this membership? It ends at the end of the paid period.",
+    "stopped": "Membership stopped.",
+    "allInvoices": "All invoices"
+  }
+}
