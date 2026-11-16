@@ -11,6 +11,8 @@ const MOVED = {
 };
 
 const nextConfig: NextConfig = {
+  // Production: the dashboard is served at hotelconnect-network.nl/dashboard (see lib/basePath.ts).
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
   async redirects() {
     return Object.entries(MOVED).flatMap(([portal, pages]) =>
       pages.flatMap((page) => [
@@ -26,7 +28,12 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      // Uploaded files (avatars, logos, photos) live in DigitalOcean Spaces.
+      // Uploaded files (avatars, logos, photos): Hetzner Object Storage, folder hotelconnect/.
+      {
+        protocol: "https",
+        hostname: "**.your-objectstorage.com",
+        pathname: "/hotelconnect/**",
+      },
       {
         protocol: "https",
         hostname: "**.digitaloceanspaces.com",

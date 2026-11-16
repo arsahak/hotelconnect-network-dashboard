@@ -30,6 +30,11 @@ export class InvalidCodeError extends CredentialsSignin {
 
 export const { auth, signIn, signOut, handlers } = NextAuth({
   secret: AUTH_SECRET,
+  // Behind the website's /dashboard rewrite the host is the dashboard's own
+  // deployment; trust it (Vercel does this by default, `next start` does not).
+  // Next.js strips the base path before Auth.js sees the URL, so Auth.js keeps
+  // its default /api/auth.
+  trustHost: true,
   // Own cookie names, so the dashboard session never mixes with the website
   // when both run on localhost.
   cookies: {

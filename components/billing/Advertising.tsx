@@ -26,7 +26,7 @@ const noVacancies = async (): Promise<ActionResponse<MyVacancy[]>> => ({ ok: tru
 
 /**
  * Reclame — /hotel/advertising and /supplier/advertising (briefing §2.1,
- * §3.15, §4.9): a sponsored spot on the homepage for a month or a quarter.
+ * §3.15, §4.9): a sponsored spot on the homepage for 14 days or a month.
  * A taken spot can still be booked: it starts when the one before ends.
  */
 const Advertising = ({ portal }: { portal: "hotel" | "supplier" }) => {
@@ -42,7 +42,7 @@ const Advertising = ({ portal }: { portal: "hotel" | "supplier" }) => {
 
   const [block, setBlock] = useState<AdBlock>(blocks[0]);
   const [position, setPosition] = useState(1);
-  const [period, setPeriod] = useState<AdPeriod>("month");
+  const [period, setPeriod] = useState<AdPeriod>("fortnight");
   const [vacancy, setVacancy] = useState("");
   const [busy, setBusy] = useState(false);
 
@@ -92,7 +92,7 @@ const Advertising = ({ portal }: { portal: "hotel" | "supplier" }) => {
                   <div key={b.block}>
                     <p className="text-sm font-medium text-gray-900">{t(`block.${b.block}`)}</p>
                     <p className="text-xs text-gray-500">{t(`blockHint.${b.block}`)}</p>
-                    <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    <div className="mt-3 grid gap-3 sm:grid-cols-3">
                       {b.positions.map((p) => {
                         const selected = block === b.block && position === p.position;
                         return (
@@ -132,7 +132,7 @@ const Advertising = ({ portal }: { portal: "hotel" | "supplier" }) => {
             <div>
               <p className={labelClass}>{t("period")}</p>
               <div className="mt-2 grid grid-cols-2 gap-2">
-                {(["month", "quarter"] as const).map((p) => (
+                {(["fortnight", "month"] as const).map((p) => (
                   <button
                     key={p}
                     type="button"

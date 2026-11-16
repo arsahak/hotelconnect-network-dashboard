@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { useState, type ReactNode } from "react";
 import { toast } from "react-hot-toast";
 import { BiCheckCircle, BiPencil } from "react-icons/bi";
+import { withBase } from "@/lib/basePath";
 
 function Block({ step, title, children, goTo, editLabel }: { step: number; title: string; children: ReactNode; goTo: (step: number) => void; editLabel: string }) {
   return (
@@ -42,7 +43,7 @@ export function ConfirmStep({ hotel, onBack, goTo }: { hotel: MyHotel; onBack: (
     if (res.ok) {
       toast.success(t("done"));
       // Full load: the dashboard layout reads the finished onboarding.
-      window.location.href = "/dashboard";
+      window.location.href = withBase("/dashboard");
     } else {
       toast.error(res.error || tc("error"));
       setConfirming(false);

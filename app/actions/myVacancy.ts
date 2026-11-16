@@ -15,7 +15,10 @@ export interface MyVacancy {
   description: string;
   category: string;
   employmentType: string;
+  /** Hours per week, free text. */
+  hours?: string;
   city: string;
+  region: string;
   urgent: boolean;
   status: MyVacancyStatus;
   style: VacancyStyle;
@@ -30,7 +33,8 @@ export interface MyVacancy {
   updatedAt: string;
 }
 
-export type MyVacancyInput = Pick<MyVacancy, "title" | "description" | "category" | "employmentType" | "urgent" | "style" | "videoUrl" | "applyEmail" | "applyWhatsapp">;
+/** city and region: suppliers fill them in; a hotel's job is at the hotel. */
+export type MyVacancyInput = Pick<MyVacancy, "title" | "description" | "category" | "employmentType" | "hours" | "urgent" | "style" | "videoUrl" | "applyEmail" | "applyWhatsapp"> & { city?: string; region?: string };
 
 export async function listMyVacanciesAction(): Promise<ActionResponse<MyVacancy[]>> {
   return apiRequest<MyVacancy[]>("/my-vacancies", { fallbackError: "Failed to load your jobs." });

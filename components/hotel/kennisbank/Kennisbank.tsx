@@ -10,7 +10,7 @@ import { BiChevronDown, BiInfoCircle, BiLinkExternal, BiSearch } from "react-ico
 /**
  * Kennisbank wet- en regelgeving (briefing §3.4.2): eight categories, each
  * topic with a short explanation and a link to the official source (new tab).
- * For the hotel manager and the staff login (§3.6).
+ * For the hotel manager, the staff login (§3.6) and every supplier (client, 31 Oct).
  */
 const Kennisbank = () => {
   const t = useTranslations("Kennisbank");

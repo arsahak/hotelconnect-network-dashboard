@@ -3,6 +3,8 @@ import { auth } from "@/auth";
 import { getMyHotelAction } from "@/app/actions/myHotel";
 import { isUserRole } from "@/config/access";
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
+import { getSettingsAction } from "@/app/actions/registration";
+import { NO_FEATURES } from "@/lib/features";
 
 // Every page here is signed-in only and loads its data per request, so none of
 // it is prerendered at build time.
@@ -27,8 +29,11 @@ export default async function DashboardLayout({
     organisation = hotel?.name;
   }
 
+  // Phase 2 features (Master Briefing v4) stay hidden until an admin switches them on.
+  const features = (await getSettingsAction()).data?.features ?? NO_FEATURES;
+
   return (
-    <LayoutWrapper user={{ name: session.user.name ?? "", email: session.user.email ?? "", role, organisation }}>
+    <LayoutWrapper user={{ name: session.user.name ?? "", email: session.user.email ?? "", role, organisation, features }}>
       {children}
     </LayoutWrapper>
   );

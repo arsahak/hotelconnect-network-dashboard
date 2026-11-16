@@ -3,6 +3,7 @@
 import { listInvitationsAction } from "@/app/actions/supplierTender";
 import { DateBadge } from "@/components/shared/DateBadge";
 import { PageHeader } from "@/components/shared/PageHeader";
+import { SupplierPortalTabs } from "../SupplierPortalTabs";
 import { TableStatus } from "@/components/shared/TableStatus";
 import { useApiData } from "@/lib/useApiData";
 import { useOptionLabel } from "@/lib/useOptions";
@@ -23,6 +24,7 @@ const SupplierTenderList = () => {
   return (
     <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
       <PageHeader title={t("title")} description={t("description")} />
+      <SupplierPortalTabs />
       <div className="overflow-x-auto rounded border border-gray-200 bg-white">
         <table className="w-full text-left text-sm">
           <thead className="bg-gray-50 text-xs uppercase tracking-wider text-gray-500">
@@ -46,12 +48,13 @@ const SupplierTenderList = () => {
                     </Link>
                   </td>
                   <td className="hidden px-5 py-3 md:table-cell">
-                    <span className="block text-gray-700">{inv.hotel.name}</span>
-                    <span className="block text-xs text-gray-500">{inv.hotel.city}</span>
+                    <span className="block text-gray-700">{inv.hotel?.name}</span>
+                    <span className="block text-xs text-gray-500">{inv.hotel?.city}</span>
+                    {inv.contactEmail && <a href={`mailto:${inv.contactEmail}`} className="block text-xs text-primary-dark underline-offset-2 hover:underline">{inv.contactEmail}</a>}
                   </td>
                   <td className="hidden px-5 py-3 lg:table-cell">
                     <span className="block text-gray-700">{optionLabel("supplierCategories", inv.category)}</span>
-                    <span className="block text-xs text-gray-500">{optionLabel("regions", inv.region)}</span>
+                    <span className="block text-xs text-gray-500">{inv.region ? optionLabel("regions", inv.region) : inv.hotel?.city}</span>
                   </td>
                   <td className="px-5 py-3">{inv.acceptingOffers ? <DateBadge value={inv.deadline} /> : <span className="text-gray-500">—</span>}</td>
                   <td className="px-5 py-3">

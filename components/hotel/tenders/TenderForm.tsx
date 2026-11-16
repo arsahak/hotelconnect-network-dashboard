@@ -9,7 +9,10 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { BiInfoCircle } from "react-icons/bi";
 
-export const EMPTY_TENDER: TenderInput = { type: "Tender", title: "", category: "", region: "", description: "", deadline: "", budget: "" };
+/** Below this budget (euros) a request is a need, otherwise a tender — same rule as the backend. */
+const NEED_BUDGET_LIMIT = 5_000;
+
+export const EMPTY_TENDER: TenderInput = { type: "One-time assignment", title: "", category: "", region: "", description: "", deadline: "", budget: "", contactEmail: "" };
 
 export const tenderToInput = (t: Tender): TenderInput => ({
   type: t.type,
@@ -19,6 +22,7 @@ export const tenderToInput = (t: Tender): TenderInput => ({
   description: t.description,
   deadline: t.deadline.slice(0, 10),
   budget: t.budget == null ? "" : String(t.budget),
+  contactEmail: t.contactEmail ?? "",
 });
 
 /**
@@ -84,9 +88,9 @@ const TenderForm = ({
               ))}
             </select>
           </Field>
-          <Field id="tender-region" label={t("fields.region")} required>
-            <select id="tender-region" required disabled={editing} value={form.region} onChange={(e) => set("region", e.target.value)} className={inputClass}>
-              <option value="">{tc("choose")}</option>
+          <Field id="tender-region" label={t("fields.region")} hint={t("hints.regionV4")}>
+            <select id="tender-region" disabled={editing} value={form.region} onChange={(e) => set("region", e.target.value)} className={inputClass}>
+              <option value="">{t("hotelRegion")}</option>
               {(options?.regions ?? []).map((r) => (
                 <option key={r} value={r}>
                   {optionLabel("regions", r)}
@@ -100,8 +104,16 @@ const TenderForm = ({
           <Field id="tender-deadline" label={t("fields.deadline")} required hint={t("hints.deadline")}>
             <input id="tender-deadline" type="date" required min={today} value={form.deadline} onChange={(e) => set("deadline", e.target.value)} className={inputClass} />
           </Field>
-          <Field id="tender-budget" label={t("fields.budget")} hint={t("hints.budget")}>
-            <input id="tender-budget" type="number" min={0} step={1} inputMode="numeric" value={form.budget} onChange={(e) => set("budget", e.target.value)} placeholder="€" className={inputClass} />
+          <Field
+            id="tender-budget"
+            label={t("fields.budget")}
+            required
+            hint={form.budget === "" ? t("hints.budget") : Number(form.budget) < NEED_BUDGET_LIMIT ? t("hints.isNeed") : t("hints.isTender")}
+          >
+            <input id="tender-budget" type="number" required min={0} step={1} inputMode="numeric" value={form.budget} onChange={(e) => set("budget", e.target.value)} placeholder="€" className={inputClass} />
+          </Field>
+          <Field id="tender-contact" label={t("fields.contactEmail")} hint={t("hints.contactEmail")} className="md:col-span-2">
+            <input id="tender-contact" type="email" maxLength={254} value={form.contactEmail} onChange={(e) => set("contactEmail", e.target.value)} placeholder="td@hotel.nl" className={inputClass} />
           </Field>
         </div>
       </div>

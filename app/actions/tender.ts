@@ -4,7 +4,7 @@ import { apiRequest, type ActionResponse } from "@/lib/api";
 
 // Tenders of the signed-in hotel (briefing §3.5).
 
-export type TenderStatus = "open" | "awarded" | "cancelled";
+export type TenderStatus = "open" | "awarded" | "closed" | "cancelled";
 export type OfferStatus = "submitted" | "won" | "lost";
 
 export interface TenderSupplier {
@@ -19,7 +19,8 @@ export interface Offer {
   _id: string;
   supplier: TenderSupplier;
   price: number;
-  deliveryTime: string;
+  /** Delivery time in weeks. */
+  deliveryWeeks: number;
   notes: string;
   file: { url: string; name: string } | null;
   status: OfferStatus;
@@ -32,13 +33,21 @@ export interface Tender {
   type: string;
   title: string;
   category: string;
+  /** Country_Tag of the hotel. */
+  country: string;
+  city: string;
   region: string;
+  /** Shown to signed-in suppliers; empty = the hotel's general email. */
+  contactEmail: string;
   description: string;
   deadline: string;
   budget: number | null;
+  /** Below €5,000 a need (small job), otherwise a tender. */
+  size: "need" | "tender";
   status: TenderStatus;
   winner: string | null;
   awardedAt: string | null;
+  closedAt: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -75,6 +84,7 @@ export interface TenderInput {
   description: string;
   deadline: string;
   budget: string;
+  contactEmail: string;
 }
 
 export async function listTendersAction(params: { q?: string }): Promise<ActionResponse<TenderListItem[]>> {
@@ -98,6 +108,11 @@ export async function updateTenderAction(
 
 export async function awardTenderAction(id: string, offerId: string): Promise<ActionResponse<Tender>> {
   return apiRequest<Tender>(`/tenders/${encodeURIComponent(id)}/award`, { method: "POST", body: { offerId }, fallbackError: "Failed to choose the winner." });
+}
+
+/** Master Briefing v4 [ Close Tender ]: done, e.g. agreed directly with a supplier. */
+export async function closeTenderAction(id: string): Promise<ActionResponse<Tender>> {
+  return apiRequest<Tender>(`/tenders/${encodeURIComponent(id)}/close`, { method: "POST", fallbackError: "Failed to close the tender." });
 }
 
 export async function cancelTenderAction(id: string): Promise<ActionResponse<Tender>> {

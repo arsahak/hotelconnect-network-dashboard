@@ -144,7 +144,7 @@ const SupplierDetails = ({ id }: { id: string }) => {
           </div>
         </div>
         <SupplierLogins supplierId={supplier._id} />
-        <MemberBillingCard supplier={supplier._id} canStart={supplier.plan === "contract"} />
+        <MemberBillingCard supplier={supplier._id} />
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import type { RegistrationStatus } from "@/app/actions/registration";
 import { StatusBadge } from "@/components/shared/StatusBadge";
 import { useTranslations } from "next-intl";
 
-const TONE = { pending: "brass", approved: "green", rejected: "red" } as const;
+const TONE = { pending: "brass", waiting: "grey", approved: "green", rejected: "red" } as const;
 
 export function RegistrationStatusBadge({ status }: { status: RegistrationStatus }) {
   const t = useTranslations("Registrations.status");

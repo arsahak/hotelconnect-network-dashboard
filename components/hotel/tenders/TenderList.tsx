@@ -56,7 +56,7 @@ const TenderList = () => {
                     <td className="px-5 py-3">
                       <Link href={`/hotel/tenders/${tender._id}`} className="block">
                         <span className="block font-medium text-gray-900 hover:text-primary-dark">{tender.title}</span>
-                        <span className="block text-xs text-gray-500">{optionLabel("tenderTypes", tender.type)}</span>
+                        <span className="block text-xs text-gray-500">{t(`size.${tender.size}`)} · {optionLabel("tenderTypes", tender.type)}</span>
                       </Link>
                     </td>
                     <td className="hidden px-5 py-3 md:table-cell">

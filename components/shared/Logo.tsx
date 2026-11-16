@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { withBase } from "@/lib/basePath";
 
 const LOGOS = {
-  dark: "/assets/logo/hotelconnect-network-blacklogo.svg",
-  light: "/assets/logo/hotelconnect-network-whitelogo.svg",
+  dark: withBase("/assets/logo/hotelconnect-network-blacklogo.svg"),
+  light: withBase("/assets/logo/hotelconnect-network-whitelogo.svg"),
 };
 
 /**
@@ -25,7 +26,7 @@ export function Logo({
     return (
       // shapelogo.png is 903 × 1083; shown 36px high.
       <Image
-        src="/assets/logo/shapelogo.png"
+        src={withBase("/assets/logo/shapelogo.png")}
         alt="HotelConnect"
         width={30}
         height={36}

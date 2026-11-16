@@ -2,6 +2,7 @@
 
 import { createContext, useContext, type ReactNode } from "react";
 import type { UserRole } from "@/config/access";
+import type { Features } from "@/app/actions/registration";
 
 export interface SessionUser {
   name: string;
@@ -9,6 +10,8 @@ export interface SessionUser {
   role: UserRole;
   /** The hotel (or later: supplier) this account belongs to. */
   organisation?: string;
+  /** Phase 2 features switched on by an admin (Master Briefing v4). */
+  features: Features;
 }
 
 const SessionUserContext = createContext<SessionUser | null>(null);

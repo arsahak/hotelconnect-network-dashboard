@@ -3,7 +3,6 @@
 import { deleteMyVoucherAction, getMyVoucherAction } from "@/app/actions/myVoucher";
 import { cardClass, dangerButtonClass, outlineButtonClass } from "@/components/shared/form-styles";
 import { InfoRow } from "@/components/shared/InfoRow";
-import { VoucherPromoteCard } from "@/components/billing/VoucherPromoteCard";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { StatusBadge } from "@/components/shared/StatusBadge";
 import { Thumb } from "@/components/shared/Thumb";
@@ -60,7 +59,7 @@ const HotelVoucherDetails = ({ id }: { id: string }) => {
         }
       />
       <div className="grid gap-6 lg:grid-cols-3">
-        <div className={`${cardClass} lg:col-span-2`}>
+        <div className={`${cardClass} lg:col-span-3`}>
           {v.image && (
             <div className="relative mb-5 aspect-[21/9] overflow-hidden rounded-lg bg-gray-50">
               <Thumb src={v.image} alt="" />
@@ -76,7 +75,6 @@ const HotelVoucherDetails = ({ id }: { id: string }) => {
             <InfoRow icon={<BiLink size={16} />} label={tv("fields.bookingUrl")} value={<a href={v.bookingUrl} target="_blank" rel="noopener noreferrer" className="break-all underline underline-offset-2">{v.bookingUrl}</a>} />
           </div>
         </div>
-        <VoucherPromoteCard id={v._id} isActive={v.isActive} promotedUntil={v.promotedUntil} />
       </div>
     </div>
   );

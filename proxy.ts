@@ -6,7 +6,7 @@ import { canAccess, isUserRole } from "./config/access";
 // Static files + NextAuth's own session/csrf/callback routes are never gated,
 // or sign-in itself breaks.
 const EXCLUDED_PATHS = ["/_next/", "/favicon.ico", "/icon.svg", "/api/auth/"];
-const PUBLIC_PATHS = ["/sign-in"];
+const PUBLIC_PATHS = ["/sign-in", "/forgot-password"];
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -18,8 +18,16 @@ export async function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // nextUrl keeps the base path (production: /dashboard); new URL("/…") would drop it.
+  const to = (path: string) => {
+    const url = request.nextUrl.clone();
+    url.pathname = path;
+    url.search = "";
+    return url;
+  };
+
   const toSignIn = () => {
-    const signInUrl = new URL("/sign-in", request.url);
+    const signInUrl = to("/sign-in");
     if (pathname !== "/") signInUrl.searchParams.set("callbackUrl", pathname + request.nextUrl.search);
     return NextResponse.redirect(signInUrl);
   };
@@ -32,12 +40,12 @@ export async function proxy(request: NextRequest) {
     const signedIn = Boolean(session?.user?.accessToken && isUserRole(role));
 
     if (pathname === "/") {
-      return NextResponse.redirect(new URL(signedIn ? "/dashboard" : "/sign-in", request.url));
+      return NextResponse.redirect(to(signedIn ? "/dashboard" : "/sign-in"));
     }
 
     if (PUBLIC_PATHS.includes(pathname)) {
       return signedIn
-        ? NextResponse.redirect(new URL("/dashboard", request.url))
+        ? NextResponse.redirect(to("/dashboard"))
         : NextResponse.next();
     }
 
@@ -45,7 +53,7 @@ export async function proxy(request: NextRequest) {
 
     // Signed in, but this page isn't for their role.
     if (!canAccess(pathname, role)) {
-      return NextResponse.redirect(new URL("/dashboard", request.url));
+      return NextResponse.redirect(to("/dashboard"));
     }
 
     return NextResponse.next();

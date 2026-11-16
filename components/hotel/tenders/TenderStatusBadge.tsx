@@ -4,7 +4,7 @@ import type { TenderStatus } from "@/app/actions/tender";
 import { StatusBadge } from "@/components/shared/StatusBadge";
 import { useTranslations } from "next-intl";
 
-const TONE = { open: "brass", awarded: "green", cancelled: "grey" } as const;
+const TONE = { open: "brass", awarded: "green", closed: "grey", cancelled: "grey" } as const;
 
 export function TenderStatusBadge({ status }: { status: TenderStatus }) {
   const t = useTranslations("Tenders");

@@ -40,7 +40,7 @@ const AdminInvoices = () => {
         </select>
         <select value={kind} onChange={(e) => setKind(e.target.value)} className={`${inputClass} w-auto`} aria-label={t("filterKind")}>
           <option value="">{t("allKinds")}</option>
-          {(["membership", "commission", "advertising", "promotion"] as const).map((k) => (
+          {(["membership", "commission", "advertising"] as const).map((k) => (
             <option key={k} value={k}>
               {t(`kind.${k}`)}
             </option>

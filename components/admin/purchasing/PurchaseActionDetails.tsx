@@ -103,9 +103,9 @@ const PurchaseActionDetails = ({ id }: { id: string }) => {
             {action.participants.map((p) => (
               <tr key={p._id}>
                 <td className="px-5 py-3">
-                  <span className="block font-medium text-gray-900">{p.hotel.name}</span>
+                  <span className="block font-medium text-gray-900">{p.hotel?.name ?? p.supplier?.name ?? "—"}</span>
                   <span className="block text-xs text-gray-500">
-                    {p.hotel.memberNumber} · {p.hotel.city}
+                    {p.hotel ? `${p.hotel.memberNumber} · ${p.hotel.city}` : `${p.supplier?.memberNumber ?? ""} · ${t("supplierMember")}`}
                   </span>
                 </td>
                 <td className="px-5 py-3 text-gray-700">{p.currentSupplier}</td>

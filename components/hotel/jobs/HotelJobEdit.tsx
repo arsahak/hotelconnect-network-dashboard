@@ -5,14 +5,16 @@ import { FormSkeleton } from "@/components/shared/FormSkeleton";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { useApiData } from "@/lib/useApiData";
 import { useTranslations } from "next-intl";
+import { useJobsBase } from "./useJobsBase";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
 import HotelJobForm, { hotelJobToInput } from "./HotelJobForm";
 
-/** "Edit job" — /hotel/jobs/edit?id=… */
+/** "Edit job" — /hotel/jobs/edit?id=… (and /supplier/jobs/…) */
 const HotelJobEdit = () => {
   const t = useTranslations("HotelJobs");
+  const { base } = useJobsBase();
   const tc = useTranslations("Common");
   const router = useRouter();
   const id = useSearchParams().get("id") ?? "";
@@ -34,12 +36,12 @@ const HotelJobEdit = () => {
       if (!up.ok) toast.error(up.error || tc("photoNotSaved"));
     }
     toast.success(t("updated"));
-    router.push(`/hotel/jobs/${id}`);
+    router.push(`${base}/${id}`);
   };
 
   return (
     <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
-      <PageHeader title={t("editTitle")} description={job?.title} back={{ href: id ? `/hotel/jobs/${id}` : "/hotel/jobs", label: t("back") }} />
+      <PageHeader title={t("editTitle")} description={job?.title} back={{ href: id ? `${base}/${id}` : base, label: t("back") }} />
       {loading ? (
         <FormSkeleton />
       ) : job ? (
@@ -57,7 +59,7 @@ const HotelJobEdit = () => {
           }}
           submitting={submitting}
           submitLabel={tc("saveChanges")}
-          cancelHref={`/hotel/jobs/${id}`}
+          cancelHref={`${base}/${id}`}
           onSubmit={handleSubmit}
         />
       ) : (

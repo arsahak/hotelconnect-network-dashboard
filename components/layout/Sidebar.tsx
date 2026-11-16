@@ -17,10 +17,10 @@ const isPathActive = (pathname: string, href: string) =>
 const Sidebar = () => {
   const t = useTranslations("Nav");
   const pathname = usePathname();
-  const { role, organisation } = useSessionUser();
+  const { role, organisation, features } = useSessionUser();
   const { isExpanded, toggleSidebar } = useSidebarContext();
   const [openMenus, setOpenMenus] = useState<string[]>([]);
-  const sections = navigationFor(role);
+  const sections = navigationFor(role, features);
 
   const toggleSubMenu = (key: string) => {
     setOpenMenus((prev) =>

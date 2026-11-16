@@ -10,8 +10,10 @@ import { useFormatter, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
-import { BiBell, BiBookBookmark, BiBuildings, BiCalendar, BiCreditCard, BiLink, BiNote, BiPencil, BiRefresh, BiTime, BiTrash, BiWallet } from "react-icons/bi";
+import { BiBell, BiBookBookmark, BiBuildings,
+  BiEnvelope, BiCalendar, BiCreditCard, BiLink, BiNote, BiPencil, BiRefresh, BiTime, BiTrash, BiWallet } from "react-icons/bi";
 import { contractTitle } from "./ContractList";
+import { InvitePartnerButton } from "./InvitePartnerButton";
 
 /** Contract details — /contracts/[id]. */
 const ContractDetails = ({ id }: { id: string }) => {
@@ -46,6 +48,7 @@ const ContractDetails = ({ id }: { id: string }) => {
         back={{ href: "/hotel/contracts", label: t("back") }}
         actions={
           <>
+            {contract.email && <InvitePartnerButton contractId={contract._id} email={contract.email} />}
             <Link href={`/hotel/contracts/edit?id=${contract._id}`} className={outlineButtonClass}>
               <BiPencil size={16} /> {tc("edit")}
             </Link>
@@ -61,6 +64,11 @@ const ContractDetails = ({ id }: { id: string }) => {
           <h2 className={cardTitleClass}>{t("sections.contract")}</h2>
           <div className="grid gap-5 sm:grid-cols-2">
             <InfoRow icon={<BiBuildings size={16} />} label={t("fields.company")} value={contract.company} />
+            <InfoRow
+              icon={<BiEnvelope size={16} />}
+              label={t("fields.email")}
+              value={contract.email ? <a href={`mailto:${contract.email}`} className="underline underline-offset-2">{contract.email}</a> : ""}
+            />
             <InfoRow icon={<BiCalendar size={16} />} label={t("fields.startDate")} value={date(contract.startDate)} />
             <InfoRow icon={<BiTime size={16} />} label={t("fields.duration")} value={contract.duration} />
             <InfoRow icon={<BiRefresh size={16} />} label={t("fields.autoRenew")} value={contract.autoRenew ? tc("yes") : tc("no")} />

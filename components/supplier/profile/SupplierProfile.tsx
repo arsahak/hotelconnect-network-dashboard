@@ -7,6 +7,7 @@ import { ImageField } from "@/components/shared/form/ImageField";
 import { FormSkeleton } from "@/components/shared/FormSkeleton";
 import { cardClass, cardTitleClass, inputClass, labelClass, outlineButtonClass, primaryButtonClass } from "@/components/shared/form-styles";
 import { PageHeader } from "@/components/shared/PageHeader";
+import { SupplierPortalTabs } from "../SupplierPortalTabs";
 import { useApiData } from "@/lib/useApiData";
 import { useOptionLabel, useOptions } from "@/lib/useOptions";
 import { WEBSITE_URL } from "@/lib/site";
@@ -16,12 +17,13 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { BiLinkExternal, BiPlus, BiTrash } from "react-icons/bi";
 
-const MAX_WORDS = 200;
-const countWords = (text: string) => text.split(/\s+/).filter(Boolean).length;
+/** Master Briefing v4: the company bio is at most 500 characters. */
+const MAX_CHARS = 500;
 
 const toInput = (s: MySupplier): MySupplierInput => ({
   tagline: s.tagline,
   description: s.description,
+  city: s.city ?? "",
   categories: s.categories,
   regions: s.regions,
   website: s.website,
@@ -40,8 +42,8 @@ function ProfileForm({ supplier, onSaved }: { supplier: MySupplier; onSaved: () 
   const [logo, setLogo] = useState<File | null>(null);
   const [saving, setSaving] = useState(false);
   const set = <K extends keyof MySupplierInput>(key: K, value: MySupplierInput[K]) => setForm((f) => ({ ...f, [key]: value }));
-  const words = countWords(form.description);
-  const tooLong = words > MAX_WORDS;
+  const chars = form.description.length;
+  const tooLong = chars > MAX_CHARS;
 
   const setCert = (index: number, key: "name" | "url", value: string) =>
     set("certificates", form.certificates.map((c, i) => (i === index ? { ...c, [key]: value } : c)));
@@ -92,8 +94,11 @@ function ProfileForm({ supplier, onSaved }: { supplier: MySupplier; onSaved: () 
             <Field id="sp-tagline" label={t("fields.tagline")} hint={t("hints.tagline")}>
               <input id="sp-tagline" maxLength={200} value={form.tagline} onChange={(e) => set("tagline", e.target.value)} className={inputClass} />
             </Field>
-            <Field id="sp-description" label={t("fields.description")} hint={t("hints.words", { count: words, max: MAX_WORDS })}>
-              <textarea id="sp-description" rows={6} value={form.description} onChange={(e) => set("description", e.target.value)} className={cn(inputClass, tooLong && "border-ember-600")} />
+            <Field id="sp-description" label={t("fields.bio")} hint={t("hints.chars", { count: chars, max: MAX_CHARS })}>
+              <textarea id="sp-description" rows={5} value={form.description} onChange={(e) => set("description", e.target.value)} className={cn(inputClass, tooLong && "border-ember-600")} />
+            </Field>
+            <Field id="sp-city" label={t("fields.city")}>
+              <input id="sp-city" maxLength={80} value={form.city} onChange={(e) => set("city", e.target.value)} className={inputClass} />
             </Field>
             <Field id="sp-website" label={t("fields.website")}>
               <input id="sp-website" type="url" value={form.website} onChange={(e) => set("website", e.target.value)} placeholder="https://" className={inputClass} />
@@ -186,6 +191,7 @@ const SupplierProfile = () => {
           )
         }
       />
+      <SupplierPortalTabs />
       <p className="-mt-2 text-sm text-gray-500">{t("nameHint")}</p>
       {loading ? <FormSkeleton /> : supplier ? <ProfileForm key={supplier.logo + supplier._id} supplier={supplier} onSaved={reload} /> : null}
     </div>

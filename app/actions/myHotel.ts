@@ -22,8 +22,14 @@ export interface MyHotel {
   memberNumber: string;
   name: string;
   slug: string;
+  /** Legal company name (may differ from the hotel name). */
+  legalName: string;
   kvkNumber: string;
+  vatNumber: string;
+  /** Country_Tag (ISO code). */
+  country: string;
   address: string;
+  postalCode: string;
   city: string;
   region: string;
   contactPerson: string;
@@ -45,7 +51,7 @@ export interface MyHotel {
 }
 
 export type MyHotelInput = Partial<
-  Pick<MyHotel, "name" | "kvkNumber" | "address" | "city" | "region" | "contactPerson" | "phone" | "description" | "bookingUrl" | "offer">
+  Pick<MyHotel, "name" | "legalName" | "kvkNumber" | "vatNumber" | "country" | "address" | "postalCode" | "city" | "region" | "contactPerson" | "phone" | "description" | "bookingUrl" | "offer">
 > & {
   emails?: Partial<HotelEmails>;
   notify?: Partial<Record<EmailType, boolean>>;
@@ -56,6 +62,16 @@ export type MyHotelInput = Partial<
 
 export async function getMyHotelAction(): Promise<ActionResponse<MyHotel>> {
   return apiRequest<MyHotel>("/my-hotel", { fallbackError: "Failed to load your hotel." });
+}
+
+/** Onboarding progress (Master Briefing v4): 25% per finished step. */
+export interface HotelProgress {
+  percent: number;
+  steps: { details: boolean; spaces: boolean; contract: boolean; published: boolean };
+}
+
+export async function getMyProgressAction(): Promise<ActionResponse<HotelProgress>> {
+  return apiRequest<HotelProgress>("/my-hotel/progress", { fallbackError: "Failed to load your progress." });
 }
 
 export async function updateMyHotelAction(data: MyHotelInput): Promise<ActionResponse<MyHotel>> {

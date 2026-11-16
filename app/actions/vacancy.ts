@@ -9,7 +9,9 @@ export type VacancyStatus = "pending" | "published" | "closed";
 
 export interface Vacancy {
   _id: string;
-  hotel: { _id: string; name: string; city: string; memberNumber: string; slug?: string };
+  /** A hotel's job, or a supplier's (then hotel is null). */
+  hotel: { _id: string; name: string; city: string; memberNumber: string; slug?: string } | null;
+  supplier?: { _id: string; name: string; memberNumber: string; slug?: string } | null;
   title: string;
   slug: string;
   description: string;

@@ -2,6 +2,7 @@
 
 import type { VacancyInput, VacancyStatus } from "@/app/actions/vacancy";
 import { Field } from "@/components/shared/form/Field";
+import { SimpleRichText } from "@/components/shared/form/SimpleRichText";
 import { Toggle } from "@/components/shared/form/Toggle";
 import { cardClass, cardTitleClass, inputClass, labelClass, outlineButtonClass, primaryButtonClass } from "@/components/shared/form-styles";
 import { useHotelOptions } from "@/lib/useHotelOptions";
@@ -95,7 +96,7 @@ const JobForm = ({
             </select>
           </Field>
           <Field id="job-description" label={t("fields.description")} className="md:col-span-2">
-            <textarea id="job-description" rows={8} maxLength={5000} value={form.description} onChange={(e) => set("description", e.target.value)} className={inputClass} />
+            <SimpleRichText id="job-description" value={form.description} onChange={(html) => set("description", html)} max={2000} />
           </Field>
         </div>
         <div className="mt-4">

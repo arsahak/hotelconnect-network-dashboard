@@ -1,6 +1,6 @@
 "use client";
 
-import { adminCancelSubscriptionAction, adminMemberBillingAction, adminStartSubscriptionAction } from "@/app/actions/billing";
+import { adminCancelSubscriptionAction, adminMemberBillingAction, adminSetFoundingAction, adminStartSubscriptionAction } from "@/app/actions/billing";
 import { cardClass, cardTitleClass, outlineButtonClass } from "@/components/shared/form-styles";
 import { StatusBadge } from "@/components/shared/StatusBadge";
 import { useApiData } from "@/lib/useApiData";
@@ -30,6 +30,7 @@ export function MemberBillingCard({ hotel, supplier, canStart = true }: { hotel?
   return (
     <div className={cardClass}>
       <h2 className={cardTitleClass}>{t("membership")}</h2>
+      {data?.blocked && <p className="mb-3 rounded bg-ember-100 px-3 py-2 text-xs font-medium text-ember-600">{t("blockedAdmin")}</p>}
       {loading ? (
         <div className="h-16 animate-pulse rounded bg-gray-50" />
       ) : (
@@ -38,7 +39,7 @@ export function MemberBillingCard({ hotel, supplier, canStart = true }: { hotel?
             <div className="space-y-1 text-sm">
               <div className="flex items-center justify-between gap-3">
                 <span className="font-medium text-gray-900">
-                  {t(`plan.${sub.plan}`)} · {t(`interval.${sub.interval}`)}
+                  {t(`plan.${sub.plan}`)} · {t(`interval.${sub.interval}`)} · {t(`method.${sub.paymentMethod}`)}
                 </span>
                 <StatusBadge tone={sub.status === "active" ? "green" : "grey"}>{t(`subStatus.${sub.status}`)}</StatusBadge>
               </div>
@@ -62,6 +63,26 @@ export function MemberBillingCard({ hotel, supplier, canStart = true }: { hotel?
                 </button>
               )}
             </div>
+          )}
+          {hotel && data && (
+            <label className="mt-4 flex cursor-pointer items-start gap-2 border-t border-gray-100 pt-4 text-sm text-gray-700">
+              <input
+                type="checkbox"
+                checked={data.foundingMember}
+                onChange={(e) =>
+                  run(
+                    () => adminSetFoundingAction({ hotel, supplier }, e.target.checked),
+                    e.target.checked ? t("confirmFounding") : t("confirmStandard"),
+                    t("foundingSaved"),
+                  )
+                }
+                className="mt-0.5 accent-[var(--color-primary)]"
+              />
+              <span>
+                {t("foundingHotel")}
+                <span className="block text-xs text-gray-500">{t("foundingHint")}</span>
+              </span>
+            </label>
           )}
           <ul className="mt-5 divide-y divide-gray-100 border-t border-gray-100">
             {(data?.invoices ?? []).slice(0, 5).map((inv) => (

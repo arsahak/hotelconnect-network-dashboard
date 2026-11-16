@@ -28,7 +28,10 @@
     "photoRemoved": "Foto verwijderd",
     "viewOnWebsite": "Bekijk op website",
     "yes": "Ja",
-    "no": "Nee"
+    "no": "Nee",
+    "save": "Opslaan",
+    "saved": "Opgeslagen",
+    "add": "Toevoegen"
   },
   "Language": {
     "label": "Taal"
@@ -53,7 +56,8 @@
       "hotel": "Hotel",
       "purchasing": "Inkoop",
       "company": "Je bedrijf",
-      "billing": "Facturen & reclame"
+      "billing": "Facturen & reclame",
+      "floor": "Floor-app"
     },
     "items": {
       "dashboard": {
@@ -206,15 +210,15 @@
       },
       "tendersAdd": {
         "title": "Nieuwe tender",
-        "description": "Vraag tot 3 leveranciers om een offerte"
+        "description": "Ontvang offertes van geverifieerde leveranciers in jouw land"
       },
       "supplierTenders": {
-        "title": "Aanvragen",
-        "description": "Tenders en aanvragen van hotels, en je offertes"
+        "title": "Open tenders",
+        "description": "Tenders in jouw land en vak, en je offertes"
       },
       "supplierProfile": {
-        "title": "Mijn bedrijf",
-        "description": "Profiel, categorieën, regio's en contactgegevens"
+        "title": "Bedrijfsprofiel",
+        "description": "Bio, vakken, plaats en contactgegevens"
       },
       "notifications": {
         "title": "Meldingen",
@@ -287,6 +291,54 @@
       "adminAdvertising": {
         "title": "Reclame",
         "description": "Gesponsorde plekken en wachtlijst"
+      },
+      "supplierPurchasing": {
+        "title": "Collectieve inkoop",
+        "description": "Samen energie en meer inkopen (onderhoudscontract)"
+      },
+      "supplierKennisbank": {
+        "title": "Kennisbank",
+        "description": "Wet- en regelgeving voor hotels, met officiële bronnen"
+      },
+      "supplierJobs": {
+        "title": "Vacatures",
+        "description": "Vacatures plaatsen (onderhoudscontract)"
+      },
+      "supplierJobsAll": {
+        "title": "Alle vacatures",
+        "description": "Je vacatures en reacties"
+      },
+      "supplierJobsAdd": {
+        "title": "Nieuwe vacature",
+        "description": "Een vacature op de vacaturepagina zetten"
+      },
+      "supplierPartners": {
+        "title": "Mijn partnerhotels",
+        "description": "Hotels die jou als vaste partner uitnodigden"
+      },
+      "hotelStaff": {
+        "title": "Personeel",
+        "description": "Accounts per rol en afdeling"
+      },
+      "floor": {
+        "title": "Vandaag",
+        "description": "Overdracht, planning, meldingen per afdeling"
+      },
+      "floorReport": {
+        "title": "Melding maken",
+        "description": "Storing of taak, buiten gebruik, foto"
+      },
+      "floorChecklists": {
+        "title": "Checklists",
+        "description": "Legionella, HACCP, MOD-ronde, onderhoud, derving"
+      },
+      "floorProcure": {
+        "title": "Bestellen",
+        "description": "Tik op een productfoto om het aan te vragen"
+      },
+      "floorInventory": {
+        "title": "Inventaris",
+        "description": "Kamers & ruimtes: RAL-kleuren, lampen, modellen"
       }
     },
     "organisation": "Uw hotel"
@@ -365,7 +417,8 @@
       "code": "Inlogcode",
       "submit": "Bevestigen",
       "back": "Terug naar inloggen"
-    }
+    },
+    "forgot": "Wachtwoord vergeten?"
   },
   "Dashboard": {
     "welcome": "Welkom terug, {name}",
@@ -519,13 +572,40 @@
       "All of the Netherlands": "Heel Nederland"
     },
     "vacancyCategories": {
-      "Kitchen": "Keuken",
-      "Front Office": "Front office",
+      "F&B": "F&B",
       "Housekeeping": "Housekeeping",
-      "F&B Service": "Bediening (F&B)",
-      "Technical": "Technische dienst",
+      "Reception": "Receptie",
       "Management": "Management",
-      "Other": "Overig"
+      "Technical (TD)": "Technische dienst (TD)",
+      "Other hospitality": "Overige horecafuncties",
+      "Technical & Installation": "Techniek & installatie",
+      "Electrical engineering": "Elektrotechniek",
+      "Mechanical engineering": "Werktuigbouw",
+      "Climate & cooling": "Klimaat & koeling",
+      "Lift technology": "Liftentechniek",
+      "Fire safety": "Brandveiligheid",
+      "Kitchen equipment": "Grootkeukenapparatuur",
+      "Construction & Property": "Bouw & vastgoed",
+      "Contracting & construction": "Aannemerij & bouw",
+      "Painting": "Schilderwerk",
+      "Roofing": "Dakwerk",
+      "Architecture": "Architectuur",
+      "Interior & finishing": "Interieur & afbouw",
+      "Facilities & Green": "Facilitair & groen",
+      "Cleaning": "Schoonmaak",
+      "Linen & textiles": "Linnen & textiel",
+      "Green & garden": "Groen & tuin",
+      "Pest control": "Ongediertebestrijding",
+      "Waste & recycling": "Afval & recycling",
+      "Advisory & Consultancy": "Advies & consultancy",
+      "Sustainability & energy": "Duurzaamheid & energie",
+      "Consultancy": "Consultancy",
+      "Training & education": "Training & opleiding",
+      "Legal & fiscal": "Juridisch & fiscaal",
+      "Other": "Overig",
+      "IT & telecom": "IT & telecom",
+      "Marketing & communication": "Marketing & communicatie",
+      "Other positions": "Overige functies"
     },
     "employmentTypes": {
       "Full-time": "Fulltime",
@@ -559,6 +639,7 @@
       "IT & software": "IT & software",
       "Security": "Beveiliging",
       "Staffing": "Personeel",
+      "Sustainability & Certifications": "Duurzaamheid & certificeringen",
       "Other": "Overig"
     },
     "faultTypes": {
@@ -593,9 +674,9 @@
       "Other": "Overig"
     },
     "tenderTypes": {
-      "Tender": "Tender",
-      "Maintenance contract": "Onderhoudscontract",
-      "Product request": "Productaanvraag"
+      "Maintenance": "Onderhoud",
+      "One-time assignment": "Eenmalige opdracht (CAPEX)",
+      "Other": "Overig"
     }
   },
   "Hotels": {
@@ -747,7 +828,9 @@
       "urgent": "Urgent",
       "applyEmail": "E-mail voor sollicitaties",
       "applyWhatsapp": "WhatsApp-nummer",
-      "location": "Locatie"
+      "location": "Locatie",
+      "city": "Plaats",
+      "region": "Regio"
     },
     "statuses": {
       "pending": "Wacht op goedkeuring",
@@ -775,7 +858,8 @@
       "applyEmailNoHotel": "Leeg = het sollicitatie-adres van het hotel.",
       "applyWhatsapp": "Cijfers met landcode, zonder +. Leeg = geen WhatsApp-knop.",
       "cv": "Cv's die via de website worden gestuurd, gaan per e-mail naar het hotel en worden nooit opgeslagen."
-    }
+    },
+    "supplierJob": "Vacature van leverancier"
   },
   "Vouchers": {
     "title": "Vouchers",
@@ -974,12 +1058,15 @@
       "ledgerAccount": "Grootboekrekening",
       "contractLink": "Link naar contract",
       "portalLink": "Portaallink",
-      "notes": "Opmerkingen"
+      "notes": "Opmerkingen",
+      "email": "E-mail leverancier",
+      "url": "Link (contract of portaal)"
     },
     "placeholders": {
       "contractFor": "bv. Energie, linnen, liftonderhoud",
       "duration": "bv. 3 jaar",
-      "paymentTerm": "bv. maandelijks"
+      "paymentTerm": "bv. maandelijks",
+      "company": "Bijv. Otis Liften"
     },
     "units": {
       "days": "dagen",
@@ -992,8 +1079,12 @@
       "autoRenew": "Het contract loopt door, tenzij u op tijd opzegt.",
       "contractLink": "Google Drive, Dropbox, …",
       "portalLink": "De online portal van de leverancier.",
-      "reminders": "Herinneringen gaan 30 dagen vóór de einddatum en, bij stilzwijgende verlenging, vóór de laatste dag om op te zeggen."
-    }
+      "reminders": "Herinneringen gaan 30 dagen vóór de einddatum en, bij stilzwijgende verlenging, vóór de laatste dag om op te zeggen.",
+      "email": "Voor bestellen en uitnodigen in één tik.",
+      "url": "Een link naar het contract in je eigen opslag of het portaal van de leverancier. We bewaren geen pdf’s.",
+      "noticePeriodV4": "Je krijgt een herinnering vóór de laatste dag om op te zeggen."
+    },
+    "moreDetails": "Meer details (optioneel): budget, looptijd, notities"
   },
   "Permits": {
     "title": "Vergunningen & certificaten",
@@ -1018,7 +1109,9 @@
       "issueDate": "Afgiftedatum",
       "expiryDate": "Verloopdatum",
       "documentLink": "Link naar document",
-      "notes": "Opmerkingen"
+      "notes": "Opmerkingen",
+      "name": "Naam vergunning / certificaat",
+      "reminderDays": "Herinnering"
     },
     "placeholders": {
       "type": "bv. Drank- en horecavergunning",
@@ -1027,8 +1120,17 @@
     "hints": {
       "expiryDate": "U krijgt 30 dagen van tevoren een herinnering.",
       "documentLink": "Google Drive, Dropbox, …",
-      "reminders": "Er gaat 30 dagen vóór de verloopdatum een herinnering uit."
-    }
+      "reminders": "Er gaat 30 dagen vóór de verloopdatum een herinnering uit.",
+      "reminderDays": "Hoe ver vóór de vervaldatum."
+    },
+    "lead": {
+      "7": "1 week vooraf",
+      "14": "2 weken vooraf",
+      "30": "1 maand vooraf",
+      "60": "2 maanden vooraf",
+      "90": "3 maanden vooraf"
+    },
+    "moreDetails": "Meer details (optioneel): instantie, datum van afgifte, link, notities"
   },
   "PortalLinks": {
     "title": "Handige links & portalen",
@@ -1136,11 +1238,11 @@
     "notFound": "Tender niet gevonden",
     "addTitle": "Nieuwe tender",
     "editTitle": "Tender bewerken",
-    "explanation": "Je tender gaat naar maximaal drie geverifieerde leveranciers met dezelfde categorie en regio. Zij krijgen een e-mail en sturen hun offerte via hun eigen dashboard; hier vergelijk je de offertes.",
+    "explanation": "Je tender wordt anoniem gepubliceerd op de openbare Tenders-pagina. Alle leveranciers in jouw land met dit vak krijgen een melding; ingelogd zien ze je hotel en contactmail en sturen ze hun offerte. Je vergelijkt de offertes hier, of sluit de tender als je rechtstreeks rond bent. 0% commissie.",
     "editExplanation": "De tender is al verstuurd, dus type, categorie en regio kunnen niet meer veranderen. Leveranciers zien je wijzigingen meteen.",
     "closedCannotEdit": "Deze tender is gesloten en kan niet meer worden gewijzigd.",
     "sent": "{count, plural, one {Tender verstuurd naar # leverancier} other {Tender verstuurd naar # leveranciers}}",
-    "sentNoSupplier": "Tender opgeslagen, maar er is nog geen passende leverancier. HotelConnect gaat er een zoeken.",
+    "sentNoSupplier": "Tender gepubliceerd. Er is nog geen leverancier met dit vak in jouw land; hij staat wel op de openbare Tenders-pagina.",
     "updated": "De tender is opgeslagen",
     "cancel": "Tender annuleren",
     "confirmCancel": "Deze tender annuleren? Leveranciers kunnen dan geen offerte meer sturen.",
@@ -1167,7 +1269,8 @@
     "status": {
       "open": "Open",
       "awarded": "Winnaar gekozen",
-      "cancelled": "Geannuleerd"
+      "cancelled": "Geannuleerd",
+      "closed": "Gesloten"
     },
     "offerStatus": {
       "submitted": "Verstuurd",
@@ -1181,16 +1284,21 @@
       "region": "Regio",
       "description": "Wat heb je nodig?",
       "deadline": "Deadline",
-      "budget": "Budget"
+      "budget": "Budget",
+      "contactEmail": "Contactmail voor leveranciers"
     },
     "placeholders": {
       "title": "bijv. Nieuwe ketel voor de spa",
       "description": "Beschrijf wat je nodig hebt: aantallen, maten, wensen, wanneer het klaar moet zijn…"
     },
     "hints": {
-      "category": "Alleen leveranciers in deze categorie worden uitgenodigd.",
+      "category": "Leveranciers met dit vak in jouw land krijgen een melding.",
       "deadline": "Leveranciers kunnen tot het einde van deze dag een offerte sturen.",
-      "budget": "Optioneel. Leveranciers zien het."
+      "budget": "Onder €5.000 is het een behoefte (kleine klus), vanaf €5.000 een tender. Leveranciers zien het.",
+      "isNeed": "Onder €5.000: dit is een behoefte (kleine klus).",
+      "isTender": "€5.000 of meer: dit is een tender.",
+      "contactEmail": "Alleen zichtbaar voor ingelogde leveranciers. Leeg: het algemene e-mailadres van je hotel.",
+      "regionV4": "Leeg laten: de provincie van je hotel. Leveranciers in jouw land met dit vak zien de tender."
     },
     "review": {
       "title": "Beoordeel {name}",
@@ -1202,7 +1310,18 @@
       "comments": "Opmerkingen",
       "save": "Beoordeling opslaan",
       "saved": "Bedankt! Je beoordeling is opgeslagen."
-    }
+    },
+    "size": {
+      "need": "Behoefte",
+      "tender": "Tender"
+    },
+    "weeks": "{count, plural, one {# week} other {# weken}}",
+    "close": "Tender sluiten",
+    "confirmClose": "Deze tender sluiten? Hij verdwijnt van de openbare Tenders-pagina en leveranciers kunnen niet meer reageren.",
+    "closedToast": "Tender gesloten",
+    "publicNote": "Anoniem gepubliceerd op de openbare Tenders-pagina; ingelogde leveranciers zien je hotel en contactmail.",
+    "viewPublic": "Bekijk op de website",
+    "hotelRegion": "Provincie van mijn hotel"
   },
   "HotelJobs": {
     "title": "Vacatures",
@@ -1251,15 +1370,18 @@
     },
     "fields": {
       "photo": "Foto",
-      "video": "Video (YouTube of Vimeo)"
+      "video": "Video (YouTube of Vimeo)",
+      "hours": "Uren per week"
     },
     "placeholders": {
       "title": "bijv. Chef de partie",
-      "description": "Wat houdt de baan in, wat bied je, wie zoek je?"
+      "description": "Wat houdt de baan in, wat bied je, wie zoek je?",
+      "hours": "32–38 uur"
     },
     "hints": {
       "video": "Optioneel. Een link naar een YouTube- of Vimeo-video.",
-      "applyEmail": "Leeg = je sollicitatie-adres uit Mijn hotel."
+      "applyEmail": "Leeg = je sollicitatie-adres uit Mijn hotel.",
+      "hours": "Bijv. 32–38 uur, of flexibel."
     }
   },
   "HotelVouchers": {
@@ -1288,20 +1410,11 @@
     },
     "hints": {
       "bookingUrl": "Je eigen boekingspagina. Alleen ingelogde leveranciers krijgen deze link."
-    },
-    "promote": {
-      "title": "Promoot deze voucher",
-      "text": "Zet je voucher bovenaan in de slideshow op de leverancierspagina, voor een maand of een kwartaal.",
-      "cta": "Promoten en betalen",
-      "extend": "Promotie verlengen",
-      "until": "Gepromoot tot {date}",
-      "hint": "start zodra er betaald is",
-      "inactive": "Zet de voucher eerst aan; alleen live vouchers kun je promoten."
     }
   },
   "Purchasing": {
     "title": "Collectieve inkoop",
-    "subtitle": "Samen met andere hotels inkopen voor betere deals.",
+    "subtitle": "Koop samen met andere leden in en krijg betere deals.",
     "introTitle": "Samen inkopen. Samen sterker.",
     "intro": "Op deze pagina doen we samen inkoop. Voorlopig alleen energie, maar er komt straks veel meer bij: keycards, brandstof, en nog veel meer. Hoe meer hotels meedoen, hoe sterker onze onderhandelingspositie. En hoe beter de deals voor jou.",
     "empty": "Nog geen collectieve inkoop. Je krijgt een melding zodra er een start.",
@@ -1319,7 +1432,7 @@
     "privacy": "Alleen HotelConnect ziet je jaarafrekening. Die wordt alleen voor deze actie gedeeld met de energieleverancier en na afronding verwijderd.",
     "hint": {
       "open": "Meld je aan vóór de deadline.",
-      "negotiating": "Er doen genoeg hotels mee; HotelConnect onderhandelt nu.",
+      "negotiating": "Genoeg leden doen mee; HotelConnect onderhandelt.",
       "completed": "Deze collectieve inkoop is afgerond."
     },
     "status": {
@@ -1378,7 +1491,8 @@
     "hints": {
       "status": "\"Afgerond\" start de 90 dagen tot het verwijderen van de jaarafrekeningen; de hotels krijgen een melding.",
       "target": "Bij dit aantal gaat de status naar \"In onderhandeling\"."
-    }
+    },
+    "supplierMember": "Leverancier (onderhoudscontract)"
   },
   "Registrations": {
     "title": "Aanmeldingen",
@@ -1410,18 +1524,20 @@
       "supplier": "Leverancier"
     },
     "plans": {
-      "contract": "Onderhoudscontract (€49/maand of €539/jaar)",
-      "commission": "Zonder contract (alleen commissie)"
+      "contract": "Maintenance Partner (gratis tot 1 mei 2028, daarna €59/maand)",
+      "commission": "Project & Capex Partner (gratis tot 1 mei 2028, daarna €19/maand)"
     },
     "status": {
       "pending": "Wacht",
       "approved": "Goedgekeurd",
-      "rejected": "Afgewezen"
+      "rejected": "Afgewezen",
+      "waiting": "Wacht op antwoord"
     },
     "statusHint": {
       "pending": "Controleer het KVK-nummer en de gegevens, keur dan goed of wijs af.",
       "approved": "Het lid en de login zijn aangemaakt; de aanvrager kreeg een e-mail.",
-      "rejected": "De aanvrager kreeg een e-mail."
+      "rejected": "De aanvrager kreeg een e-mail.",
+      "waiting": "Je hebt de leverancier een vraag gemaild. Keur goed of af zodra er antwoord is."
     },
     "testPhase": {
       "label": "Testfase (aanmelden gesloten)",
@@ -1430,7 +1546,39 @@
       "confirmOpen": "Aanmelden openzetten? Iedereen kan zich dan aanmelden op de website (je keurt nog steeds elke aanmelding goed).",
       "opened": "Aanmelden staat open",
       "closed": "Testfase aan: aanmelden is gesloten"
-    }
+    },
+    "ask": "Vraag de leverancier",
+    "askTitle": "Stel de leverancier een vraag",
+    "askLabel": "Bijvoorbeeld: het gekozen plan lijkt niet bij het bedrijf te passen. Antwoorden komen in je eigen mailbox.",
+    "send": "Versturen",
+    "asked": "Vraag verstuurd; de aanmelding wacht op antwoord.",
+    "questionsSent": "Gestelde vragen",
+    "features": {
+      "title": "Fase 2-functies",
+      "hint": "Gebouwd, maar verborgen tot je ze aanzet (website, dashboards en API).",
+      "on": "Aangezet.",
+      "off": "Uitgezet.",
+      "vouchers": {
+        "label": "Corporate vouchers",
+        "description": "Vouchers van hotels, de slideshow en boeken door leveranciers"
+      },
+      "advertising": {
+        "label": "Reclame",
+        "description": "Gesponsorde plekken op de homepage en het boeken ervan"
+      },
+      "reviews": {
+        "label": "Beoordelingen",
+        "description": "De leverancier beoordelen na een tender"
+      }
+    },
+    "country": "Land",
+    "legalName": "Statutaire naam",
+    "vat": "Btw-nummer",
+    "rooms": "Kamers",
+    "roomsValue": "{rooms} kamers · {tier}",
+    "billingEmail": "Factuur-e-mail",
+    "bookingUrl": "Boekingslink",
+    "termsAccepted": "Voorwaarden geaccepteerd"
   },
   "SupplierTenders": {
     "title": "Aanvragen",
@@ -1452,16 +1600,16 @@
       "status": "Status",
       "budget": "Budget",
       "price": "Prijs (excl. btw)",
-      "deliveryTime": "Levertijd",
+      "deliveryTime": "Levertijd (weken)",
       "notes": "Opmerkingen",
       "file": "Offerte (PDF of foto)"
     },
     "placeholders": {
-      "deliveryTime": "bijv. 2 weken"
+      "deliveryTime": "bijv. 3"
     },
     "hints": {
-      "deliveryTime": "Wanneer kun je leveren of starten?",
-      "file": "Optioneel. PDF, JPEG, PNG of WEBP, max. 10 MB. Een nieuw bestand vervangt het oude."
+      "deliveryTime": "Aantal weken tot levering of start van het werk.",
+      "file": "Optioneel. PDF, JPEG, PNG of WEBP, max. 5 MB. Een nieuw bestand vervangt het oude."
     },
     "status": {
       "open": "Open",
@@ -1542,7 +1690,9 @@
       "invoicesEmail": "E-mailadres voor facturen",
       "notificationsEmail": "E-mailadres voor meldingen",
       "certificateName": "Certificaat",
-      "certificateUrl": "Link"
+      "certificateUrl": "Link",
+      "bio": "Bedrijfsbio",
+      "city": "Plaats"
     },
     "placeholders": {
       "certificateName": "bijv. ISO 9001, VCA"
@@ -1554,7 +1704,8 @@
       "contact": "Hotels zien deze niet op de website; ze zijn voor HotelConnect en voor hotels waarmee je werkt.",
       "fallback": "Leeg = het algemene e-mailadres.",
       "notifications": "Nieuwe aanvragen en uitslagen komen hier. Leeg = het algemene e-mailadres.",
-      "certificates": "Alleen links (bijv. naar een certificaat op je website of in een register); geen uploads."
+      "certificates": "Alleen links (bijv. naar een certificaat op je website of in een register); geen uploads.",
+      "chars": "{count} / {max} tekens"
     }
   },
   "MyHotel": {
@@ -1564,15 +1715,21 @@
       "title": "Bedrijfsgegevens",
       "description": "Zoals ingeschreven bij de KVK.",
       "name": "Hotelnaam",
-      "kvk": "KVK-nummer",
-      "kvkHint": "8 cijfers.",
-      "address": "Adres",
+      "kvk": "KvK- / registratienummer",
+      "kvkHint": "Nederland: 8 cijfers.",
+      "address": "Straat en huisnummer",
       "city": "Plaats",
-      "region": "Regio",
+      "region": "Provincie",
       "contactPerson": "Contactpersoon",
       "phone": "Telefoon",
       "generalEmail": "Algemeen e-mailadres",
-      "generalEmailHint": "Verplicht, bv. info@hotel.nl. Alle e-mail gaat hierheen, tenzij u die elders laat binnenkomen."
+      "generalEmailHint": "Verplicht, bv. info@hotel.nl. Alle e-mail gaat hierheen, tenzij u die elders laat binnenkomen.",
+      "legalName": "Statutaire naam",
+      "vat": "Btw-nummer",
+      "vatHint": "Bijv. NL123456789B01.",
+      "country": "Land",
+      "countryHint": "Bepaalt welke wetten en leveranciers bij je passen.",
+      "postalCode": "Postcode"
     },
     "facilities": {
       "title": "Type hotel",
@@ -1758,10 +1915,12 @@
     "prices": "Prijzen",
     "plan": {
       "hotel": "Hotellidmaatschap",
-      "supplier-contract": "Onderhoudscontract"
+      "supplier-contract": "Maintenance Partner",
+      "supplier-project": "Project & Capex Partner"
     },
     "interval": {
       "month": "Maandelijks",
+      "quarter": "Per kwartaal",
       "year": "Jaarlijks"
     },
     "subStatus": {
@@ -1777,8 +1936,7 @@
     "kind": {
       "membership": "Lidmaatschap",
       "commission": "Commissie",
-      "advertising": "Gesponsorde plek",
-      "promotion": "Voucherpromotie"
+      "advertising": "Gesponsorde plek"
     },
     "adStatus": {
       "pending_payment": "Wacht op betaling",
@@ -1788,23 +1946,10 @@
       "cancelled": "Geannuleerd"
     },
     "currentPeriod": "Huidige periode: {start} – {end}",
-    "endsOn": "Gestopt — eindigt op {date}",
-    "pricePerYear": "{price} per jaar, excl. btw",
-    "pricePerMonth": "{price} per maand, excl. btw",
-    "perYear": "{price} / jaar",
-    "perMonth": "{price} / maand",
-    "perQuarter": "{price} / kwartaal",
-    "payEvery": "Betalen",
-    "intervalHint": "Een wijziging geldt vanaf je volgende periode.",
-    "intervalSaved": "Opgeslagen — dit geldt vanaf je volgende periode.",
-    "noMembershipHotel": "Je lidmaatschap start zodra HotelConnect je hotel goedkeurt. Tijdens de testfase zijn de eerste hotels gratis.",
-    "noMembershipContract": "Je lidmaatschap voor het onderhoudscontract is nog niet gestart. HotelConnect zet het voor je aan.",
-    "commissionOnly": "Je hebt geen vast lidmaatschap: je betaalt {percent}% commissie op elke opdracht die je via een aanvraag wint.",
-    "commission": "Commissie per gewonnen opdracht",
-    "sponsoredSpot": "Gesponsorde plek op de homepage",
-    "voucherPromotion": "Voucherpromotie",
+    "endsOn": "Opgezegd — eindigt op {date}",
+    "noMembershipHotel": "Je lidmaatschap start zodra HotelConnect je hotel activeert.",
     "exclVat": "Alle prijzen excl. {rate}% btw.",
-    "payByTransfer": "Online betalen staat nog niet aan: betaal per overboeking onder vermelding van het factuurnummer. HotelConnect zet de factuur op betaald.",
+    "payByTransfer": "Zolang Moneybird wordt ingericht, stuurt HotelConnect de facturen. Betaal per overboeking onder vermelding van het factuurnummer.",
     "thanks": "Dank je! We hebben de betaling voor {number} ontvangen; het kan een minuutje duren voordat je het hier ziet.",
     "invoice": "Factuur",
     "member": "Lid",
@@ -1820,7 +1965,7 @@
     "markedPaid": "Op betaald gezet.",
     "cancelled": "Factuur geannuleerd.",
     "confirmPaid": "Factuur {number} op betaald zetten? Als het een advertentie of promotie betaalt, start die nu.",
-    "confirmCancel": "Factuur {number} annuleren?",
+    "confirmCancel": "Je lidmaatschap opzeggen? Het eindigt aan het einde van het contractjaar (of een jaar later bij minder dan {months} maanden opzegtermijn). Betaalde bedragen worden niet terugbetaald.",
     "adminTitle": "Facturen",
     "adminSubtitle": "Alle facturen: lidmaatschappen, commissie, advertenties en voucherpromoties.",
     "invoiceCount": "{count, plural, one {# factuur} other {# facturen}}",
@@ -1848,8 +1993,8 @@
     "book": "Boeken",
     "period": "Periode",
     "adPeriod": {
-      "month": "1 maand",
-      "quarter": "1 kwartaal"
+      "fortnight": "14 dagen",
+      "month": "1 maand"
     },
     "job": "Vacature",
     "chooseJob": "Kies een gepubliceerde vacature",
@@ -1876,6 +2021,381 @@
     "stopMembership": "Niet meer verlengen",
     "confirmStop": "Dit lidmaatschap stoppen? Het eindigt aan het einde van de betaalde periode.",
     "stopped": "Lidmaatschap gestopt.",
-    "allInvoices": "Alle facturen"
+    "allInvoices": "Alle facturen",
+    "foundingMember": "Prijs voor founding members",
+    "payBy": "Betaalwijze",
+    "method": {
+      "sepa": "Automatische incasso",
+      "invoice": "Factuur"
+    },
+    "methodSavedSepa": "Opgeslagen — de volgende factuur wordt automatisch geïncasseerd.",
+    "methodSavedInvoice": "Opgeslagen — je betaalt de volgende factuur zelf.",
+    "sepaHint": "Automatische SEPA-incasso via Moneybird. De eerste keer krijg je een e-mail om de machtiging te geven.",
+    "invoiceHint": "Je krijgt elke factuur per e-mail en betaalt zelf (overboeking of betaallink).",
+    "blockedAdmin": "Geblokkeerd: commissie na 51 dagen niet betaald (geen websitelink in de gids).",
+    "foundingHotel": "Een van de eerste 10 Founding Hotels (eerste jaar gratis)",
+    "foundingSupplier": "Founding supplier (€500 per jaar)",
+    "foundingHint": "De eerste 12 maanden na activatie zijn gratis; de prijs van het eerste betaalde jaar wordt nooit verhoogd.",
+    "confirmFounding": "Dit lid de founding-prijs geven vanaf de volgende periode?",
+    "confirmStandard": "Terug naar de standaardprijs vanaf de volgende periode?",
+    "foundingSaved": "Opgeslagen.",
+    "tier": {
+      "small": "Small Boutique",
+      "medium": "Medium Boutique",
+      "large": "Large Boutique"
+    },
+    "tierLine": "{tier} · {rooms} kamers",
+    "freeUntil": "Gratis tot {date}",
+    "thenPerYear": "Daarna {price} per jaar, excl. btw",
+    "pricePerYear": "{price} per jaar, excl. btw",
+    "cancelMembership": "Lidmaatschap opzeggen",
+    "confirmCancelFree": "Je gratis lidmaatschap nu stoppen? Je account wordt gesloten.",
+    "cancelledUntil": "Opgezegd — je lidmaatschap eindigt op {date}.",
+    "cancelHint": "Zeg minstens {months} maanden voor het einde van het contractjaar op; het wordt elk jaar vanzelf verlengd. Betaalde bedragen worden niet terugbetaald; je houdt toegang tot de einddatum.",
+    "noMembershipSupplier": "Je lidmaatschap start zodra HotelConnect je bedrijf activeert.",
+    "upToRooms": "tot {rooms} kamers",
+    "moreRooms": "meer dan {rooms} kamers",
+    "perYear": "{price} / jaar",
+    "perMonth": "{price} / maand",
+    "foundingNote": "Eerste 10 Founding Hotels: de eerste {months} maanden gratis, en de prijs wordt nooit verhoogd.",
+    "supplierFree": "Gratis voor elke leverancier tot {date}.",
+    "zeroCommission": "0% commissie"
+  },
+  "ForgotPassword": {
+    "title": "Wachtwoord vergeten",
+    "intro": {
+      "email": "Vul je e-mailadres in. We sturen je een code van 4 cijfers.",
+      "code": "We hebben een code gestuurd naar {email}. Hij is een paar minuten geldig.",
+      "password": "Kies een nieuw wachtwoord (minstens 8 tekens).",
+      "done": "Je wachtwoord is gewijzigd. Je kunt nu inloggen."
+    },
+    "email": "E-mail",
+    "sendCode": "Code sturen",
+    "code": "Code",
+    "checkCode": "Code controleren",
+    "otherEmail": "Ander e-mailadres gebruiken",
+    "newPassword": "Nieuw wachtwoord",
+    "repeat": "Herhaal wachtwoord",
+    "mismatch": "De wachtwoorden zijn niet gelijk.",
+    "save": "Wachtwoord opslaan",
+    "busy": "Even geduld…",
+    "toSignIn": "Inloggen",
+    "back": "Terug naar inloggen",
+    "error": "Er ging iets mis. Probeer het opnieuw."
+  },
+  "Progress": {
+    "title": "Je onboarding",
+    "percent": "{percent}% klaar",
+    "steps": {
+      "details": {
+        "title": "Bedrijfsgegevens",
+        "text": "Naam, KvK, btw, adres en e-mail."
+      },
+      "spaces": {
+        "title": "Kamers & personeel",
+        "text": "Aantal kamers en minstens 1 personeelsaccount."
+      },
+      "contract": {
+        "title": "Eerste contract",
+        "text": "Ontgrendelt Tenders en Vacatures."
+      },
+      "published": {
+        "title": "Foto & boekingslink",
+        "text": "Je hotel verschijnt in de Hotelgids."
+      }
+    }
+  },
+  "Countries": {
+    "NL": "Nederland",
+    "BE": "België",
+    "DE": "Duitsland",
+    "FR": "Frankrijk",
+    "LU": "Luxemburg",
+    "GB": "Verenigd Koninkrijk"
+  },
+  "RichText": {
+    "toolbar": "Opmaak",
+    "bold": "Vet",
+    "italic": "Cursief",
+    "bullets": "Opsomming",
+    "numbers": "Genummerde lijst",
+    "link": "Link",
+    "linkPrompt": "Plak de link (https://…)",
+    "count": "{count} / {max} tekens"
+  },
+  "SupplierPortal": {
+    "tabs": "Leveranciersportaal",
+    "openTenders": "Open tenders",
+    "partnerHotels": "Mijn partnerhotels",
+    "companyProfile": "Bedrijfsprofiel",
+    "membershipStatus": "Lidmaatschap",
+    "freeUntil": "100% gratis tot {date}",
+    "active": "Actief",
+    "zeroCommission": "0% commissie op alle opdrachten",
+    "partnersIntro": "Hotels die jou als vaste partner hebben uitgenodigd.",
+    "noPartners": "Nog geen partnerhotels",
+    "noPartnersHint": "Zodra een hotel je met één klik uitnodigt (bijv. vanuit een contract), staat het hier.",
+    "partnerSince": "Partner sinds {date}",
+    "viewHotel": "{name} op de website",
+    "emailQuote": "Offerte mailen",
+    "contact": "Contact"
+  },
+  "Partners": {
+    "invite": "Uitnodigen op HotelConnect",
+    "inviteAgain": "Opnieuw uitnodigen",
+    "hint": "Eén klik: de leverancier krijgt een uitnodiging (gratis tot 1 mei 2028).",
+    "sent": "Uitnodiging verstuurd naar {email}",
+    "linked": "Deze leverancier staat al op HotelConnect en is nu je partner",
+    "isPartner": "Partner op HotelConnect"
+  },
+  "Staff": {
+    "title": "Personeel",
+    "description": "Persoonlijke accounts voor je team: GM, afdelingsmanager of medewerker, per afdeling.",
+    "add": "Account toevoegen",
+    "addButton": "Toevoegen",
+    "added": "Account voor {name} aangemaakt — deel het wachtwoord persoonlijk",
+    "saved": "Opgeslagen",
+    "deleted": "Account verwijderd",
+    "confirmDelete": "Het account van {name} verwijderen?",
+    "newPassword": "Nieuw wachtwoord",
+    "newPasswordPrompt": "Nieuw wachtwoord voor {name} (minstens 8 tekens):",
+    "you": "jij",
+    "active": "Actief",
+    "inactive": "Inactief",
+    "rolesHint": "GM: volledige toegang tot het dashboard. Afdelingsmanager: de floor-app plus wat alleen managers zien. Medewerker: de floor-app voor de eigen afdeling.",
+    "fields": {
+      "name": "Naam",
+      "firstName": "Voornaam",
+      "lastName": "Achternaam",
+      "email": "E-mail",
+      "password": "Eerste wachtwoord",
+      "role": "Rol",
+      "department": "Afdeling",
+      "language": "Taal",
+      "status": "Status"
+    },
+    "hints": {
+      "password": "Minstens 8 tekens.",
+      "department": "FO / MOD ziet standaard alle afdelingen."
+    },
+    "roles": {
+      "gm": "GM",
+      "dept_manager": "Afdelingsmanager",
+      "staff": "Medewerker",
+      "shared": "Gedeelde personeelslogin"
+    },
+    "departments": {
+      "HSK": "Housekeeping (HSK)",
+      "TD": "Technische dienst (TD)",
+      "FO": "Front Office (FO)",
+      "FB": "F&B",
+      "all": "Alle afdelingen"
+    },
+    "languages": {
+      "auto": "Automatisch"
+    }
+  },
+  "Floor": {
+    "loggedIn": "Ingelogd: {name}",
+    "back": "Floor-app",
+    "schedule": "Overdracht & planning van vandaag",
+    "handover": "Overdracht",
+    "maintenance": "Onderhoud",
+    "external": "Keuring",
+    "nothingToday": "Niets gepland. Voeg een afspraak of overdrachtsnotitie toe.",
+    "managersOnly": "Alleen zichtbaar voor managers",
+    "missedYesterday": "{count, plural, =0 {Gisteren niets gemist} one {# taak gisteren gemist} other {# taken gisteren gemist}}",
+    "allDone": "MOD-rondes compleet",
+    "orderQueue": "{count, plural, =0 {Bestellijst leeg} one {# item in de bestellijst} other {# items in de bestellijst}}",
+    "flushed": "Legionella: {done}/{total} vandaag gespoeld",
+    "filter": "Afdeling",
+    "all": "Alle",
+    "openIssues": "Open meldingen ({count})",
+    "noIssues": "Geen open meldingen. 👍",
+    "room": "Kamer {name}",
+    "noLocation": "Geen locatie",
+    "outOfOrder": "Buiten gebruik",
+    "photo": "Foto",
+    "fix": "Opgelost",
+    "fixRelease": "Opgelost & kamer vrijgeven",
+    "fixed": "Gemarkeerd als opgelost",
+    "actions": {
+      "report": "Melding / taak",
+      "procure": "Bestellen",
+      "checklists": "Checklists",
+      "inventory": "Inventaris"
+    },
+    "log": {
+      "kind": "Soort",
+      "handover": "Overdrachtsnotitie",
+      "appointment": "Afspraak",
+      "time": "Tijd",
+      "text": "Notitie",
+      "add": "Toevoegen",
+      "placeholder": {
+        "handover": "bijv. VIP-gast op kamer 204",
+        "appointment": "bijv. Keuring liftmonteur"
+      }
+    },
+    "departments": {
+      "HSK": "Housekeeping",
+      "TD": "Technische dienst",
+      "FO": "Front Office",
+      "FB": "F&B",
+      "all": "Alle afdelingen"
+    },
+    "roles": {
+      "gm": "GM",
+      "dept_manager": "Afdelingsmanager",
+      "staff": "Medewerker",
+      "shared": "Medewerker"
+    },
+    "shifts": {
+      "morning": "Ochtend",
+      "evening": "Avond",
+      "night": "Nacht"
+    },
+    "install": {
+      "title": "Zet de app op je beginscherm",
+      "ios": "Tik in Safari op Deel → Zet op beginscherm.",
+      "android": "Open in Chrome het menu (⋮) → App installeren.",
+      "close": "Sluiten"
+    },
+    "report": {
+      "title": "Melding / taak",
+      "room": "Kamer of ruimte",
+      "otherPlace": "Andere plek…",
+      "location": "Waar?",
+      "locationPlaceholder": "bijv. Ontbijtzaal",
+      "department": "Afdeling",
+      "what": "Wat is er mis / wat moet er gebeuren?",
+      "whatPlaceholder": "bijv. Lekkage onder de wastafel",
+      "outOfOrder": "Kamer buiten gebruik",
+      "outOfOrderHint": "Blokkeert de kamer voor Housekeeping en Front Office tot het is opgelost.",
+      "photo": "Foto toevoegen",
+      "photoReady": "Foto klaar ({kb} KB)",
+      "photoHint": "De foto wordt automatisch verkleind (max 150 KB).",
+      "photoTooBig": "Deze foto kon niet klein genoeg worden gemaakt.",
+      "send": "Versturen",
+      "sent": "Melding gemaakt"
+    },
+    "procure": {
+      "title": "Bestellen",
+      "description": "Tik op een foto om een product aan te vragen. Managers bestellen per telefoon of e-mail.",
+      "addProduct": "Product toevoegen",
+      "name": "Product",
+      "supplier": "Leverancier",
+      "phone": "Telefoon",
+      "email": "E-mail",
+      "photo": "Foto",
+      "requested": "{name} aangevraagd",
+      "queue": "Bestellijst ({count})",
+      "queueEmpty": "Niets te bestellen.",
+      "call": "Bellen",
+      "emailOrder": "Mailen",
+      "orderSubject": "Bestelling",
+      "markOrdered": "Besteld",
+      "markReceived": "Ontvangen",
+      "status": {
+        "requested": "Aangevraagd",
+        "ordered": "Besteld",
+        "received": "Ontvangen"
+      },
+      "confirmRemove": "{name} van de lijst halen?",
+      "empty": "Nog geen producten. Vraag je manager om ze toe te voegen.",
+      "emptyManager": "Nog geen producten. Voeg toe wat je team het vaakst vraagt.",
+      "hint": "Geen voorraad tellen: de lijst is alleen een snelle manier om te vragen."
+    },
+    "checklists": {
+      "title": "Checklists",
+      "description": "Eén keer vastleggen, voor elke inspectie exporteren.",
+      "excel": "Excel",
+      "pdf": "PDF / afdrukken",
+      "signature": "Handtekening",
+      "dateLine": "Datum",
+      "tabs": {
+        "legionella": "Legionella",
+        "haccp": "HACCP",
+        "mod": "MOD-ronde",
+        "preventive": "Preventief onderhoud",
+        "waste": "Dervingslijst"
+      },
+      "legionellaIntro": "Spoel elk tappunt minstens elke {days} dagen en noteer koud en warm °C. Rood alarm bij koud > {cold}°C of warm < {warm}°C (boiler 60°C).",
+      "redAlert": "Rood alarm: koud moet ≤ {cold}°C en warm ≥ {warm}°C zijn. Meld het je manager.",
+      "saved": "Opgeslagen",
+      "outOfLimit": "Buiten de grens — meld het je manager",
+      "vacant": "Lege kamer",
+      "overdue": "Niet gespoeld in de laatste {days} dagen",
+      "cold": "Koud °C",
+      "warm": "Warm °C",
+      "flushed": "Gespoeld",
+      "doneToday": "Vandaag gedaan",
+      "noPoints": "Nog geen tappunten. Markeer ze onder Inventaris.",
+      "addVacant": "Lege kamers toevoegen (> 6 dagen)",
+      "room": "Kamer",
+      "emptySince": "Leeg sinds",
+      "addVacantButton": "Toevoegen",
+      "addVacantHint": "Kamers die langer dan {days} dagen leeg staan komen vanzelf op de spoellijst.",
+      "external": "Extern",
+      "nextDue": "Uiterlijk {date}",
+      "every": "elke {days} dagen",
+      "done": "Klaar",
+      "confirmRemove": "Dit item verwijderen? De historie blijft.",
+      "add": {
+        "haccp": "Eigen HACCP-item toevoegen",
+        "mod": "Eigen MOD-item toevoegen / wijzigen",
+        "preventive": "Onderhoudstaak toevoegen"
+      },
+      "section": "Onderdeel",
+      "itemName": "Item",
+      "kind": "Soort",
+      "checkbox": "Vinkje",
+      "minC": "Min °C",
+      "maxC": "Max °C",
+      "intervalDays": "Elke … dagen",
+      "shift": "Dienst",
+      "product": "Product",
+      "quantity": "Aantal / gewicht",
+      "reason": "Reden",
+      "date": "Datum",
+      "by": "Door",
+      "noWaste": "Nog niets genoteerd.",
+      "reasons": {
+        "leftover_buffet": "Restant buffet",
+        "expired": "Over datum",
+        "breakage": "Breuk",
+        "prep_error": "Bereidingsfout"
+      }
+    },
+    "inventory": {
+      "title": "Inventaris",
+      "description": "Kamers & ruimtes met hun specificaties: RAL-kleuren, lamptypes, apparatuurmodellen.",
+      "nameOrRange": "Kamernummer, naam, of een reeks zoals 101-120",
+      "kind": "Soort",
+      "room": "Kamer",
+      "space": "Ruimte",
+      "waterPoint": "Tappunt",
+      "added": "{count} toegevoegd",
+      "specs": "Specificaties",
+      "specsPlaceholder": "bijv. Muren RAL 9010 · Lampen E27 LED 2700K · Koelkast Liebherr K 2834",
+      "confirmDelete": "{name} verwijderen?",
+      "search": "Zoek kamers en specificaties…",
+      "empty": "Nog geen kamers.",
+      "emptyManager": "Voeg je kamers (bijv. 101-120) en ruimtes toe."
+    }
+  },
+  "Cockpit": {
+    "title": "Cockpit (live)",
+    "openIssues": "Open meldingen",
+    "flushed": "Legionella vandaag gespoeld",
+    "flushOverdue": "{count} tappunten te laat",
+    "orderQueue": "Bestellijst",
+    "modRound": "MOD",
+    "liveOps": "Live operatie & meldingen (alle afdelingen)",
+    "view": "Weergave",
+    "compact": "Compact",
+    "full": "Volledig",
+    "ooo": "OOO",
+    "open": "Open"
   }
 }

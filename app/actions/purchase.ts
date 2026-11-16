@@ -37,7 +37,11 @@ export interface HotelPurchaseAction extends PurchaseAction {
 }
 
 export interface AdminPurchaseAction extends Omit<PurchaseAction, "participants"> {
-  participants: (Participation & { hotel: { _id: string; name: string; memberNumber: string; city: string } })[];
+  /** A hotel, or a supplier with a maintenance contract. */
+  participants: (Participation & {
+    hotel: { _id: string; name: string; memberNumber: string; city: string } | null;
+    supplier: { _id: string; name: string; memberNumber: string } | null;
+  })[];
 }
 
 export interface PurchaseActionInput {

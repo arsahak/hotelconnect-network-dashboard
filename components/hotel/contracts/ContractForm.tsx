@@ -12,6 +12,7 @@ import { BiInfoCircle } from "react-icons/bi";
 export const EMPTY_CONTRACT: ContractInput = {
   contractFor: "",
   company: "",
+  email: "",
   startDate: "",
   endDate: "",
   duration: "",
@@ -28,8 +29,9 @@ export const EMPTY_CONTRACT: ContractInput = {
 const UNITS: NoticeUnit[] = ["days", "weeks", "months"];
 
 /**
- * Contract register form (briefing §3.4.1). All fields are optional; the
- * explanation at the top says which ones matter for what.
+ * Contract register form. Master Briefing v4: five fields — company, email,
+ * end date, notice period and URL (no PDF uploads). The older, optional
+ * fields (budget, ledger, notes…) sit folded away under "More details".
  */
 const ContractForm = ({
   initial = EMPTY_CONTRACT,
@@ -72,22 +74,16 @@ const ContractForm = ({
       <div className={cardClass}>
         <h2 className={cardTitleClass}>{t("sections.contract")}</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Field id={id("for")} label={t("fields.contractFor")}>
-            <input id={id("for")} maxLength={120} value={form.contractFor} onChange={(e) => set("contractFor", e.target.value)} placeholder={t("placeholders.contractFor")} className={inputClass} />
+          <Field id={id("company")} label={t("fields.company")} required>
+            <input id={id("company")} required maxLength={120} value={form.company} onChange={(e) => set("company", e.target.value)} placeholder={t("placeholders.company")} className={inputClass} />
           </Field>
-          <Field id={id("company")} label={t("fields.company")}>
-            <input id={id("company")} maxLength={120} value={form.company} onChange={(e) => set("company", e.target.value)} className={inputClass} />
-          </Field>
-          <Field id={id("start")} label={t("fields.startDate")}>
-            <input id={id("start")} type="date" value={form.startDate} onChange={(e) => set("startDate", e.target.value)} className={inputClass} />
+          <Field id={id("email")} label={t("fields.email")} hint={t("hints.email")}>
+            <input id={id("email")} type="email" maxLength={254} value={form.email} onChange={(e) => set("email", e.target.value)} placeholder="service@company.nl" className={inputClass} />
           </Field>
           <Field id={id("end")} label={t("fields.endDate")} hint={t("hints.endDate")}>
             <input id={id("end")} type="date" value={form.endDate} onChange={(e) => set("endDate", e.target.value)} className={inputClass} />
           </Field>
-          <Field id={id("duration")} label={t("fields.duration")}>
-            <input id={id("duration")} maxLength={60} value={form.duration} onChange={(e) => set("duration", e.target.value)} placeholder={t("placeholders.duration")} className={inputClass} />
-          </Field>
-          <Field id={id("notice")} label={t("fields.noticePeriod")} hint={t("hints.noticePeriod")}>
+          <Field id={id("notice")} label={t("fields.noticePeriod")} hint={t("hints.noticePeriodV4")}>
             <div className="flex gap-2">
               <input
                 id={id("notice")}
@@ -112,15 +108,29 @@ const ContractForm = ({
               </select>
             </div>
           </Field>
-        </div>
-        <div className="mt-4">
-          <Toggle checked={form.autoRenew} onChange={(v) => set("autoRenew", v)} label={t("fields.autoRenew")} description={t("hints.autoRenew")} />
+          <Field id={id("link")} label={t("fields.url")} hint={t("hints.url")} className="md:col-span-2">
+            <input id={id("link")} type="url" value={form.contractLink} onChange={(e) => set("contractLink", e.target.value)} placeholder="https://" className={inputClass} />
+          </Field>
         </div>
       </div>
 
-      <div className={cardClass}>
-        <h2 className={cardTitleClass}>{t("sections.budget")}</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <details className={`${cardClass} group`}>
+        <summary className="cursor-pointer list-none text-sm font-medium text-gray-700 marker:hidden">
+          <span className="inline-flex items-center gap-2">
+            <span className="transition-transform group-open:rotate-90">›</span>
+            {t("moreDetails")}
+          </span>
+        </summary>
+        <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <Field id={id("for")} label={t("fields.contractFor")}>
+            <input id={id("for")} maxLength={120} value={form.contractFor} onChange={(e) => set("contractFor", e.target.value)} placeholder={t("placeholders.contractFor")} className={inputClass} />
+          </Field>
+          <Field id={id("start")} label={t("fields.startDate")}>
+            <input id={id("start")} type="date" value={form.startDate} onChange={(e) => set("startDate", e.target.value)} className={inputClass} />
+          </Field>
+          <Field id={id("duration")} label={t("fields.duration")}>
+            <input id={id("duration")} maxLength={60} value={form.duration} onChange={(e) => set("duration", e.target.value)} placeholder={t("placeholders.duration")} className={inputClass} />
+          </Field>
           <Field id={id("cost")} label={t("fields.costPerYear")}>
             <div className="relative">
               <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm text-gray-400">€</span>
@@ -133,25 +143,19 @@ const ContractForm = ({
           <Field id={id("payment")} label={t("fields.paymentTerm")}>
             <input id={id("payment")} maxLength={60} value={form.paymentTerm} onChange={(e) => set("paymentTerm", e.target.value)} placeholder={t("placeholders.paymentTerm")} className={inputClass} />
           </Field>
-        </div>
-      </div>
-
-      <div className={cardClass}>
-        <h2 className={cardTitleClass}>{t("sections.links")}</h2>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <Field id={id("link")} label={t("fields.contractLink")} hint={t("hints.contractLink")}>
-            <input id={id("link")} type="url" value={form.contractLink} onChange={(e) => set("contractLink", e.target.value)} placeholder="https://drive.google.com/…" className={inputClass} />
-          </Field>
-          <Field id={id("portal")} label={t("fields.portalLink")} hint={t("hints.portalLink")}>
+          <Field id={id("portal")} label={t("fields.portalLink")} hint={t("hints.portalLink")} className="md:col-span-2">
             <input id={id("portal")} type="url" value={form.portalLink} onChange={(e) => set("portalLink", e.target.value)} placeholder="https://" className={inputClass} />
           </Field>
           <Field id={id("notes")} label={t("fields.notes")} className="md:col-span-2">
             <textarea id={id("notes")} rows={3} maxLength={2000} value={form.notes} onChange={(e) => set("notes", e.target.value)} className={inputClass} />
           </Field>
+          <div className="md:col-span-2">
+            <Toggle checked={form.autoRenew} onChange={(v) => set("autoRenew", v)} label={t("fields.autoRenew")} description={t("hints.autoRenew")} />
+          </div>
         </div>
-      </div>
+      </details>
 
-      <FormActions submitting={submitting} submitLabel={submitLabel} cancelHref={cancelHref} onCancel={onCancel} disabled={!form.contractFor.trim() && !form.company.trim()} />
+      <FormActions submitting={submitting} submitLabel={submitLabel} cancelHref={cancelHref} onCancel={onCancel} disabled={!form.company.trim()} />
     </form>
   );
 };
@@ -160,6 +164,7 @@ const ContractForm = ({
 export function contractToInput(contract: {
   contractFor: string;
   company: string;
+  email?: string;
   startDate: string | null;
   endDate: string | null;
   duration: string;
@@ -174,6 +179,7 @@ export function contractToInput(contract: {
 }): ContractInput {
   return {
     ...contract,
+    email: contract.email ?? "",
     startDate: contract.startDate?.slice(0, 10) ?? "",
     endDate: contract.endDate?.slice(0, 10) ?? "",
     noticePeriod: { value: contract.noticePeriod?.value?.toString() ?? "", unit: contract.noticePeriod?.unit ?? "months" },

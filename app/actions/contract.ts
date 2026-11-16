@@ -10,6 +10,8 @@ export interface Contract {
   _id: string;
   contractFor: string;
   company: string;
+  /** The supplier's email. */
+  email: string;
   startDate: string | null;
   endDate: string | null;
   duration: string;
@@ -31,6 +33,7 @@ export interface Contract {
 export interface ContractInput {
   contractFor: string;
   company: string;
+  email: string;
   startDate: string;
   endDate: string;
   duration: string;

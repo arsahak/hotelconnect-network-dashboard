@@ -4,6 +4,10 @@ import {
   BiBookBookmark,
   BiBell,
   BiBuildingHouse,
+  BiPackage,
+  BiCart,
+  BiListCheck,
+  BiGridAlt,
   BiCheckShield,
   BiFile,
   BiWrench,
@@ -24,6 +28,8 @@ import {
   BiBroadcast,
 } from "react-icons/bi";
 import { canAccess, type UserRole } from "./access";
+import type { FeatureKey, Features } from "@/app/actions/registration";
+import { NO_FEATURES } from "@/lib/features";
 
 // Sidebar + topbar search. `key` points to the Nav.items.<key> message
 // (title + description) in messages/en.json and messages/nl.json.
@@ -40,6 +46,8 @@ export interface NavItem {
   href: string;
   icon: IconType;
   sub?: SubNavItem[];
+  /** A Phase 2 feature (Master Briefing v4): shown only when an admin switched it on. */
+  feature?: FeatureKey;
 }
 
 export interface NavSection {
@@ -51,6 +59,17 @@ export interface NavSection {
 export const navigation: NavSection[] = [
   {
     items: [{ key: "dashboard", href: "/dashboard", icon: BiHome }],
+  },
+  {
+    // The floor app (Master Briefing v4): GM and every staff account.
+    key: "floor",
+    items: [
+      { key: "floor", href: "/floor", icon: BiGridAlt },
+      { key: "floorReport", href: "/floor/report", icon: BiWrench },
+      { key: "floorChecklists", href: "/floor/checklists", icon: BiListCheck },
+      { key: "floorProcure", href: "/floor/procure", icon: BiCart },
+      { key: "floorInventory", href: "/floor/inventory", icon: BiPackage },
+    ],
   },
   {
     key: "compliance",
@@ -99,17 +118,32 @@ export const navigation: NavSection[] = [
         ],
       },
       { key: "supplierTenders", href: "/supplier/tenders", icon: BiReceipt },
+      { key: "supplierPartners", href: "/supplier/partners", icon: BiBuildingHouse },
       { key: "collectivePurchasing", href: "/hotel/purchasing", icon: BiShoppingBag },
+      { key: "supplierPurchasing", href: "/supplier/purchasing", icon: BiShoppingBag },
     ],
   },
   {
     key: "company",
-    items: [{ key: "supplierProfile", href: "/supplier/profile", icon: BiStore }],
+    items: [
+      { key: "supplierProfile", href: "/supplier/profile", icon: BiStore },
+      {
+        key: "supplierJobs",
+        href: "/supplier/jobs",
+        icon: BiBriefcase,
+        sub: [
+          { key: "supplierJobsAll", href: "/supplier/jobs", icon: BiBriefcase },
+          { key: "supplierJobsAdd", href: "/supplier/jobs/add", icon: BiPlusCircle },
+        ],
+      },
+      { key: "supplierKennisbank", href: "/supplier/kennisbank", icon: BiBookBookmark },
+    ],
   },
   {
     key: "hotel",
     items: [
       { key: "myHotel", href: "/hotel/my-hotel", icon: BiBuildingHouse },
+      { key: "hotelStaff", href: "/hotel/staff", icon: BiGroup },
       {
         key: "hotelJobs",
         href: "/hotel/jobs",
@@ -120,7 +154,7 @@ export const navigation: NavSection[] = [
         ],
       },
       {
-        key: "hotelVouchers",
+        key: "hotelVouchers", feature: "vouchers",
         href: "/hotel/vouchers",
         icon: BiPurchaseTagAlt,
         sub: [
@@ -185,7 +219,7 @@ export const navigation: NavSection[] = [
         ],
       },
       {
-        key: "vouchers",
+        key: "vouchers", feature: "vouchers",
         href: "/admin/vouchers",
         icon: BiPurchaseTagAlt,
         sub: [
@@ -210,10 +244,10 @@ export const navigation: NavSection[] = [
     items: [
       { key: "hotelInvoices", href: "/hotel/invoices", icon: BiWallet },
       { key: "supplierInvoices", href: "/supplier/invoices", icon: BiWallet },
-      { key: "hotelAdvertising", href: "/hotel/advertising", icon: BiBroadcast },
-      { key: "supplierAdvertising", href: "/supplier/advertising", icon: BiBroadcast },
+      { key: "hotelAdvertising", feature: "advertising", href: "/hotel/advertising", icon: BiBroadcast },
+      { key: "supplierAdvertising", feature: "advertising", href: "/supplier/advertising", icon: BiBroadcast },
       { key: "adminInvoices", href: "/admin/invoices", icon: BiWallet },
-      { key: "adminAdvertising", href: "/admin/advertising", icon: BiBroadcast },
+      { key: "adminAdvertising", feature: "advertising", href: "/admin/advertising", icon: BiBroadcast },
     ],
   },
   {
@@ -243,13 +277,13 @@ export const navigation: NavSection[] = [
 // Same rule as the proxy, so the menu never shows a page the role can't open.
 const allowed = (href: string, role: UserRole) => canAccess(href, role);
 
-/** The menu as one role sees it: hidden items and empty sections removed. */
-export function navigationFor(role: UserRole): NavSection[] {
+/** The menu as one role sees it: hidden items, switched-off features and empty sections removed. */
+export function navigationFor(role: UserRole, features: Features = NO_FEATURES): NavSection[] {
   return navigation
     .map((section) => ({
       ...section,
       items: section.items
-        .filter((item) => allowed(item.href, role))
+        .filter((item) => allowed(item.href, role) && (!item.feature || features[item.feature]))
         .map((item) => ({
           ...item,
           sub: item.sub?.filter((sub) => allowed(sub.href, role)),
@@ -259,9 +293,9 @@ export function navigationFor(role: UserRole): NavSection[] {
 }
 
 /** Every page a role can open, flat — for the topbar search. */
-export function pagesFor(role: UserRole): SubNavItem[] {
+export function pagesFor(role: UserRole, features: Features = NO_FEATURES): SubNavItem[] {
   const seen = new Set<string>();
-  return navigationFor(role)
+  return navigationFor(role, features)
     .flatMap((section) => section.items.flatMap((item) => [item, ...(item.sub ?? [])]))
     .filter((page) => (seen.has(page.href) ? false : (seen.add(page.href), true)));
 }

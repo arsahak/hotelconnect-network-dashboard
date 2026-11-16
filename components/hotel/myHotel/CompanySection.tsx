@@ -28,12 +28,17 @@ export function CompanySection({
   const tc = useTranslations("Common");
   const options = useOptions();
   const optionLabel = useOptionLabel();
+  const tCountry = useTranslations("Countries");
   const [form, setForm] = useState({
     name: hotel.name,
+    legalName: hotel.legalName ?? "",
     kvkNumber: hotel.kvkNumber ?? "",
+    vatNumber: hotel.vatNumber ?? "",
+    country: hotel.country || "NL",
     address: hotel.address,
+    postalCode: hotel.postalCode ?? "",
     city: hotel.city,
-    region: hotel.region,
+    region: hotel.region ?? "",
     contactPerson: hotel.contactPerson ?? "",
     phone: hotel.phone ?? "",
     general: hotel.emails.general,
@@ -44,7 +49,9 @@ export function CompanySection({
   const submit = async () => {
     setSubmitting(true);
     const { general, ...rest } = form;
-    const saved = await saveSection(() => updateMyHotelAction({ ...rest, emails: { general } }), { success: quiet ? undefined : t("saved"), error: tc("error") }, toast);
+    // The province only exists in the Netherlands.
+    const data = { ...rest, region: rest.country === "NL" ? rest.region : "" };
+    const saved = await saveSection(() => updateMyHotelAction({ ...data, emails: { general } }), { success: quiet ? undefined : t("saved"), error: tc("error") }, toast);
     setSubmitting(false);
     if (saved) onSaved(saved);
   };
@@ -55,24 +62,47 @@ export function CompanySection({
         <Field id="company-name" label={t("company.name")} required>
           <input id="company-name" required minLength={2} maxLength={120} value={form.name} onChange={(e) => set("name", e.target.value)} className={inputClass} />
         </Field>
+        <Field id="company-legal" label={t("company.legalName")}>
+          <input id="company-legal" maxLength={120} value={form.legalName} onChange={(e) => set("legalName", e.target.value)} className={inputClass} />
+        </Field>
         <Field id="company-kvk" label={t("company.kvk")} hint={t("company.kvkHint")}>
-          <input id="company-kvk" inputMode="numeric" maxLength={9} value={form.kvkNumber} onChange={(e) => set("kvkNumber", e.target.value)} placeholder="12345678" className={inputClass} />
+          <input id="company-kvk" maxLength={24} value={form.kvkNumber} onChange={(e) => set("kvkNumber", e.target.value)} placeholder="12345678" className={inputClass} />
         </Field>
-        <Field id="company-address" label={t("company.address")} required className="md:col-span-2">
-          <input id="company-address" required value={form.address} onChange={(e) => set("address", e.target.value)} className={inputClass} />
+        <Field id="company-vat" label={t("company.vat")} hint={t("company.vatHint")}>
+          <input id="company-vat" maxLength={20} value={form.vatNumber} onChange={(e) => set("vatNumber", e.target.value)} placeholder="NL123456789B01" className={inputClass} />
         </Field>
-        <Field id="company-city" label={t("company.city")} required>
-          <input id="company-city" required value={form.city} onChange={(e) => set("city", e.target.value)} className={inputClass} />
-        </Field>
-        <Field id="company-region" label={t("company.region")} required>
-          <select id="company-region" required value={form.region} onChange={(e) => set("region", e.target.value)} className={inputClass}>
-            {(options?.regions ?? [form.region]).map((r) => (
-              <option key={r} value={r}>
-                {optionLabel("regions", r)}
+        <Field id="company-country" label={t("company.country")} hint={t("company.countryHint")} required>
+          <select id="company-country" required value={form.country} onChange={(e) => set("country", e.target.value)} className={inputClass}>
+            {(options?.countries ?? [{ code: form.country, name: form.country }]).map((c) => (
+              <option key={c.code} value={c.code}>
+                {tCountry.has(c.code) ? tCountry(c.code) : c.name}
               </option>
             ))}
           </select>
         </Field>
+        <Field id="company-address" label={t("company.address")} required className="md:col-span-2">
+          <input id="company-address" required value={form.address} onChange={(e) => set("address", e.target.value)} className={inputClass} />
+        </Field>
+        <Field id="company-postal" label={t("company.postalCode")}>
+          <input id="company-postal" maxLength={12} value={form.postalCode} onChange={(e) => set("postalCode", e.target.value)} className={inputClass} />
+        </Field>
+        <Field id="company-city" label={t("company.city")} required>
+          <input id="company-city" required value={form.city} onChange={(e) => set("city", e.target.value)} className={inputClass} />
+        </Field>
+        {form.country === "NL" && (
+          <Field id="company-region" label={t("company.region")} required className="md:col-span-2">
+            <select id="company-region" required value={form.region} onChange={(e) => set("region", e.target.value)} className={inputClass}>
+              <option value="" disabled>
+                …
+              </option>
+              {(options?.regions ?? [form.region]).filter(Boolean).map((r) => (
+                <option key={r} value={r}>
+                  {optionLabel("regions", r)}
+                </option>
+              ))}
+            </select>
+          </Field>
+        )}
         <Field id="company-person" label={t("company.contactPerson")}>
           <input id="company-person" maxLength={100} value={form.contactPerson} onChange={(e) => set("contactPerson", e.target.value)} className={inputClass} />
         </Field>

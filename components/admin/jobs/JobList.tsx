@@ -118,7 +118,8 @@ const JobList = () => {
                       </Link>
                     </td>
                     <td className="px-5 py-3 text-gray-600">
-                      {job.hotel?.name ?? "—"}
+                      {job.hotel?.name ?? job.supplier?.name ?? "—"}
+                      {job.supplier && <span className="block text-xs text-brass-600">{t("supplierJob")}</span>}
                       <span className="block text-xs text-gray-400">{job.city}</span>
                     </td>
                     <td className="px-5 py-3">

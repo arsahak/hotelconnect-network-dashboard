@@ -9,9 +9,10 @@ import { useFormatter, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 import { RegistrationStatusBadge } from "./RegistrationStatusBadge";
+import { FeaturesCard } from "./FeaturesCard";
 import { TestPhaseCard } from "./TestPhaseCard";
 
-const FILTERS = ["pending", "approved", "rejected", ""] as const;
+const FILTERS = ["pending", "waiting", "approved", "rejected", ""] as const;
 
 /** Admin: sign-ups to approve (briefing §3.1, §4.1), with the test phase switch on top. */
 const RegistrationList = () => {
@@ -26,6 +27,7 @@ const RegistrationList = () => {
     <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
       <PageHeader title={t("title")} description={t("description")} />
       <TestPhaseCard />
+      <FeaturesCard />
       <div className="flex flex-wrap gap-2">
         {FILTERS.map((f) => (
           <button

@@ -8,25 +8,26 @@ import { Thumb } from "@/components/shared/Thumb";
 import { useApiData } from "@/lib/useApiData";
 import { useOptionLabel } from "@/lib/useOptions";
 import { WEBSITE_URL } from "@/lib/site";
-import { useFormatter, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
+import { useJobsBase } from "./useJobsBase";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import { BiCategory, BiEnvelope, BiLinkExternal, BiLockAlt, BiLockOpenAlt, BiPencil, BiPhone, BiTrash, BiVideo } from "react-icons/bi";
 import { HotelJobStatusBadge } from "./HotelJobStatusBadge";
 
-/** One job — /hotel/jobs/[id]: status, applications and close/reopen. */
+/** One job — /hotel/jobs/[id] or /supplier/jobs/[id]: status, applications and close/reopen. */
 const HotelJobDetails = ({ id }: { id: string }) => {
   const t = useTranslations("HotelJobs");
+  const { base } = useJobsBase();
   const tj = useTranslations("Jobs");
   const tc = useTranslations("Common");
-  const format = useFormatter();
   const optionLabel = useOptionLabel();
   const router = useRouter();
   const { data: job, loading, reload } = useApiData(getMyVacancyAction, id);
 
   if (loading) return <div className="h-64 animate-pulse rounded border border-gray-200 bg-white" />;
-  if (!job) return <PageHeader title={t("notFound")} back={{ href: "/hotel/jobs", label: t("back") }} />;
+  if (!job) return <PageHeader title={t("notFound")} back={{ href: base, label: t("back") }} />;
 
   const setStatus = async (status: "closed" | "pending") => {
     if (status === "closed" && !window.confirm(t("confirmClose"))) return;
@@ -42,7 +43,7 @@ const HotelJobDetails = ({ id }: { id: string }) => {
     const res = await deleteMyVacancyAction(job._id);
     if (res.ok) {
       toast.success(t("deleted"));
-      router.push("/hotel/jobs");
+      router.push(base);
     } else toast.error(res.error || tc("error"));
   };
 
@@ -51,7 +52,7 @@ const HotelJobDetails = ({ id }: { id: string }) => {
       <PageHeader
         title={job.title}
         description={`${optionLabel("vacancyCategories", job.category)} · ${optionLabel("employmentTypes", job.employmentType)}`}
-        back={{ href: "/hotel/jobs", label: t("back") }}
+        back={{ href: base, label: t("back") }}
         actions={
           <>
             {job.status === "published" && (
@@ -59,7 +60,7 @@ const HotelJobDetails = ({ id }: { id: string }) => {
                 <BiLinkExternal size={16} /> {tc("viewOnWebsite")}
               </a>
             )}
-            <Link href={`/hotel/jobs/edit?id=${job._id}`} className={outlineButtonClass}>
+            <Link href={`${base}/edit?id=${job._id}`} className={outlineButtonClass}>
               <BiPencil size={16} /> {tc("edit")}
             </Link>
             {job.status === "closed" ? (
@@ -89,7 +90,12 @@ const HotelJobDetails = ({ id }: { id: string }) => {
               <Thumb src={job.image} alt="" />
             </div>
           )}
-          <p className="whitespace-pre-line text-sm leading-relaxed text-gray-700">{job.description || "—"}</p>
+          {job.description ? (
+            // Cleaned by the API when saved.
+            <div className="job-text text-sm leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html: job.description }} />
+          ) : (
+            <p className="text-sm text-gray-700">—</p>
+          )}
           <div className="mt-6 grid gap-5 border-t border-gray-100 pt-6 sm:grid-cols-2">
             <InfoRow icon={<BiCategory size={16} />} label={t("style.title")} value={t(`style.${job.style ?? "traditional"}`)} />
             {job.style === "visual" && (
@@ -102,9 +108,6 @@ const HotelJobDetails = ({ id }: { id: string }) => {
         <div className={cardClass}>
           <h2 className={cardTitleClass}>{t("columns.applications")}</h2>
           <p className="font-display text-5xl text-gray-950">{job.applicationCount ?? 0}</p>
-          <p className="mt-2 text-sm text-gray-600">
-            {job.lastApplicationAt ? t("lastApplication", { date: format.dateTime(new Date(job.lastApplicationAt), { dateStyle: "medium" }) }) : t("noApplications")}
-          </p>
           <p className="mt-4 text-xs text-gray-500">{t("applicationsHint", { email: job.applyEmail })}</p>
         </div>
       </div>

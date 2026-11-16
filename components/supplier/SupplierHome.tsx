@@ -11,7 +11,9 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { BiGift, BiLinkExternal, BiRightArrowAlt, BiStore } from "react-icons/bi";
 import { ProfileChecklist } from "./ProfileChecklist";
+import { SupplierPortalTabs } from "./SupplierPortalTabs";
 import { InvitationStatusBadge } from "./tenders/InvitationStatusBadge";
+import { withBase } from "@/lib/basePath";
 
 function Stat({ label, value, tone }: { label: string; value: number; tone?: "brass" | "green" }) {
   return (
@@ -30,7 +32,7 @@ function InvitationRow({ inv }: { inv: Invitation }) {
         <span className="min-w-0">
           <span className="block truncate font-medium text-gray-900">{inv.title}</span>
           <span className="block truncate text-xs text-gray-500">
-            {inv.hotel.name} · {optionLabel("tenderTypes", inv.type)}
+            {inv.hotel?.name} · {optionLabel("tenderTypes", inv.type)}
           </span>
         </span>
         <span className="flex shrink-0 flex-col items-end gap-1">
@@ -48,7 +50,7 @@ function InvitationRow({ inv }: { inv: Invitation }) {
  */
 const SupplierHome = () => {
   const t = useTranslations("SupplierHome");
-  const { name } = useSessionUser();
+  const { name, features } = useSessionUser();
   const { data, loading } = useApiData(listInvitationsAction, undefined);
   const invitations = data ?? [];
 
@@ -60,6 +62,7 @@ const SupplierHome = () => {
   return (
     <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
       <PageHeader title={t("welcome", { name: name.split(" ")[0] || name })} description={t("intro")} />
+      <SupplierPortalTabs />
 
       <ProfileChecklist />
 
@@ -108,18 +111,21 @@ const SupplierHome = () => {
             <span className="mt-1 block text-sm text-gray-500">{t("profile.description")}</span>
           </span>
         </Link>
+        {/* Phase 2 (v4): vouchers are hidden until an admin switches them on. */}
         {/* Signs the supplier in on the website, where vouchers can be booked (briefing §2.4). */}
-        <a href="/api/website-login?next=/suppliers/vouchers" className="group flex items-start gap-4 rounded-lg border border-gray-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brass-100 text-brass-600 group-hover:bg-primary group-hover:text-white">
-            <BiGift size={20} />
-          </span>
-          <span>
-            <span className="flex items-center gap-1 font-display text-xl text-gray-950">
-              {t("vouchers.title")} <BiLinkExternal size={16} className="text-brass-500" />
+        {features.vouchers && (
+          <a href={withBase("/api/website-login?next=/suppliers/vouchers")} className="group flex items-start gap-4 rounded-lg border border-gray-200 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-primary/40">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brass-100 text-brass-600 group-hover:bg-primary group-hover:text-white">
+              <BiGift size={20} />
             </span>
-            <span className="mt-1 block text-sm text-gray-500">{t("vouchers.description")}</span>
-          </span>
-        </a>
+            <span>
+              <span className="flex items-center gap-1 font-display text-xl text-gray-950">
+                {t("vouchers.title")} <BiLinkExternal size={16} className="text-brass-500" />
+              </span>
+              <span className="mt-1 block text-sm text-gray-500">{t("vouchers.description")}</span>
+            </span>
+          </a>
+        )}
       </div>
     </div>
   );

@@ -28,3 +28,21 @@ export async function adminDownload(path: string): Promise<Response> {
   headers.set("cache-control", "no-store");
   return new Response(res.body, { status: 200, headers });
 }
+
+/** The same for a hotel's own exports (floor checklists): GM and hotel staff. */
+export async function hotelDownload(path: string): Promise<Response> {
+  const session = await auth();
+  const role = session?.user?.role;
+  if (!session?.user?.accessToken || (role !== "hotel_manager" && role !== "hotel_staff")) {
+    return new Response("Not allowed", { status: 403 });
+  }
+  const res = await fetch(`${API}${path}`, { headers: { Authorization: `Bearer ${session.user.accessToken}` }, cache: "no-store" });
+  if (!res.ok || !res.body) return new Response("The file could not be downloaded.", { status: res.status || 502 });
+  const headers = new Headers();
+  for (const name of ["content-type", "content-disposition"]) {
+    const value = res.headers.get(name);
+    if (value) headers.set(name, value);
+  }
+  headers.set("cache-control", "no-store");
+  return new Response(res.body, { status: 200, headers });
+}

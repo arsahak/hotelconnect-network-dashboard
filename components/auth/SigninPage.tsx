@@ -10,6 +10,8 @@ import { useSearchParams } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
 import { BiEnvelope, BiLockAlt, BiLogIn } from "react-icons/bi";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { withBase } from "@/lib/basePath";
+import Link from "next/link";
 
 const SigninPage = () => {
   const t = useTranslations("Signin");
@@ -21,7 +23,7 @@ const SigninPage = () => {
   useEffect(() => {
     if (state.ok) {
       // Full page load so the layout re-renders with the fresh session cookie.
-      window.location.href = state.redirectTo || callbackUrl;
+      window.location.href = withBase(state.redirectTo || callbackUrl);
     }
   }, [state.ok, state.redirectTo, callbackUrl]);
 
@@ -123,9 +125,14 @@ const SigninPage = () => {
             </div>
 
             <div className="space-y-1.5">
-              <label className={labelClass} htmlFor="password">
-                {t("password")}
-              </label>
+              <div className="flex items-center justify-between">
+                <label className={labelClass} htmlFor="password">
+                  {t("password")}
+                </label>
+                <Link href="/forgot-password" className="text-xs font-medium text-primary-dark hover:underline">
+                  {t("forgot")}
+                </Link>
+              </div>
               <div className="relative flex items-center">
                 <BiLockAlt className={iconClass} />
                 <input

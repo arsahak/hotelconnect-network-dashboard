@@ -18,7 +18,7 @@ export function OfferForm({ invitation, onSaved }: { invitation: Invitation; onS
   const tc = useTranslations("Common");
   const offer = invitation.myOffer;
   const [price, setPrice] = useState(offer ? String(offer.price) : "");
-  const [deliveryTime, setDeliveryTime] = useState(offer?.deliveryTime ?? "");
+  const [deliveryWeeks, setDeliveryWeeks] = useState(offer?.deliveryWeeks != null ? String(offer.deliveryWeeks) : "");
   const [notes, setNotes] = useState(offer?.notes ?? "");
   const [file, setFile] = useState<File | null>(null);
   const [saving, setSaving] = useState(false);
@@ -29,7 +29,7 @@ export function OfferForm({ invitation, onSaved }: { invitation: Invitation; onS
         e.preventDefault();
         const form = new FormData();
         form.set("price", price);
-        form.set("deliveryTime", deliveryTime);
+        form.set("deliveryWeeks", deliveryWeeks);
         form.set("notes", notes);
         if (file) form.set("file", file);
         setSaving(true);
@@ -48,8 +48,8 @@ export function OfferForm({ invitation, onSaved }: { invitation: Invitation; onS
         <Field id="offer-price" label={t("fields.price")} required>
           <input id="offer-price" type="number" required min={0} step="0.01" inputMode="decimal" value={price} onChange={(e) => setPrice(e.target.value)} placeholder="€" className={inputClass} />
         </Field>
-        <Field id="offer-delivery" label={t("fields.deliveryTime")} hint={t("hints.deliveryTime")}>
-          <input id="offer-delivery" maxLength={100} value={deliveryTime} onChange={(e) => setDeliveryTime(e.target.value)} placeholder={t("placeholders.deliveryTime")} className={inputClass} />
+        <Field id="offer-delivery" label={t("fields.deliveryTime")} required hint={t("hints.deliveryTime")}>
+          <input id="offer-delivery" type="number" required min={0} max={520} step={1} inputMode="numeric" value={deliveryWeeks} onChange={(e) => setDeliveryWeeks(e.target.value)} placeholder={t("placeholders.deliveryTime")} className={inputClass} />
         </Field>
         <Field id="offer-notes" label={t("fields.notes")} className="md:col-span-2">
           <textarea id="offer-notes" rows={4} maxLength={2000} value={notes} onChange={(e) => setNotes(e.target.value)} className={inputClass} />

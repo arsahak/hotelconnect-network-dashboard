@@ -64,7 +64,7 @@ const JobDetails = ({ id }: { id: string }) => {
     <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
       <PageHeader
         title={job.title}
-        description={`${job.hotel?.name ?? ""} · ${job.city}`}
+        description={`${job.hotel?.name ?? job.supplier?.name ?? ""} · ${job.city}`}
         back={{ href: "/admin/jobs", label: t("back") }}
         actions={
           <>
@@ -73,9 +73,12 @@ const JobDetails = ({ id }: { id: string }) => {
                 <BiLinkExternal size={16} /> {tc("viewOnWebsite")}
               </a>
             )}
-            <Link href={`/admin/jobs/edit?id=${job._id}`} className={outlineButtonClass}>
-              <BiPencil size={16} /> {tc("edit")}
-            </Link>
+            {/* A supplier edits its own job; the admin only publishes or closes it. */}
+            {!job.supplier && (
+              <Link href={`/admin/jobs/edit?id=${job._id}`} className={outlineButtonClass}>
+                <BiPencil size={16} /> {tc("edit")}
+              </Link>
+            )}
             <button type="button" onClick={handleDelete} className={dangerButtonClass}>
               <BiTrash size={16} /> {tc("delete")}
             </button>
@@ -89,9 +92,18 @@ const JobDetails = ({ id }: { id: string }) => {
             <JobStatusBadge status={job.status} />
             {job.urgent && <span className="rounded bg-ember-100 px-2 py-0.5 text-xs font-semibold text-ember-600">{t("fields.urgent")}</span>}
           </div>
-          <p className="mt-5 whitespace-pre-line text-sm leading-relaxed text-gray-700">{job.description || "—"}</p>
+          {job.description ? (
+            // Cleaned by the API when saved.
+            <div className="job-text mt-5 text-sm leading-relaxed text-gray-700" dangerouslySetInnerHTML={{ __html: job.description }} />
+          ) : (
+            <p className="mt-5 text-sm text-gray-700">—</p>
+          )}
           <div className="mt-6 grid gap-5 border-t border-gray-100 pt-6 sm:grid-cols-2">
-            <InfoRow icon={<BiBuildings size={16} />} label={t("fields.hotel")} value={job.hotel && <Link href={`/admin/hotels/${job.hotel._id}`} className="underline underline-offset-2">{job.hotel.name}</Link>} />
+            {job.supplier ? (
+              <InfoRow icon={<BiBuildings size={16} />} label={t("supplierJob")} value={<Link href={`/admin/suppliers/${job.supplier._id}`} className="underline underline-offset-2">{job.supplier.name}</Link>} />
+            ) : (
+              <InfoRow icon={<BiBuildings size={16} />} label={t("fields.hotel")} value={job.hotel && <Link href={`/admin/hotels/${job.hotel._id}`} className="underline underline-offset-2">{job.hotel.name}</Link>} />
+            )}
             <InfoRow icon={<BiMap size={16} />} label={t("fields.location")} value={`${job.city}, ${optionLabel("regions", job.region)}`} />
             <InfoRow icon={<BiCheckCircle size={16} />} label={t("fields.category")} value={`${optionLabel("vacancyCategories", job.category)} · ${optionLabel("employmentTypes", job.employmentType)}`} />
             <InfoRow icon={<BiCalendar size={16} />} label={t("columns.published")} value={job.publishedAt ? format.dateTime(new Date(job.publishedAt), { dateStyle: "long" }) : "—"} />

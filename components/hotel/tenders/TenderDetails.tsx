@@ -1,6 +1,7 @@
 "use client";
 
-import { awardTenderAction, cancelTenderAction, getTenderAction, type Offer } from "@/app/actions/tender";
+import { awardTenderAction, cancelTenderAction, closeTenderAction, getTenderAction, type Offer } from "@/app/actions/tender";
+import { WEBSITE_URL } from "@/lib/site";
 import { DateBadge } from "@/components/shared/DateBadge";
 import { cardClass, cardTitleClass, dangerButtonClass, outlineButtonClass, primaryButtonClass } from "@/components/shared/form-styles";
 import { InfoRow } from "@/components/shared/InfoRow";
@@ -13,13 +14,15 @@ import { useFormatter, useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
-import { BiCategory, BiEuro, BiFile, BiMap, BiPencil, BiTrophy, BiX } from "react-icons/bi";
+import { BiCategory, BiEuro, BiFile, BiGlobe, BiLockAlt, BiMap, BiPencil, BiTrophy, BiX } from "react-icons/bi";
 import { ReviewCard } from "./ReviewCard";
 import { TenderStatusBadge } from "./TenderStatusBadge";
+import { useSessionUser } from "@/lib/SessionUserContext";
 
 /** Tender details — /hotel/tenders/[id]: the request, the invited suppliers and the quote comparison. */
 const TenderDetails = ({ id }: { id: string }) => {
   const t = useTranslations("Tenders");
+  const { features } = useSessionUser();
   const tc = useTranslations("Common");
   const format = useFormatter();
   const optionLabel = useOptionLabel();
@@ -45,6 +48,17 @@ const TenderDetails = ({ id }: { id: string }) => {
     } else toast.error(res.error || tc("error"));
   };
 
+  const close = async () => {
+    if (!window.confirm(t("confirmClose"))) return;
+    setBusy("close");
+    const res = await closeTenderAction(tender._id);
+    setBusy(null);
+    if (res.ok) {
+      toast.success(t("closedToast"));
+      reload();
+    } else toast.error(res.error || tc("error"));
+  };
+
   const cancel = async () => {
     if (!window.confirm(t("confirmCancel"))) return;
     setBusy("cancel");
@@ -60,7 +74,7 @@ const TenderDetails = ({ id }: { id: string }) => {
     <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
       <PageHeader
         title={tender.title}
-        description={optionLabel("tenderTypes", tender.type)}
+        description={`${t(`size.${tender.size}`)} · ${optionLabel("tenderTypes", tender.type)}`}
         back={{ href: "/hotel/tenders", label: t("back") }}
         actions={
           open && (
@@ -68,6 +82,9 @@ const TenderDetails = ({ id }: { id: string }) => {
               <Link href={`/hotel/tenders/edit?id=${tender._id}`} className={outlineButtonClass}>
                 <BiPencil size={16} /> {tc("edit")}
               </Link>
+              <button type="button" onClick={close} disabled={busy !== null} className={primaryButtonClass}>
+                <BiLockAlt size={16} /> {t("close")}
+              </button>
               <button type="button" onClick={cancel} disabled={busy !== null} className={dangerButtonClass}>
                 <BiX size={16} /> {t("cancel")}
               </button>
@@ -81,9 +98,18 @@ const TenderDetails = ({ id }: { id: string }) => {
           <div className="mb-5 flex flex-wrap items-center gap-2">
             <TenderStatusBadge status={tender.status} />
           </div>
+          {open && (
+            <p className="mb-5 flex flex-wrap items-center gap-x-2 gap-y-1 rounded border border-brass-400/40 bg-brass-100/60 p-3 text-sm text-ink-700">
+              <BiGlobe size={16} className="shrink-0 text-brass-600" />
+              {t("publicNote")}
+              <a href={`${WEBSITE_URL}/tenders/${tender._id}`} target="_blank" rel="noopener noreferrer" className="font-medium text-primary-dark underline underline-offset-2">
+                {t("viewPublic")}
+              </a>
+            </p>
+          )}
           <div className="grid gap-5 sm:grid-cols-3">
             <InfoRow icon={<BiCategory size={16} />} label={t("fields.category")} value={optionLabel("supplierCategories", tender.category)} />
-            <InfoRow icon={<BiMap size={16} />} label={t("fields.region")} value={optionLabel("regions", tender.region)} />
+            <InfoRow icon={<BiMap size={16} />} label={t("fields.region")} value={tender.region ? optionLabel("regions", tender.region) : tender.city} />
             <InfoRow icon={<BiEuro size={16} />} label={t("fields.budget")} value={tender.budget != null ? money(tender.budget) : ""} />
           </div>
           <p className="mt-6 whitespace-pre-line border-t border-gray-100 pt-6 text-sm leading-relaxed text-gray-700">{tender.description}</p>
@@ -116,7 +142,8 @@ const TenderDetails = ({ id }: { id: string }) => {
       </div>
 
       {/* Kwaliteitsformulier (briefing §3.8), once a winner is chosen */}
-      {tender.status === "awarded" && winnerOffer && (
+      {/* Phase 2 (v4): reviews are hidden until an admin switches them on. */}
+      {features.reviews && tender.status === "awarded" && winnerOffer && (
         <ReviewCard tenderId={tender._id} supplierName={winnerOffer.supplier.name} review={tender.review} onSaved={reload} />
       )}
 
@@ -152,7 +179,7 @@ const TenderDetails = ({ id }: { id: string }) => {
                       <span className="font-semibold text-gray-900">{money(offer.price)}</span>
                       {offer.price === cheapest && tender.offers.length > 1 && <span className="ml-2"><StatusBadge tone="brass">{t("lowest")}</StatusBadge></span>}
                     </td>
-                    <td className="px-5 py-3 text-gray-700">{offer.deliveryTime || "—"}</td>
+                    <td className="px-5 py-3 text-gray-700">{t("weeks", { count: offer.deliveryWeeks })}</td>
                     <td className="max-w-xs px-5 py-3 text-gray-700"><span className="whitespace-pre-line">{offer.notes || "—"}</span></td>
                     <td className="px-5 py-3">
                       {offer.file ? (

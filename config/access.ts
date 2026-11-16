@@ -48,6 +48,9 @@ export const ROUTE_ACCESS: Record<string, UserRole[]> = {
   "/hotel/faults/edit": ["hotel_manager"],
   "/hotel/kennisbank": ["hotel_manager", "hotel_staff"],
 
+  // The floor app (Master Briefing v4): the GM and every staff account.
+  "/floor": ["hotel_manager", "hotel_staff"],
+
   // Supplier portal
   "/supplier": ["supplier"],
 };

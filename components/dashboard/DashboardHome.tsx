@@ -12,11 +12,11 @@ import { BiRightArrowAlt } from "react-icons/bi";
 const DashboardHome = () => {
   const t = useTranslations("Dashboard");
   const tNav = useTranslations("Nav");
-  const { name, role } = useSessionUser();
+  const { name, role, features } = useSessionUser();
   const firstName = name.split(" ")[0] || name;
 
   // The main menu items this role can open (sub-pages like "Add member" are left out).
-  const links = navigationFor(role)
+  const links = navigationFor(role, features)
     .flatMap((section) => section.items)
     .filter((page) => page.href !== "/dashboard");
 

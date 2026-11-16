@@ -10,6 +10,8 @@ export interface Permit {
   authority: string;
   issueDate: string | null;
   expiryDate: string | null;
+  /** Days before the expiry date that the reminder goes out (7, 14, 30, 60 or 90). */
+  reminderDays: number;
   documentLink: string;
   notes: string;
   createdAt: string;
@@ -22,6 +24,7 @@ export interface PermitInput {
   authority: string;
   issueDate: string;
   expiryDate: string;
+  reminderDays: number;
   documentLink: string;
   notes: string;
 }

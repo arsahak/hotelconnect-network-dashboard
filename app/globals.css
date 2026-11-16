@@ -155,3 +155,21 @@ body {
     scrollbar-color: var(--color-brass-500) var(--color-ink-950);
   }
 }
+
+/* Job descriptions (SimpleRichText): bold, italic, lists, links. */
+.job-text > * + * {
+  margin-top: 0.75rem;
+}
+.job-text ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.job-text ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+}
+.job-text a {
+  color: var(--color-primary-dark, #8a6830);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

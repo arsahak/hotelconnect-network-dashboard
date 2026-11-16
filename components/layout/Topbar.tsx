@@ -35,12 +35,12 @@ const Topbar = () => {
   // Searchable pages = the pages this role can open, in the chosen language.
   const pages = useMemo(
     () =>
-      pagesFor(sessionUser.role).map((page) => ({
+      pagesFor(sessionUser.role, sessionUser.features).map((page) => ({
         ...page,
         title: tNav(`items.${page.key}.title`),
         description: tNav(`items.${page.key}.description`),
       })),
-    [sessionUser.role, tNav],
+    [sessionUser.role, sessionUser.features, tNav],
   );
 
   const matchedPages = useMemo(() => {

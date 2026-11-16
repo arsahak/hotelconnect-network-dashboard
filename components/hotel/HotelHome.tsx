@@ -4,6 +4,8 @@ import { getCalendarAction } from "@/app/actions/myHotel";
 import { RemindersPanel } from "@/components/hotel/calendar/RemindersPanel";
 import { YearCalendar } from "@/components/hotel/calendar/YearCalendar";
 import { PageHeader } from "@/components/shared/PageHeader";
+import { OnboardingProgress } from "@/components/hotel/progress/OnboardingProgress";
+import { ManagerCockpit } from "@/components/hotel/cockpit/ManagerCockpit";
 import { useApiData } from "@/lib/useApiData";
 import { useSessionUser } from "@/lib/SessionUserContext";
 import { useFormatter, useTranslations } from "next-intl";
@@ -23,7 +25,7 @@ function Stat({ href, icon, label, value }: { href: string; icon: ReactNode; lab
   );
 }
 
-/** Hotel manager's start page (briefing §3.3): year calendar on top. */
+/** Hotel manager's start page: onboarding progress, the Manager Cockpit (Master Briefing v4) and the year calendar (briefing §3.3). */
 const HotelHome = () => {
   const t = useTranslations("Dashboard");
   const tCal = useTranslations("Calendar");
@@ -36,6 +38,8 @@ const HotelHome = () => {
   return (
     <div className="flex min-h-screen flex-col gap-6 bg-gray-50">
       <PageHeader title={t("welcome", { name: firstName })} description={organisation ? `${organisation} · ${t("intro.hotel_manager")}` : t("intro.hotel_manager")} />
+      <OnboardingProgress />
+      <ManagerCockpit />
 
       {loading ? (
         <div className="h-96 animate-pulse rounded border border-gray-200 bg-white" />

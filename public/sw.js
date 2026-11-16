@@ -15,8 +15,8 @@ self.addEventListener("push", (event) => {
   event.waitUntil(
     self.registration.showNotification(data.title || "HotelConnect", {
       body: data.body || "",
-      icon: "/icons/icon-192.png",
-      badge: "/icons/badge-96.png",
+      icon: new URL("icons/icon-192.png", self.registration.scope).href,
+      badge: new URL("icons/badge-96.png", self.registration.scope).href,
       data: { url: data.url || "/notifications" },
     }),
   );
@@ -25,7 +25,8 @@ self.addEventListener("push", (event) => {
 // Tapping a notification opens (or focuses) the dashboard on the right page.
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
-  const url = new URL(event.notification.data?.url || "/notifications", self.location.origin).href;
+  // Links are dashboard paths ("/hotel/…"); the scope carries the base path (production: /dashboard/).
+  const url = new URL((event.notification.data?.url || "/notifications").replace(/^\//, ""), self.registration.scope).href;
   event.waitUntil(
     self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((windows) => {
       for (const client of windows) {

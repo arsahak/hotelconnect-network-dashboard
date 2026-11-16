@@ -88,10 +88,10 @@ function ActionCard({ action, onChange, onJoin }: { action: HotelPurchaseAction;
   );
 }
 
-/** Collectieve inkoop — /hotel/purchasing (briefing §3.13). */
+/** Collectieve inkoop — /hotel/purchasing and /supplier/purchasing (briefing §3.13; contract suppliers since 31 Oct). */
 const HotelPurchasing = () => {
   const t = useTranslations("Purchasing");
-  const { data, loading, reload } = useApiData(listPurchaseActionsAction, undefined);
+  const { data, loading, error, reload } = useApiData(listPurchaseActionsAction, undefined);
   const [joining, setJoining] = useState<HotelPurchaseAction | null>(null);
   const actions = data ?? [];
 
@@ -104,6 +104,8 @@ const HotelPurchasing = () => {
       </div>
       {loading ? (
         <div className="h-56 animate-pulse rounded border border-gray-200 bg-white" />
+      ) : error ? (
+        <p className="rounded border border-dashed border-gray-300 bg-white py-16 text-center text-sm text-gray-500">{error}</p>
       ) : actions.length === 0 ? (
         <p className="rounded border border-dashed border-gray-300 bg-white py-16 text-center text-sm text-gray-500">{t("empty")}</p>
       ) : (

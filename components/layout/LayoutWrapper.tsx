@@ -10,15 +10,15 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Sidebar - Fixed positioning */}
-      <Sidebar />
-
-      {/* Topbar - Fixed positioning */}
-      <Topbar />
+      {/* Sidebar and topbar - fixed; left out when printing (checklist / cockpit PDFs) */}
+      <div className="print:hidden">
+        <Sidebar />
+        <Topbar />
+      </div>
 
       {/* Main content with proper spacing for fixed sidebar and topbar */}
       <main
-        className="min-h-screen pt-16 transition-all duration-300"
+        className="min-h-screen pt-16 transition-all duration-300 print:!p-0"
         style={{ paddingLeft: isExpanded ? "256px" : "80px" }}
       >
         <div className="p-6">{children}</div>

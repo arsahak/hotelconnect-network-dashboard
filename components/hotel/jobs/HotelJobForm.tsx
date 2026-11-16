@@ -2,6 +2,7 @@
 
 import type { MyVacancy, MyVacancyInput, VacancyStyle } from "@/app/actions/myVacancy";
 import { Field } from "@/components/shared/form/Field";
+import { SimpleRichText, textLength } from "@/components/shared/form/SimpleRichText";
 import { FormActions } from "@/components/shared/form/FormActions";
 import { ImageField } from "@/components/shared/form/ImageField";
 import { Toggle } from "@/components/shared/form/Toggle";
@@ -11,12 +12,14 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { BiDetail, BiImage } from "react-icons/bi";
+import { useJobsBase } from "./useJobsBase";
 
 export const EMPTY_HOTEL_JOB: MyVacancyInput = {
   title: "",
   description: "",
   category: "",
   employmentType: "",
+  hours: "",
   urgent: false,
   style: "traditional",
   videoUrl: "",
@@ -25,10 +28,13 @@ export const EMPTY_HOTEL_JOB: MyVacancyInput = {
 };
 
 export const hotelJobToInput = (v: MyVacancy): MyVacancyInput => ({
+  city: v.city,
+  region: v.region,
   title: v.title,
   description: v.description,
   category: v.category,
   employmentType: v.employmentType,
+  hours: v.hours ?? "",
   urgent: v.urgent,
   style: v.style ?? "traditional",
   videoUrl: v.videoUrl ?? "",
@@ -36,14 +42,19 @@ export const hotelJobToInput = (v: MyVacancy): MyVacancyInput => ({
   applyWhatsapp: v.applyWhatsapp ?? "",
 });
 
+/** Master Briefing v4: the job text is at most 2000 characters. */
+const DESCRIPTION_MAX = 2000;
+
 const STYLES: { value: VacancyStyle; icon: typeof BiDetail }[] = [
   { value: "traditional", icon: BiDetail },
   { value: "visual", icon: BiImage },
 ];
 
 /**
- * Job form for the hotel (briefing §3.7): title, description, category, type
- * and the style — visual (photo/video, WhatsApp first) or traditional.
+ * Job form (briefing §3.7) for hotels and suppliers with a maintenance
+ * contract: title, description, category, type and the style — visual
+ * (photo/video, WhatsApp first) or traditional. Suppliers also say where the
+ * job is and pick a category from the five main groups.
  */
 const HotelJobForm = ({
   initial = EMPTY_HOTEL_JOB,
@@ -70,6 +81,7 @@ const HotelJobForm = ({
   const [form, setForm] = useState<MyVacancyInput>(initial);
   const [image, setImage] = useState<File | null>(null);
   const set = <K extends keyof MyVacancyInput>(key: K, value: MyVacancyInput[K]) => setForm((f) => ({ ...f, [key]: value }));
+  const { supplier } = useJobsBase();
 
   return (
     <form
@@ -87,11 +99,21 @@ const HotelJobForm = ({
           <Field id="hj-category" label={tj("fields.category")} required>
             <select id="hj-category" required value={form.category} onChange={(e) => set("category", e.target.value)} className={inputClass}>
               <option value="">{tc("choose")}</option>
-              {(options?.vacancyCategories ?? []).map((c) => (
-                <option key={c} value={c}>
-                  {optionLabel("vacancyCategories", c)}
-                </option>
-              ))}
+              {supplier
+                ? Object.entries(options?.supplierVacancyGroups ?? {}).map(([group, subs]) => (
+                    <optgroup key={group} label={optionLabel("vacancyCategories", group)}>
+                      {subs.map((c) => (
+                        <option key={c} value={c}>
+                          {optionLabel("vacancyCategories", c)}
+                        </option>
+                      ))}
+                    </optgroup>
+                  ))
+                : (options?.vacancyCategories ?? []).map((c) => (
+                    <option key={c} value={c}>
+                      {optionLabel("vacancyCategories", c)}
+                    </option>
+                  ))}
             </select>
           </Field>
           <Field id="hj-type" label={tj("fields.employmentType")} required>
@@ -104,8 +126,28 @@ const HotelJobForm = ({
               ))}
             </select>
           </Field>
+          <Field id="hj-hours" label={t("fields.hours")} hint={t("hints.hours")}>
+            <input id="hj-hours" maxLength={60} value={form.hours ?? ""} onChange={(e) => set("hours", e.target.value)} placeholder={t("placeholders.hours")} className={inputClass} />
+          </Field>
+          {supplier && (
+            <>
+              <Field id="hj-city" label={tj("fields.city")} required>
+                <input id="hj-city" required minLength={2} maxLength={80} value={form.city ?? ""} onChange={(e) => set("city", e.target.value)} className={inputClass} />
+              </Field>
+              <Field id="hj-region" label={tj("fields.region")} required>
+                <select id="hj-region" required value={form.region ?? ""} onChange={(e) => set("region", e.target.value)} className={inputClass}>
+                  <option value="">{tc("choose")}</option>
+                  {(options?.regions ?? []).map((r) => (
+                    <option key={r} value={r}>
+                      {optionLabel("regions", r)}
+                    </option>
+                  ))}
+                </select>
+              </Field>
+            </>
+          )}
           <Field id="hj-description" label={tj("fields.description")} className="md:col-span-2">
-            <textarea id="hj-description" rows={7} maxLength={5000} value={form.description} onChange={(e) => set("description", e.target.value)} placeholder={t("placeholders.description")} className={inputClass} />
+            <SimpleRichText id="hj-description" value={form.description} onChange={(html) => set("description", html)} max={DESCRIPTION_MAX} placeholder={t("placeholders.description")} />
           </Field>
           <div className="md:col-span-2">
             <Toggle checked={form.urgent} onChange={(v) => set("urgent", v)} label={tj("fields.urgent")} description={tj("hints.urgent")} />
@@ -162,7 +204,7 @@ const HotelJobForm = ({
         <p className="mt-4 text-xs text-gray-500">{tj("hints.cv")}</p>
       </div>
 
-      <FormActions submitting={submitting} submitLabel={submitLabel} cancelHref={cancelHref} />
+      <FormActions submitting={submitting} submitLabel={submitLabel} cancelHref={cancelHref} disabled={textLength(form.description) > DESCRIPTION_MAX} />
     </form>
   );
 };

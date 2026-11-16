@@ -3,13 +3,15 @@
 import { apiRequest, type ActionResponse } from "@/lib/api";
 
 // Memberships, invoices (Facturen, briefing §3.9), sponsored homepage spots
-// (§2.1, §3.15, §4.9) and voucher promotion (§3.10). Amounts are in cents.
+// (§2.1, §3.15, §4.9). Amounts are in cents. Prices: client, 31 Oct 2026.
 
-export type InvoiceKind = "membership" | "commission" | "advertising" | "promotion";
+export type InvoiceKind = "membership" | "commission" | "advertising";
 export type InvoiceStatus = "open" | "paid" | "cancelled";
-export type BillingInterval = "month" | "year";
+export type BillingInterval = "month" | "quarter" | "year";
+export type PaymentMethod = "sepa" | "invoice";
+export type PriceTier = "standard" | "founding";
 export type AdBlock = "suppliers" | "jobs" | "hotels";
-export type AdPeriod = "month" | "quarter";
+export type AdPeriod = "fortnight" | "month";
 export type AdStatus = "pending_payment" | "queued" | "live" | "ended" | "cancelled";
 
 type MemberRef = { _id: string; name: string; memberNumber: string } | null;
@@ -40,21 +42,28 @@ export interface AdminInvoice extends Invoice {
 
 export interface Subscription {
   _id: string;
-  plan: "hotel" | "supplier-contract";
+  plan: "hotel" | "supplier-contract" | "supplier-project";
   interval: BillingInterval;
+  tier: PriceTier;
+  paymentMethod: PaymentMethod;
   status: "active" | "cancelled";
   startedAt: string;
   currentPeriodStart: string;
   currentPeriodEnd: string;
   cancelledAt: string | null;
+  /** Free until (founding hotel 12 months, suppliers 1 May 2028). */
+  freeUntil: string | null;
+  /** The membership (and account) ends on this date after cancelling. */
+  endsAt: string | null;
 }
 
 export interface Prices {
-  subscriptions: { hotel: { year: number }; "supplier-contract": { month: number; year: number } };
-  commissionPercent: number;
+  hotelTiers: { key: "small" | "medium" | "large"; maxRooms: number | null; price: number }[];
+  foundingFreeMonths: number;
+  suppliers: Record<"supplier-contract" | "supplier-project", { month: number; year: number }>;
+  supplierFreeUntil: string;
+  noticeMonths: number;
   vatRate: number;
-  ads: Record<AdPeriod, number>;
-  promotions: Record<AdPeriod, number>;
 }
 
 export interface MyBilling {
@@ -62,6 +71,12 @@ export interface MyBilling {
   invoices: Invoice[];
   /** Suppliers only: "contract" pays a membership, otherwise commission per won job. */
   plan: string | null;
+  /** One of the first 10 Founding Hotels. */
+  foundingMember: boolean;
+  /** Hotels: number of rooms (decides the tier). */
+  rooms: number | null;
+  /** The yearly price of the next paid period, excl. VAT. */
+  nextYearPrice: number;
   prices: Prices;
   online: { mollie: boolean; moneybird: boolean };
 }
@@ -98,8 +113,13 @@ export async function myBillingAction(): Promise<ActionResponse<MyBilling>> {
   return apiRequest<MyBilling>("/billing/mine", { fallbackError: "Failed to load your invoices." });
 }
 
-export async function changeIntervalAction(interval: BillingInterval): Promise<ActionResponse<Subscription>> {
-  return apiRequest<Subscription>("/billing/mine/interval", { method: "PATCH", body: { interval }, fallbackError: "Failed to save." });
+/** Cancels the membership (ends at the end of the contract year; see agreements §6). */
+export async function cancelMembershipAction(): Promise<ActionResponse<Subscription>> {
+  return apiRequest<Subscription>("/billing/mine/cancel", { method: "POST", fallbackError: "Failed to cancel." });
+}
+
+export async function changePaymentMethodAction(paymentMethod: PaymentMethod): Promise<ActionResponse<Subscription>> {
+  return apiRequest<Subscription>("/billing/mine/payment-method", { method: "PATCH", body: { paymentMethod }, fallbackError: "Failed to save." });
 }
 
 export async function adAvailabilityAction(): Promise<ActionResponse<AdAvailability[]>> {
@@ -116,10 +136,6 @@ export async function bookAdAction(data: { block: AdBlock; position: number; per
 
 export async function cancelAdBookingAction(id: string): Promise<ActionResponse<AdBooking>> {
   return apiRequest<AdBooking>(`/ads/${encodeURIComponent(id)}`, { method: "DELETE", fallbackError: "Failed to cancel." });
-}
-
-export async function promoteVoucherAction(id: string, period: AdPeriod): Promise<ActionResponse<Checkout>> {
-  return apiRequest<Checkout>(`/my-vouchers/${encodeURIComponent(id)}/promote`, { method: "POST", body: { period }, fallbackError: "Failed to start the promotion." });
 }
 
 // ── Admins ──
@@ -139,13 +155,17 @@ export async function adminCancelInvoiceAction(id: string): Promise<ActionRespon
   return apiRequest<Invoice>(`/billing/admin/invoices/${encodeURIComponent(id)}/cancel`, { method: "POST", fallbackError: "Failed to cancel the invoice." });
 }
 
-export async function adminMemberBillingAction(owner: { hotel?: string; supplier?: string }): Promise<ActionResponse<{ subscription: Subscription | null; invoices: Invoice[] }>> {
+export async function adminMemberBillingAction(owner: { hotel?: string; supplier?: string }): Promise<ActionResponse<{ subscription: Subscription | null; invoices: Invoice[]; foundingMember: boolean; blocked: boolean }>> {
   const query = owner.hotel ? `hotel=${encodeURIComponent(owner.hotel)}` : `supplier=${encodeURIComponent(owner.supplier ?? "")}`;
   return apiRequest(`/billing/admin/member?${query}`, { fallbackError: "Failed to load the billing." });
 }
 
 export async function adminStartSubscriptionAction(owner: { hotel?: string; supplier?: string }): Promise<ActionResponse<Subscription>> {
   return apiRequest<Subscription>("/billing/admin/subscriptions", { method: "POST", body: owner, fallbackError: "Failed to start the membership." });
+}
+
+export async function adminSetFoundingAction(owner: { hotel?: string; supplier?: string }, founding: boolean): Promise<ActionResponse<{ founding: boolean }>> {
+  return apiRequest("/billing/admin/founding", { method: "POST", body: { ...owner, founding }, fallbackError: "Failed to save." });
 }
 
 export async function adminCancelSubscriptionAction(id: string): Promise<ActionResponse<Subscription>> {

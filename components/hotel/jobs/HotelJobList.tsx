@@ -8,6 +8,7 @@ import { TableStatus } from "@/components/shared/TableStatus";
 import { useApiData } from "@/lib/useApiData";
 import { useOptionLabel } from "@/lib/useOptions";
 import { useFormatter, useTranslations } from "next-intl";
+import { useJobsBase } from "./useJobsBase";
 import Link from "next/link";
 import { toast } from "react-hot-toast";
 import { BiPlus } from "react-icons/bi";
@@ -16,6 +17,7 @@ import { HotelJobStatusBadge } from "./HotelJobStatusBadge";
 /** The hotel's own jobs (briefing §3.7): status and how many applications came in. */
 const HotelJobList = () => {
   const t = useTranslations("HotelJobs");
+  const { base } = useJobsBase();
   const tc = useTranslations("Common");
   const format = useFormatter();
   const optionLabel = useOptionLabel();
@@ -37,7 +39,7 @@ const HotelJobList = () => {
         title={t("title")}
         description={t("description")}
         actions={
-          <Link href="/hotel/jobs/add" className={primaryButtonClass}>
+          <Link href={`${base}/add`} className={primaryButtonClass}>
             <BiPlus size={18} /> {t("add")}
           </Link>
         }
@@ -59,7 +61,7 @@ const HotelJobList = () => {
               jobs.map((job) => (
                 <tr key={job._id} className="align-top transition-colors hover:bg-gray-50/60">
                   <td className="px-5 py-3">
-                    <Link href={`/hotel/jobs/${job._id}`} className="block">
+                    <Link href={`${base}/${job._id}`} className="block">
                       <span className="block font-medium text-gray-900 hover:text-primary-dark">{job.title}</span>
                       <span className="block text-xs text-gray-500">
                         {optionLabel("vacancyCategories", job.category)} · {optionLabel("employmentTypes", job.employmentType)} · {t(`style.${job.style ?? "traditional"}`)}
@@ -72,7 +74,7 @@ const HotelJobList = () => {
                   <td className="px-5 py-3 text-gray-700">{job.applicationCount ?? 0}</td>
                   <td className="hidden px-5 py-3 text-gray-500 md:table-cell">{format.dateTime(new Date(job.createdAt), { dateStyle: "medium" })}</td>
                   <td className="px-5 py-3">
-                    <RowActions viewHref={`/hotel/jobs/${job._id}`} editHref={`/hotel/jobs/edit?id=${job._id}`} onDelete={() => remove(job)} />
+                    <RowActions viewHref={`${base}/${job._id}`} editHref={`${base}/edit?id=${job._id}`} onDelete={() => remove(job)} />
                   </td>
                 </tr>
               ))}
